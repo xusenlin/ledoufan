@@ -153,7 +153,7 @@ footer .span1{
     left: 106px;
     width: 44px;
     transform: rotate(-63deg);
-    border-bottom: 2px solid #17d3c0;
+    border-bottom: 1px solid #17d3c0;
 }
 .center-top .item3{
     display: block;
@@ -210,7 +210,8 @@ footer .span1{
     overflow: hidden;
 }
 .center-paging .item:hover,.center-paging .item:hover>a,
-.center-paging-list li:hover,.center-paging-list li:hover>a{
+.center-paging-list li:hover,.center-paging-list li:hover>a,
+.center-paging .itemss{
     background: #19dada;
     border:1px solid #19dada;
     color: #fff;
