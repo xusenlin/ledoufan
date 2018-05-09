@@ -34,9 +34,64 @@
 | affiliate
 |--------------------------------------------------------------------------
 */
-.affiliate .your-class{
+.affiliate{
 
 }
+.affiliate .container{
+ display: flex;
+ width: 1200px;
+ margin: 0 auto;
+ padding-top: 62px;
+}
+.affiliate .container-l{
+flex: 375px;
+}
+.affiliate .container-r{
+flex: 875px;
+}
+.affiliate .container-ra{
+
+}
+.affiliate .container-rb{
+ display: flex;
+ height: 272px;
+}
+.affiliate .container-rb-l{
+ flex: 356px;
+}
+.affiliate .container-rb-z{
+ flex: 12px;
+}
+.affiliate .container-rb-r{
+ flex: 457px;
+}
+.affiliate .container-rb-r .container-rb-ra{
+ height: 97px;
+ border-bottom: 1px solid #cac8c9;
+}
+.affiliate .container-rb-r .container-rb-rb{
+height: 175px;
+}
+.affiliate .container-rb-r .container-rb-rb span{
+ font-size: 16px;
+}
+
+
+
+
+.affiliate .container-rc{
+
+}
+.affiliate .container-rd{
+
+}
+.affiliate .container-re{
+
+}
+.affiliate .container-rf{
+
+}
+
 .affiliate .your-class{
 
 }
