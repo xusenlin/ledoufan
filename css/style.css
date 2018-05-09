@@ -152,9 +152,15 @@ flex: 875px;
 .affiliate .container-ra{
 
 }
+.affiliate .container-ra .center-top{
+    width: 824px;
+    height: 66px;
+    line-height: 66px;
+}
 .affiliate .container-rb{
  display: flex;
  height: 272px;
+    padding-top: 35px;
 }
 .affiliate .container-rb-l{
  flex: 356px;
@@ -171,25 +177,43 @@ flex: 875px;
 }
 .affiliate .container-rb-r .container-rb-rb{
 height: 175px;
+padding-top: 25px;
 }
 .affiliate .container-rb-r .container-rb-rb span{
  font-size: 16px;
 }
-
-
-
-
 .affiliate .container-rc{
-
+    padding-top: 40px;
 }
-.affiliate .container-rd{
+.affiliate .container-rc-a{
+    height:48px ;
+    border-bottom: 4px solid #32d8d6;
+}
+.affiliate .container-rc-a span{
+    height:48px;
+    font-size: 24px;
+    border-radius: 7px 7px 0 0;
+    line-height: 65px;
+    background:#32d8d6;
+}
 
+.affiliate .container-rd{
+    padding-top: 45px;
+    line-height: 30px;
+}
+.affiliate .container-rd span{
+
+    word-spacing: 100px;
 }
 .affiliate .container-re{
-
+padding-top: 34px;
 }
 .affiliate .container-rf{
-
+    padding-top: 45px;
+    line-height: 30px;
+}
+.affiliate .container-rg{
+height: 40px;
 }
 .affiliate .your-class {
 
