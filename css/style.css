@@ -3,11 +3,56 @@
 | index
 |--------------------------------------------------------------------------
 */
-.index .your-class{
-
+/*首页样式*/
+.index .about-us{
+ width: 100%;
+ height: 580px;
+ background: url("../img/about-us-bg.png");
+}
+.index .left-img{
+ width: 467px;
+ height: 413px;
+ float: left;
+ margin: 93px 0 0 360px;
 }
 
+.index .right-characters{
+ float: left;
+ width: 638px;
+ height: 413px;
+ /*background: green;*/
+ height: 413px;
+ margin: 93px 360px 0 78px;
+}
+
+.index .right-characters-top{
+ background: none;
+ margin: 0 0 0 437px;
+}
+.index .right-characters-top .item1{
+ color: #4c4c4c;
+ font-size: 10px;
+}
+.index .right-characters .conten-p{
+ width: 638px;
+ height: 227px;
+ float: left;
+}
+.index .right-characters .right-point{
+ float: left;
+}
+.index .right-characters .about-span1,.about-span2,.about-span3{
+ display: inline-block;
+}
+
+.index .right-characters .about-span1{
+ margin: 0 0 0 0;
+}
+.index .right-characters .about-span2 img{
+ background: #e9fbf9;
+}
 .index .your-class{
+
 
 }
 
