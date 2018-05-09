@@ -57,6 +57,63 @@
 .index .right-characters .about-span2 img{
  background: #e9fbf9;
 }
+/*首页的下面*/
+.index .bottom{
+ width: 1203px;
+ height: 739px;
+ /*background: #cac8c9;*/
+ margin-top: 60px;
+}
+.index .bottom .item1{
+ color: #4c4c4c;
+}
+.index .center-top{
+ background: none;
+}
+.index .bottom .left-list ul .list-li{
+ width: 720px;
+ height: 138px;
+ /*background: #c27a02;*/
+ margin-top: 70px;
+}
+.index .bottom .left-list ul .list-li .spanspan{
+ display: inline-block;
+ margin: 22px 0 0 0;
+}
+.index .bottom .left-list ul .list-li .spanspan .tigh-p{
+margin-left: 560px;
+}
+.index .bottom .left-list ul .list-li h3{
+ font-weight: bold;
+}
+.index .bottom .left-list ul .list-li .pde{
+margin: 20px 0 0 0;
+ font-size: 17px;
+}
+.index .bottom .left-list ul .list-li .spanspan p{
+ float: right;
+}
+/**/
+.index .bottom .right-list{
+ float: right;
+}
+.index .bottom .right-list ul li .imgs1{
+ float: right;
+ margin:-632px 0 0 0;
+}
+.index .bottom .right-list ul li .imgs2{
+ float: right;
+ margin:-408px 0 0 0;
+}
+
+.index .bottom .right-list ul li .imgs3{
+ float: right;
+ margin:-183px 0 0 0;
+}
+
+
+
+
 
 
 /*
