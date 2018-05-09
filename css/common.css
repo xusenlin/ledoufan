@@ -1,5 +1,5 @@
 /*body{*/
-    /*background: #eee;*/
+/*background: #eee;*/
 /*}*/
 /*网站顶部*/
 header{
@@ -26,13 +26,13 @@ header{
 .header-nav>li{
     position: relative;
     float: left;
+    margin:0 20px;
 }
 .header-nav>li>a{
     display: block;
     position: relative;
     width: 90px;
     height: 34px;
-    margin:0 20px;
     padding-left: 16px;
     font-size: 16px;
     font-weight: bold;
@@ -53,14 +53,14 @@ header{
 .header-nav>li:hover>.ict3{
     color: #19deeb
 }
-.header-nav>li>.item{
+.header-nav>li:last-child{
     margin-right:0;
 }
 .header-nav-list{
     display: none;
     position: absolute;
     top: 24px;
-    left: 25px;
+    left: 5px;
     width: 90px;
     padding-top: 14px;
     background: rgba(13,190,196,.8);
@@ -172,4 +172,51 @@ footer .span1{
     height: 7px;
     background:#36d9c9;
     z-index: 1;
+}
+
+/*分页*/
+.center-paging .item{
+    display: inline-block;
+    float: left;
+    border:1px solid #19dada;
+    border-radius:2px;
+    overflow: hidden;
+}
+.center-paging .item:hover,.center-paging .item:hover>a,
+.center-paging-list li:hover,.center-paging-list li:hover>a{
+    background: #19dada;
+    border:1px solid #19dada;
+    color: #fff;
+}
+.center-paging .item a{
+    display: block;
+    width: 56px;
+    height: 26px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    color: #19dada;
+    border:1px solid #66e6e6;
+}
+.center-paging-list li{
+    float: left;
+    margin-left:14px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    border:1px solid #19dada;
+    border-radius:2px;
+    overflow: hidden;
+}
+.center-paging-list li:last-child{
+    margin-right: 14px;
+}
+.center-paging-list li a{
+    display: block;
+    width: 26px;
+    height: 26px;
+    font-weight: bold;
+    color: #19dada;
+    border:1px solid #66e6e6;
 }

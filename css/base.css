@@ -58,3 +58,5 @@ ul,ol{
 .hide{display: none;}
 .block{display: block;}
 .clear{display: table}
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
