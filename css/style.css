@@ -124,9 +124,95 @@
 | recruitment
 |--------------------------------------------------------------------------
 */
-.recruitment .your-class{
-
+.recruitment .lb{
 }
-.recruitment .your-class{
+.recruitment .lb .center-top{
+    position: relative;
+ margin-top: 63px;
+ width: 286px;
+}
+.recruitment .lb .center-list{
+    position: relative;
+ margin-top: 20px;
+}
+
+
+.recruitment .rb{
+    position: relative;
+    width: 826px;
+}
+.recruitment .rb .center-top{
+    position: relative;
+    margin-top: 63px;
+    width: 826px;
+}
+.recruitment .rb .center-top .item1{
+    position: relative;
+    margin-top: 5px;
+}
+.recruitment .rb  .b{
+    position: relative;
+    width: 796px;
+    left: 20px;
+    top: 40px;
+}
+.recruitment .rb  .b .b-top{
+    position: relative;
+    /*width: 490px;*/
+}
+
+.recruitment .rb  .b .b-top-post{
+    color: #4c4c4c;
+    margin-bottom: 10px;
+}
+.recruitment .rb  .b .b-c{
+    margin-top: 16px;
+}
+.recruitment .rb  .b .b-c-a{
+    position: relative;
+    background: #def6f3;
+    padding: 1px 8px;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.recruitment .rb  .b .b-d{
+    position: relative;
+    color: #4c4c4c;
+    margin-top: 26px;
+}
+
+.recruitment .rb  .b .b-d-a{
+    margin-right: 16px;
+}
+.recruitment .rb .b-top-site{
+    position: relative;
+    margin-top: 12px;
+}
+.recruitment .rb .b-top-site-a{
+    position: relative;
+    padding-left: 30px;
+    padding-top: 3px;
+}
+.recruitment .rb .b-top-salary{
+    position: absolute;
+    right: 44px;
+    top: 34px;
+    font-size: 32px;
+    color: #f1520c;
+}
+
+.recruitment .rb .b-content{
+    position: relative;
+    margin-top: 52px;
+    color: #4c4c4c;
+    line-height: 3;
+}
+
+.recruitment .rb .run{
+    position: relative;
+    margin-top: 98px;
+    margin-bottom: 100px;
+    width: 796px;
 
 }
