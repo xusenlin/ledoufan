@@ -3,7 +3,7 @@ include 'header.php';
 ?>
 <div class="affiliate">
     <div class="container">
-        <div class="fl ">
+        <div class="container-l">
 
         </div>
         <div class="container-r">
@@ -13,13 +13,13 @@ include 'header.php';
                 <div class=".container-rb-z"></div>
                 <div class=".container-rb-r">
                     <div class="container-rb-ra">
-                        <b style="font-size: 20px;color: #c27a02">诚邀金额：10万—20万</b>
+                        <b style="font-size: 20px;color: #c27a02">诚邀金额：10万—20万</b><br>
                         <b style="font-size: 18px;color: #6a6869;">所属行业：零售</b>
                     </div>
                     <div class="container-rb-rb">
                         <div class="fl">
                             <span>成立时间：2010年8月5日</span>
-                            <span>加盟区域：全国</span>
+                            <span>加盟区域：全国</span><br>
                             <span>经营范围：豆类食品</span>
                         </div>
                         <div class="fr">

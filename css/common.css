@@ -1,5 +1,5 @@
 /*body{*/
-    /*background: #eee;*/
+/*background: #eee;*/
 /*}*/
 /*网站顶部*/
 header{
@@ -26,13 +26,13 @@ header{
 .header-nav>li{
     position: relative;
     float: left;
+    margin:0 20px;
 }
 .header-nav>li>a{
     display: block;
     position: relative;
     width: 90px;
     height: 34px;
-    margin:0 20px;
     padding-left: 16px;
     font-size: 16px;
     font-weight: bold;
@@ -53,14 +53,14 @@ header{
 .header-nav>li:hover>.ict3{
     color: #19deeb
 }
-.header-nav>li>.item{
+.header-nav>li:last-child{
     margin-right:0;
 }
 .header-nav-list{
     display: none;
     position: absolute;
     top: 24px;
-    left: 25px;
+    left: 5px;
     width: 90px;
     padding-top: 14px;
     background: rgba(13,190,196,.8);
@@ -132,10 +132,37 @@ footer .span1{
 
 /*目录标签*/
 .center-top{
-    width: 860px;
+    position: relative;
+    width: 285px;
     height: 68px;
     border-radius: 8px;
-    background: linear-gradient(to right, #17dadb ,rgba(23,218,219,0.5),rgba(64,153,124,0.2),rgba(64,153,124,0));
+    background: linear-gradient(to right, #17dadb , rgba(104, 216, 209, 0.8), rgba(50, 153, 111, 0.2),rgba(64,153,124,0));
+}
+.center-top .item1{
+    display: block;
+    float: left;
+    padding-top: 12px;
+    padding-left: 22px;
+    font-size: 25px;
+    line-height: 25px;
+    color: #fff;
+}
+.center-top .item2{
+    position: absolute;
+    top:35px;
+    left: 106px;
+    width: 44px;
+    transform: rotate(-63deg);
+    border-bottom: 1px solid #17d3c0;
+}
+.center-top .item3{
+    display: block;
+    float: left;
+    padding-top: 36px;
+    padding-left: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #4c4c4c;
 }
 /*目录*/
 .center-list li{
@@ -172,4 +199,52 @@ footer .span1{
     height: 7px;
     background:#36d9c9;
     z-index: 1;
+}
+
+/*分页*/
+.center-paging .item{
+    display: inline-block;
+    float: left;
+    border:1px solid #19dada;
+    border-radius:2px;
+    overflow: hidden;
+}
+.center-paging .item:hover,.center-paging .item:hover>a,
+.center-paging-list li:hover,.center-paging-list li:hover>a,
+.center-paging .itemss{
+    background: #19dada;
+    border:1px solid #19dada;
+    color: #fff;
+}
+.center-paging .item a{
+    display: block;
+    width: 56px;
+    height: 26px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    color: #19dada;
+    border:1px solid #66e6e6;
+}
+.center-paging-list li{
+    float: left;
+    margin-left:14px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    border:1px solid #19dada;
+    border-radius:2px;
+    overflow: hidden;
+}
+.center-paging-list li:last-child{
+    margin-right: 14px;
+}
+.center-paging-list li a{
+    display: block;
+    width: 26px;
+    height: 26px;
+    font-weight: bold;
+    color: #19dada;
+    border:1px solid #66e6e6;
 }
