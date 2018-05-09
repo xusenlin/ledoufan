@@ -1,0 +1,60 @@
+/*重置浏览器样式reset及底层组件 2016-03-21-JORDAN*/
+
+/*样式重置*/
+body,h1,h2,h3,h4,h5,h6,hr,p,div,span,ul,li,img{
+    margin: 0;
+    padding: 0;
+
+}
+
+body,html {
+    font-family: 'Microsoft YaHei';
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    /*font-size: 100%;*/
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+/*按钮*/
+.btn{padding: 0 10px;text-align: center;}
+
+/*文字*/
+
+.f12{font-size: 12px;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.f18{font-size: 18px;}
+.f20{font-size: 20px;}
+.f25{font-size: 25px;}
+.f30{font-size: 30px;}
+.text-red{color: red;}
+.text-black{color: black;}
+.text-white{color: white;}
+.bolder{font-weight: bolder}
+.text-center{text-align: center;}
+
+/* 盒子及布局*/
+.container{width: 1200px;margin: 0 auto;}
+.container-fluid{width: 100%;}
+.fl{float: left;}
+.fr{float: right;}
+.por{position: relative;}
+.poa{position: absolute;}
+.max-img{max-width: 1170px;}
+.hide{display: none;}
+.block{display: block;}
+.clear{display: table}
