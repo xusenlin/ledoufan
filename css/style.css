@@ -3,6 +3,7 @@
 | index
 |--------------------------------------------------------------------------
 */
+
 /*首页样式*/
 .index .about-us{
  width: 100%;
@@ -45,19 +46,13 @@
  display: inline-block;
 }
 
+
 .index .right-characters .about-span1{
  margin: 0 0 0 0;
 }
 .index .right-characters .about-span2 img{
  background: #e9fbf9;
 }
-.index .your-class{
-
-
-}
-
-
-
 
 
 /*
@@ -65,24 +60,24 @@
 | about
 |--------------------------------------------------------------------------
 */
-.about .your-class{
-
-}
-.about .your-class{
+.about .your-class {
 
 }
 
+.about .your-class {
 
+}
 
 /*
 |--------------------------------------------------------------------------
 | affiliate
 |--------------------------------------------------------------------------
 */
-.affiliate .your-class{
+.affiliate .your-class {
 
 }
-.affiliate .your-class{
+
+.affiliate .your-class {
 
 }
 
@@ -91,13 +86,13 @@
 | article
 |--------------------------------------------------------------------------
 */
-.article .your-class{
-
-}
-.article .your-class{
+.article .your-class {
 
 }
 
+.article .your-class {
+
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -105,36 +100,72 @@
 |--------------------------------------------------------------------------
 */
 
-.contact .your-class{
-
+.contact .main {
+    margin-top: 66px;
+    margin-bottom: 720px;
 }
-.contact .your-class{
-
+.contact .nav{
+    margin-top: 46px;
 }
-
-
+.contact .con-right h2{
+    color: #fff;
+    line-height: 66px;
+    padding-left: 30px;
+}
+.contact .con-right a{
+    line-height: 66px;
+    color: #838987;
+}
+.contact .con-right span {
+    padding: 0 6px 0 0;
+    color: #838987;
+    line-height: 71px;
+    letter-spacing: -6px;
+}
+.contact .con-right .center-top{
+    width: 824px;
+    height: 66px;
+}
+.contact #dituContent{
+    margin-top: 46px;
+    margin-bottom: 34px;
+}
+.contact .QRcode{
+    height: 260px;
+    width: 260px;
+    background: url("../img/QRcode.jpg");
+}
+.contact .info-more ul{
+    padding-top: 16px;
+    padding-left: 84px;
+}
+.contact .info-more li{
+    color: #4b4b4b;
+    line-height: 44px;
+}
 /*
 |--------------------------------------------------------------------------
 | details
 |--------------------------------------------------------------------------
 */
-.details .your-class{
-
- }
-.details .your-class{
+.details .your-class {
 
 }
 
+.details .your-class {
+
+}
 
 /*
 |--------------------------------------------------------------------------
 | food
 |--------------------------------------------------------------------------
 */
-.food .your-class{
+.food .your-class {
 
 }
-.food .your-class{
+
+.food .your-class {
 
 }
 
@@ -143,24 +174,24 @@
 | hierarchy
 |--------------------------------------------------------------------------
 */
-.hierarchy .your-class{
-
-}
-.hierarchy .your-class{
+.hierarchy .your-class {
 
 }
 
+.hierarchy .your-class {
 
+}
 
 /*
 |--------------------------------------------------------------------------
 | product
 |--------------------------------------------------------------------------
 */
-.product .your-class{
+.product .your-class {
 
 }
-.product .your-class{
+
+.product .your-class {
 
 }
 
@@ -169,9 +200,10 @@
 | recruitment
 |--------------------------------------------------------------------------
 */
-.recruitment .your-class{
+.recruitment .your-class {
 
 }
-.recruitment .your-class{
+
+.recruitment .your-class {
 
 }
