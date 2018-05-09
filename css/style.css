@@ -28,19 +28,23 @@
 
 .index .right-characters-top{
  background: none;
- margin: 0 0 0 437px;
+ margin: 0 0 0 398px;
 }
 .index .right-characters-top .item1{
  color: #4c4c4c;
- font-size: 10px;
 }
 .index .right-characters .conten-p{
- width: 638px;
+ width: 636px;
  height: 227px;
  float: left;
+ margin: 74px 0 0 0px;
+ font-size: 17px;
+ text-indent: 2em;
+ line-height: 34px;
 }
 .index .right-characters .right-point{
  float: left;
+ margin: -24px 0 0 564px;
 }
 .index .right-characters .about-span1,.about-span2,.about-span3{
  display: inline-block;
