@@ -22,11 +22,7 @@ include 'header.php';
             </ul>
         </div>
         <div class="rb fr ">
-            <div class="center-top">
-                <span class="item1">连锁加盟</span>
-<!--                <span class="item2"></span>-->
-                <span class="item3"><a href="#">首页</a>>><a href="">联系我们</a>>><a href="">在线招聘</a>/span>
-            </div>
+                <div class="center-top clear"><h2 class="h25 fl">连锁加盟 </h2><div class="fr"><a href="#">首页</a><span>&gt;&gt;</span><a href="#">联系我们</a><span>&gt;&gt;</span><a href="#">在线招聘</a></div></div>
             <div class="b">
                 <div class="b-top">
                     <p class="f20 b-top-post">招聘职位</p>

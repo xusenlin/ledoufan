@@ -359,14 +359,25 @@ height: 40px;
     position: relative;
     width: 826px;
 }
-.recruitment .rb .center-top{
-    position: relative;
-    margin-top: 63px;
-    width: 826px;
+.recruitment .rb h2{
+    color: #fff;
+    line-height: 66px;
+    padding-left: 30px;
 }
-.recruitment .rb .center-top .item1{
-    position: relative;
-    margin-top: 5px;
+.recruitment .rb a{
+    line-height: 66px;
+    color: #838987;
+}
+.recruitment .rb span {
+    padding: 0 6px 0 0;
+    color: #838987;
+    line-height: 71px;
+    letter-spacing: -6px;
+}
+.recruitment .rb .center-top{
+    margin-top: 63px;
+    width: 824px;
+    height: 66px;
 }
 .recruitment .rb  .b{
     position: relative;
@@ -433,5 +444,5 @@ height: 40px;
     margin-top: 98px;
     margin-bottom: 100px;
     width: 796px;
-
 }
+
