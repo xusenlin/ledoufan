@@ -3,13 +3,114 @@
 | index
 |--------------------------------------------------------------------------
 */
-.index .your-class{
 
+/*首页样式*/
+.index .about-us{
+ width: 100%;
+ height: 580px;
+ background: url("../img/about-us-bg.png");
+}
+.index .left-img{
+ width: 467px;
+ height: 413px;
+ float: left;
+ margin: 93px 0 0 360px;
 }
 
-.index .your-class{
-
+.index .right-characters{
+ float: left;
+ width: 638px;
+ height: 413px;
+ /*background: green;*/
+ height: 413px;
+ margin: 93px 360px 0 78px;
 }
+
+.index .right-characters-top{
+ background: none;
+ margin: 0 0 0 398px;
+}
+.index .right-characters-top .item1{
+ color: #4c4c4c;
+}
+.index .right-characters .conten-p{
+ width: 636px;
+ height: 227px;
+ float: left;
+ margin: 74px 0 0 0px;
+ font-size: 17px;
+ text-indent: 2em;
+ line-height: 34px;
+}
+.index .right-characters .right-point{
+ float: left;
+ margin: -24px 0 0 564px;
+}
+.index .right-characters .about-span1,.about-span2,.about-span3{
+ display: inline-block;
+}
+
+
+.index .right-characters .about-span1{
+ margin: 0 0 0 0;
+}
+.index .right-characters .about-span2 img{
+ background: #e9fbf9;
+}
+/*首页的下面*/
+.index .bottom{
+ width: 1203px;
+ height: 739px;
+ /*background: #cac8c9;*/
+ margin-top: 60px;
+}
+.index .bottom .item1{
+ color: #4c4c4c;
+}
+.index .center-top{
+ background: none;
+}
+.index .bottom .left-list ul .list-li{
+ width: 720px;
+ height: 138px;
+ /*background: #c27a02;*/
+ margin-top: 70px;
+}
+.index .bottom .left-list ul .list-li .spanspan{
+ display: inline-block;
+ margin: 22px 0 0 0;
+}
+.index .bottom .left-list ul .list-li .spanspan .tigh-p{
+margin-left: 560px;
+}
+.index .bottom .left-list ul .list-li h3{
+ font-weight: bold;
+}
+.index .bottom .left-list ul .list-li .pde{
+margin: 20px 0 0 0;
+ font-size: 17px;
+}
+.index .bottom .left-list ul .list-li .spanspan p{
+ float: right;
+}
+/**/
+.index .bottom .right-list{
+ float: right;
+}
+.index .bottom .right-list ul li .imgs1{
+ float: right;
+ margin:-632px 0 0 0;
+}
+.index .bottom .right-list ul li .imgs2{
+ float: right;
+ margin:-408px 0 0 0;
+}
+
+.index .bottom .right-list ul li .imgs3{
+ float: right;
+ margin:-183px 0 0 0;
+}
+
 
 
 
@@ -20,39 +121,118 @@
 | about
 |--------------------------------------------------------------------------
 */
-.about .your-class{
-
-}
-.about .your-class{
+.about .your-class {
 
 }
 
+.about .your-class {
 
+}
 
 /*
 |--------------------------------------------------------------------------
 | affiliate
 |--------------------------------------------------------------------------
 */
-.affiliate .your-class{
+.affiliate{
 
 }
-.affiliate .your-class{
+.affiliate .container{
+ display: flex;
+ width: 1200px;
+ margin: 0 auto;
+ padding-top: 62px;
+}
+.affiliate .container-l{
+flex: 375px;
+}
+.affiliate .container-r{
+flex: 875px;
+}
+.affiliate .container-ra{
 
 }
+.affiliate .container-ra .center-top{
+    width: 824px;
+    height: 66px;
+    line-height: 66px;
+}
+.affiliate .container-rb{
+ display: flex;
+ height: 272px;
+    padding-top: 35px;
+}
+.affiliate .container-rb-l{
+ flex: 356px;
+}
+.affiliate .container-rb-z{
+ flex: 12px;
+}
+.affiliate .container-rb-r{
+ flex: 457px;
+}
+.affiliate .container-rb-r .container-rb-ra{
+ height: 97px;
+ border-bottom: 1px solid #cac8c9;
+}
+.affiliate .container-rb-r .container-rb-rb{
+height: 175px;
+padding-top: 25px;
+}
+.affiliate .container-rb-r .container-rb-rb span{
+ font-size: 16px;
+}
+.affiliate .container-rc{
+    padding-top: 40px;
+}
+.affiliate .container-rc-a{
+    height:48px ;
+    border-bottom: 4px solid #32d8d6;
+}
+.affiliate .container-rc-a span{
+    height:48px;
+    font-size: 24px;
+    border-radius: 7px 7px 0 0;
+    line-height: 65px;
+    background:#32d8d6;
+}
+
+.affiliate .container-rd{
+    padding-top: 45px;
+    line-height: 30px;
+}
+.affiliate .container-rd span{
+
+    word-spacing: 100px;
+}
+.affiliate .container-re{
+padding-top: 34px;
+}
+.affiliate .container-rf{
+    padding-top: 45px;
+    line-height: 30px;
+}
+.affiliate .container-rg{
+height: 40px;
+}
+.affiliate .your-class {
+
+}
+
+
 
 /*
 |--------------------------------------------------------------------------
 | article
 |--------------------------------------------------------------------------
 */
-.article .your-class{
-
-}
-.article .your-class{
+.article .your-class {
 
 }
 
+.article .your-class {
+
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -60,36 +240,72 @@
 |--------------------------------------------------------------------------
 */
 
-.contact .your-class{
-
+.contact .main {
+    margin-top: 66px;
+    margin-bottom: 720px;
 }
-.contact .your-class{
-
+.contact .nav{
+    margin-top: 46px;
 }
-
-
+.contact .con-right h2{
+    color: #fff;
+    line-height: 66px;
+    padding-left: 30px;
+}
+.contact .con-right a{
+    line-height: 66px;
+    color: #838987;
+}
+.contact .con-right span {
+    padding: 0 6px 0 0;
+    color: #838987;
+    line-height: 71px;
+    letter-spacing: -6px;
+}
+.contact .con-right .center-top{
+    width: 824px;
+    height: 66px;
+}
+.contact #dituContent{
+    margin-top: 46px;
+    margin-bottom: 34px;
+}
+.contact .QRcode{
+    height: 260px;
+    width: 260px;
+    background: url("../img/QRcode.jpg");
+}
+.contact .info-more ul{
+    padding-top: 16px;
+    padding-left: 84px;
+}
+.contact .info-more li{
+    color: #4b4b4b;
+    line-height: 44px;
+}
 /*
 |--------------------------------------------------------------------------
 | details
 |--------------------------------------------------------------------------
 */
-.details .your-class{
-
- }
-.details .your-class{
+.details .your-class {
 
 }
 
+.details .your-class {
+
+}
 
 /*
 |--------------------------------------------------------------------------
 | food
 |--------------------------------------------------------------------------
 */
-.food .your-class{
+.food .your-class {
 
 }
-.food .your-class{
+
+.food .your-class {
 
 }
 
@@ -98,24 +314,24 @@
 | hierarchy
 |--------------------------------------------------------------------------
 */
-.hierarchy .your-class{
-
-}
-.hierarchy .your-class{
+.hierarchy .your-class {
 
 }
 
+.hierarchy .your-class {
 
+}
 
 /*
 |--------------------------------------------------------------------------
 | product
 |--------------------------------------------------------------------------
 */
-.product .your-class{
+.product .your-class {
 
 }
-.product .your-class{
+
+.product .your-class {
 
 }
 
@@ -124,6 +340,7 @@
 | recruitment
 |--------------------------------------------------------------------------
 */
+
 .recruitment .lb{
 }
 .recruitment .lb .center-top{
@@ -135,6 +352,7 @@
     position: relative;
  margin-top: 20px;
 }
+
 
 
 .recruitment .rb{
@@ -160,6 +378,7 @@
     position: relative;
     /*width: 490px;*/
 }
+
 
 .recruitment .rb  .b .b-top-post{
     color: #4c4c4c;
