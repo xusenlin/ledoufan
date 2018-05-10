@@ -202,9 +202,13 @@ footer .span1{
 }
 
 /*分页*/
+.center-paging{
+    display: inline-block;
+    line-height: 0;
+}
 .center-paging .item{
     display: inline-block;
-    float: left;
+    /*float: left;*/
     border:1px solid #19dada;
     border-radius:2px;
     overflow: hidden;
@@ -226,6 +230,10 @@ footer .span1{
     text-align: center;
     color: #19dada;
     border:1px solid #66e6e6;
+}
+.center-paging-list{
+    display: inline-block;
+    /*float: left;*/
 }
 .center-paging-list li{
     float: left;
