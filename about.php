@@ -8,7 +8,7 @@ include 'header.php';
                <div class="center-top about-bottom">
                    <span class="item1">关于我们</span>
                    <span class="item2"></span>
-                   <span class="item3">NEWS</span>
+                   <span class="item3">ABOUT US</span>
                </div>
                <ul class="center-list">
                    <li><a href="#">
@@ -73,19 +73,19 @@ include 'header.php';
                <div class="center-top about-bottom about-top">
                    <span class="item1">联系我们</span>
                    <span class="item2"></span>
-                   <span class="item3">NEWS</span>
+                   <span class="item3">CONTACT US</span>
                </div>
                <div class="about-phone">
                    <h3>镇远乐豆坊食品有限公司</h3>
                    <ul class="top-icon">
-                       <pre><li>联系人：</li></pre>
-                       <pre><li>座  机：</li></pre>
-                       <pre><li>传  真：</li></pre>
-                       <pre><li>手  机：</li></pre>
-                       <pre><li>Q   Q： </li></pre>
-                       <pre><li>邮  箱：</li></pre>
-                       <pre><li>地  址：</li></pre>
-                       <pre><li>网  址：</li></pre>
+                       <li>联系人：</li>
+                       <li>座&emsp;机：</li>
+                       <li>传&emsp;真：</li>
+                       <li>手&emsp;机：</li>
+                       <li>Q&emsp;Q： </li>
+                       <li>邮&emsp;箱：</li>
+                       <li>地&emsp;址：</li>
+                       <li>网&emsp;址：</li>
                    </ul>
                </div>
            </div><!--about-center-left 结束-->
