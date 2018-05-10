@@ -8,13 +8,17 @@
 .index .about-us{
  width: 100%;
  height: 580px;
- background: url("../img/about-us-bg.png");
+ background: #e9fbf9;
 }
+/*.index .about-us .juzhong{*/
+    /*margin: 96px auto;*/
+/*}*/
 .index .left-img{
  width: 467px;
  height: 413px;
  float: left;
- margin: 93px 0 0 360px;
+    margin: 96px auto;
+ /*margin: 93px 0 0 360px;*/
 }
 
 .index .right-characters{
@@ -23,7 +27,8 @@
  height: 413px;
  /*background: green;*/
  height: 413px;
- margin: 93px 360px 0 78px;
+ /*margin: 93px 360px 0 78px;*/
+    margin: 96px 0 0 95px;
 }
 
 .index .right-characters-top{
@@ -57,6 +62,63 @@
 .index .right-characters .about-span2 img{
  background: #e9fbf9;
 }
+/*首页的下面*/
+.index .bottom{
+ width: 1203px;
+ height: 739px;
+ /*background: #cac8c9;*/
+ margin-top: 60px;
+}
+.index .bottom .item1{
+ color: #4c4c4c;
+}
+.index .center-top{
+ background: none;
+}
+.index .bottom .left-list ul .list-li{
+ width: 720px;
+ height: 138px;
+ /*background: #c27a02;*/
+ margin-top: 70px;
+}
+.index .bottom .left-list ul .list-li .spanspan{
+ display: inline-block;
+ margin: 22px 0 0 0;
+}
+.index .bottom .left-list ul .list-li .spanspan .tigh-p{
+margin-left: 560px;
+}
+.index .bottom .left-list ul .list-li h3{
+ font-weight: bold;
+}
+.index .bottom .left-list ul .list-li .pde{
+margin: 20px 0 0 0;
+ font-size: 17px;
+}
+.index .bottom .left-list ul .list-li .spanspan p{
+ float: right;
+}
+/**/
+.index .bottom .right-list{
+ float: right;
+}
+.index .bottom .right-list ul li .imgs1{
+ float: right;
+ margin:-632px 0 0 0;
+}
+.index .bottom .right-list ul li .imgs2{
+ float: right;
+ margin:-408px 0 0 0;
+}
+
+.index .bottom .right-list ul li .imgs3{
+ float: right;
+ margin:-183px 0 0 0;
+}
+
+
+
+
 
 
 /*
@@ -64,8 +126,97 @@
 | about
 |--------------------------------------------------------------------------
 */
-.about .your-class {
 
+
+.about .about-center-box{
+    margin-top: 60px;
+}
+.about-center-left{
+ float: left;
+ width: 340px;
+}
+.about-bottom{
+    margin-bottom: 30px;
+}
+.about-top{
+    margin-top: 46px;
+}
+.about-phone{
+    color: #535353;
+    margin-left: 20px;
+}
+.about .about-phone>h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+.about .about-phone>ul>li{
+    font-size: 15px;
+    line-height: 1.8;
+    display: block;
+}
+.about .top-icon{
+    margin-top: 16px;
+}
+.about-center-right{
+    width: 860px;
+    float: right;
+    position: relative;
+}
+.about-right-title{
+    width: 860px;
+}
+.about .right-ul{
+    float: right;
+    line-height: 70px;
+    margin-right: 28px;
+}
+.about .right-ul>li{
+    float: left;
+}
+.about .right-ul>li>a{
+    color: #8fa3a0;
+    font-size: 17px;
+    margin-right: 26px;
+}
+.about .right-ul>li>a>span>img{
+    margin-left: 6px;
+}
+.about .right-top1{
+    height: 48px;
+    margin-top: 54px;
+    border-top: 2px solid #949494;
+    border-bottom: 2px solid #bcbcbc;
+}
+.about .right-title2{
+    float: left;
+}
+.about .right-title2>li{
+    float: left;
+    font-size: 16px;
+    margin-right: 12px;
+    line-height: 48px;
+}
+.about .right-title2 .about-item{
+    color: #b6383b;
+}
+.about-photo{
+    width: 268px;
+    height: 42px;
+    z-index: 20;
+    float: right;
+    margin-right: 56px;
+    background: url("../img/about-right-photo.png");
+}
+.about .about-photo .side-a{
+    margin-top: 4px;
+    height: 40px;
+    width: 44px;
+    float: left;
+    display: block;
+}
+
+.about-new-center{
+    height: 2000px;
 }
 
 .about .your-class {
@@ -173,7 +324,63 @@ height: 40px;
 | article
 |--------------------------------------------------------------------------
 */
+
+.article .article-content{
+  overflow: hidden;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+}
+.article .article-content-left{
+  width: 290px;
+  float: left;
+
+}
+.article .article-content-left-div{
+    margin-bottom: 25px;
+}
+.article .article-content-left-content{
+width: 100%;
+    margin-bottom: 40px;
+}
+.article .article-content-right-right{
+
+}
+
+.article .article-content-right-right{
+    padding-top: 0;
+    float: right;
+}
+.article .article-content-right{
+  width: 848px;
+  float: right;
+}
+.article .article-content-right-content{
+  width: 846px;
+  height: 480px;
+ background: url(../img/article-content-right-content.png)no-repeat 0 360px ;
+   margin-bottom: 20px;
+
+}
+.article .article-content-right-content-top{
+
+    height: 378px;
+    width: 864px;
+    margin: 0px auto ;
+    background: #ffffff;
+
+
+}
+.article .article-content-right-content-bottom{
+
+    height: 378px;
+    margin:30px 30px 0  ;
+
+}
+
+
 .article .your-class {
+
 
 }
 
@@ -287,10 +494,109 @@ height: 40px;
 | recruitment
 |--------------------------------------------------------------------------
 */
-.recruitment .your-class {
 
+.recruitment .lb{
+}
+.recruitment .lb .center-top{
+    position: relative;
+ margin-top: 63px;
+ width: 286px;
+}
+.recruitment .lb .center-list{
+    position: relative;
+ margin-top: 20px;
 }
 
-.recruitment .your-class {
 
+
+.recruitment .rb{
+    position: relative;
+    width: 826px;
 }
+.recruitment .rb h2{
+    color: #fff;
+    line-height: 66px;
+    padding-left: 30px;
+}
+.recruitment .rb a{
+    line-height: 66px;
+    color: #838987;
+}
+.recruitment .rb span {
+    padding: 0 6px 0 0;
+    color: #838987;
+    line-height: 71px;
+    letter-spacing: -6px;
+}
+.recruitment .rb .center-top{
+    margin-top: 63px;
+    width: 824px;
+    height: 66px;
+}
+.recruitment .rb  .b{
+    position: relative;
+    width: 796px;
+    left: 20px;
+    top: 40px;
+}
+.recruitment .rb  .b .b-top{
+    position: relative;
+    /*width: 490px;*/
+}
+
+
+.recruitment .rb  .b .b-top-post{
+    color: #4c4c4c;
+    margin-bottom: 10px;
+}
+.recruitment .rb  .b .b-c{
+    margin-top: 16px;
+}
+.recruitment .rb  .b .b-c-a{
+    position: relative;
+    background: #def6f3;
+    padding: 1px 8px;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.recruitment .rb  .b .b-d{
+    position: relative;
+    color: #4c4c4c;
+    margin-top: 26px;
+}
+
+.recruitment .rb  .b .b-d-a{
+    margin-right: 16px;
+}
+.recruitment .rb .b-top-site{
+    position: relative;
+    margin-top: 12px;
+}
+.recruitment .rb .b-top-site-a{
+    position: relative;
+    padding-left: 30px;
+    padding-top: 3px;
+}
+.recruitment .rb .b-top-salary{
+    position: absolute;
+    right: 44px;
+    top: 34px;
+    font-size: 32px;
+    color: #f1520c;
+}
+
+.recruitment .rb .b-content{
+    position: relative;
+    margin-top: 52px;
+    color: #4c4c4c;
+    line-height: 3;
+}
+
+.recruitment .rb .run{
+    position: relative;
+    margin-top: 98px;
+    margin-bottom: 100px;
+    width: 796px;
+}
+
