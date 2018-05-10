@@ -125,6 +125,36 @@ include 'header.php';
                        </li>
                    </ul>
                </div>
+
+               <div class="product_food_list_box">
+                   <ul>
+                       <li>
+                           <div><img src="img/public_food_pic.png" alt=""></div>
+
+                           <span><a href="">米豆腐</a></span>
+
+                       </li>
+                   </ul>
+               </div>
+               <div class="product_food_list_box">
+                   <ul>
+                       <li>
+                           <div><img src="img/public_food_pic.png" alt=""></div>
+                           <span><a href="">米豆腐</a></span>
+
+                       </li>
+                   </ul>
+               </div>
+               <div class="product_food_list_box clear_shadow">
+                   <ul>
+                       <li>
+                           <div><img src="img/public_food_pic.png" alt=""></div>
+                           <span><a href="">米豆腐</a></span>
+
+                       </li>
+                   </ul>
+               </div>
+
                <div class="product_food_list_box">
                    <ul>
                        <li>
@@ -182,6 +212,7 @@ include 'header.php';
                        </li>
                    </ul>
                </div>
+
                <div class="product_food_list_box">
                    <ul>
                        <li>
@@ -213,7 +244,7 @@ include 'header.php';
            </div>
 
        </div>
-       <div class="product_turn_page">
+       <div class="right_btn_page">
            <div class="center-paging clearfloat">
                <span class="item"><a href="#">Prev</a></span>
                <ul class="center-paging-list">
@@ -223,7 +254,7 @@ include 'header.php';
                </ul>
                <span class="item"><a href="#">Next</a></span>
            </div>
-          <br>
+           <br>
        </div>
    </div>
 </div>

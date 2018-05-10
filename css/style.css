@@ -489,6 +489,7 @@ font-size: 14px;
         width: 100%;
         height: 100%;
 }
+.container{position: relative}
 .product_item_left{
         position: relative;
         float: left;
@@ -578,7 +579,14 @@ font-size: 14px;
         margin-right: 0px;
 }
 
-.product{}
+.product .right_btn_page{
+        position: relative;
+}
+.product .center-paging{
+       position: relative;
+        display: inline-block;
+        margin: 130px 0 40px 922px;
+}
         /*
         |--------------------------------------------------------------------------
         | recruitment
