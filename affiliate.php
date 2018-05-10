@@ -36,12 +36,12 @@ include 'header.php';
         <div class="container-r">
             <div class="container-ra">
                 <div class="center-top clear">
-                    <h2 class="h25 fl">连锁加盟 </h2>
+                    <h2 class="h25 fl" style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;连锁加盟 </h2>
                     <div class="fr">
                         <a href="#">首页</a>
-                        <span>>></span>
+                        <span>》</span>
                         <a href="#">联系我们</a>
-                        <span>>></span>
+                        <span>》</span>
                         <a href="#">连锁加盟</a>
                     </div>
                 </div>

@@ -274,17 +274,21 @@ padding-top: 25px;
 }
 .affiliate .container-rc{
     padding-top: 40px;
-}
-.affiliate .container-rc-a{
-    height:48px ;
+    height:45px ;
     border-bottom: 4px solid #32d8d6;
 }
-.affiliate .container-rc-a span{
-    height:48px;
-    font-size: 24px;
-    border-radius: 7px 7px 0 0;
-    line-height: 65px;
+.affiliate .container-rc-a{
+    height:45px;
+    width: 158px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    line-height: 45px;
     background:#32d8d6;
+}
+.affiliate .container-rc-a span{
+    font-size: 25px;
+    color: white;
+
 }
 
 .affiliate .container-rd{
