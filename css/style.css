@@ -46,6 +46,58 @@
 | article
 |--------------------------------------------------------------------------
 */
+.article .article-content{
+  overflow: hidden;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+}
+.article .article-content-left{
+  width: 290px;
+  float: left;
+
+}
+.article .article-content-left-div{
+    margin-bottom: 25px;
+}
+.article .article-content-left-content{
+width: 100%;
+    margin-bottom: 40px;
+}
+.article .article-content-right-right{
+
+}
+
+.article .article-content-right-right{
+    padding-top: 0;
+    float: right;
+}
+.article .article-content-right{
+  width: 848px;
+  float: right;
+}
+.article .article-content-right-content{
+  width: 846px;
+  height: 480px;
+ background: url(../img/article-content-right-content.png)no-repeat 0 360px ;
+   margin-bottom: 20px;
+
+}
+.article .article-content-right-content-top{
+
+    height: 378px;
+    width: 864px;
+    margin: 0px auto ;
+    background: #ffffff;
+
+
+}
+.article .article-content-right-content-bottom{
+
+    height: 378px;
+    margin:30px 30px 0  ;
+
+}
 .article .your-class{
 
 }
