@@ -210,9 +210,10 @@ include 'header.php';
                        </li>
                    </ul>
                </div>
-
            </div>
+
        </div>
+       <div class="product_turn_page">
            <div class="center-paging clearfloat">
                <span class="item"><a href="#">Prev</a></span>
                <ul class="center-paging-list">
@@ -222,9 +223,9 @@ include 'header.php';
                </ul>
                <span class="item"><a href="#">Next</a></span>
            </div>
-       <br>
+          <br>
+       </div>
    </div>
-
 </div>
 <script>
     //Your JAVASCRIPT Code
