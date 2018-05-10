@@ -8,22 +8,21 @@
 .index .about-us{
  width: 100%;
  height: 580px;
- background: url("../img/about-us-bg.png");
+ background: #e9fbf9;
 }
 .index .left-img{
  width: 467px;
  height: 413px;
  float: left;
- margin: 93px 0 0 360px;
+ margin: 96px auto;
 }
 
 .index .right-characters{
  float: left;
  width: 638px;
  height: 413px;
- /*background: green;*/
  height: 413px;
- margin: 93px 360px 0 78px;
+ margin: 96px 0 0 95px;
 }
 
 .index .right-characters-top{
@@ -41,6 +40,7 @@
  font-size: 17px;
  text-indent: 2em;
  line-height: 34px;
+    color: #565656;
 }
 .index .right-characters .right-point{
  float: left;
@@ -73,22 +73,24 @@
 .index .bottom .left-list ul .list-li{
  width: 720px;
  height: 138px;
- /*background: #c27a02;*/
- margin-top: 70px;
+ margin: 70px 0 0 23px;
 }
 .index .bottom .left-list ul .list-li .spanspan{
  display: inline-block;
  margin: 22px 0 0 0;
 }
 .index .bottom .left-list ul .list-li .spanspan .tigh-p{
-margin-left: 560px;
+  margin-left: 560px;
+  color: #a3a3a3;
 }
 .index .bottom .left-list ul .list-li h3{
  font-weight: bold;
+ color: #535353;
 }
 .index .bottom .left-list ul .list-li .pde{
 margin: 20px 0 0 0;
  font-size: 17px;
+ color: #a3a3a3;
 }
 .index .bottom .left-list ul .list-li .spanspan p{
  float: right;
@@ -105,7 +107,6 @@ margin: 20px 0 0 0;
  float: right;
  margin:-408px 0 0 0;
 }
-
 .index .bottom .right-list ul li .imgs3{
  float: right;
  margin:-183px 0 0 0;
@@ -273,17 +274,21 @@ padding-top: 25px;
 }
 .affiliate .container-rc{
     padding-top: 40px;
-}
-.affiliate .container-rc-a{
-    height:48px ;
+    height:45px ;
     border-bottom: 4px solid #32d8d6;
 }
-.affiliate .container-rc-a span{
-    height:48px;
-    font-size: 24px;
-    border-radius: 7px 7px 0 0;
-    line-height: 65px;
+.affiliate .container-rc-a{
+    height:45px;
+    width: 158px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    line-height: 45px;
     background:#32d8d6;
+}
+.affiliate .container-rc-a span{
+    font-size: 25px;
+    color: white;
+
 }
 
 .affiliate .container-rd{
@@ -315,7 +320,69 @@ height: 40px;
 | article
 |--------------------------------------------------------------------------
 */
+
+.article .article-content{
+  overflow: hidden;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+}
+.article .article-content-left{
+  width: 290px;
+  float: left;
+
+}
+.article .article-content-left-div{
+    margin-bottom: 25px;
+}
+.article .article-content-left-content{
+width: 100%;
+    margin-bottom: 40px;
+}
+.article .article-content-right-right{
+
+}
+
+.article .article-content-right-right{
+    padding-top: 0;
+    float: right;
+    margin-right: 50px;
+}
+.article .article-content-right{
+  width: 848px;
+  float: right;
+}
+.article .article-content-right-content{
+  width: 846px;
+  height: 480px;
+ background: url(../img/article-content-right-content.png)no-repeat 0 360px ;
+   margin-bottom: 20px;
+
+}
+.article .article-content-right-content-top{
+
+    height: 378px;
+    width: 864px;
+    margin: 0px auto ;
+    background: #ffffff;
+
+
+}
+.article .article-content-right-content-bottom{
+
+    height: 378px;
+    margin:30px 30px 0  ;
+
+}
+.article .article-content-right-right ul li{
+    float: left;
+    line-height: 60px;
+}
+.article .article-content-left-content-span{
+font-size: 14px;
+}
 .article .your-class {
+
 
 }
 
