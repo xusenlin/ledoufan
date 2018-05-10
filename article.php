@@ -8,7 +8,15 @@ include 'header.php';
         <div class="article-content-right">
             <div class="center-top " style="width: 850px;margin-bottom: 30px">
                 <span class="item1">关于我们</span>
-            <div class="article-content-right-right"><span class="">首页》关于我们》公司展示</span></div>
+            <div class="article-content-right-right">
+<!--                <span class="">首页》关于我们》公司展示</span>-->
+                <ul>
+                    <li>首页<span><img src="img/about-right-pic.png" alt=""></span></li>
+                    <li>关于我们<span><img src="img/about-right-pic.png" alt=""></span></li>
+                    <li>展示公司介绍</li>
+                </ul>
+
+            </div>
             </div>
 
             <div class="article-content-right-content">
@@ -111,17 +119,17 @@ include 'header.php';
                     <span class="item3">CONTACT US</span>
                 </div>
 
-                <div class="about-phone">
+                <div >
                     <h3>镇远乐豆坊食品有限公司</h3>
-                    <ul class="top-icon">
-                        <pre><li>联系人：<></pre>
-                        <pre><li>座  机：<></pre>
-                        <pre><li>传  真：<></pre>
-                        <pre><li>手  机：<></pre>
-                        <pre><li>Q   Q： <></pre>
-                        <pre><li>邮  箱：<></pre>
-                        <pre><li>地  址：<></pre>
-                        <pre><li>网  址：<></pre>
+                    <ul class="article-content-left-content-span">
+                        <li><span >联系人</span>：     <span></span></li>
+                        <li><span >座&emsp;机</span>：<span></span></li>
+                        <li><span >传&emsp;真</span>：<span></span></li>
+                        <li><span >手&emsp;机</span>：<span></span></li>
+                        <li><span >Q&emsp;Q  </span>：<span></span></li>
+                        <li><span >邮&emsp;箱</span>：<span></span></li>
+                        <li><span >地&emsp;址</span>：<span></span></li>
+                        <li><span >网&emsp;址</span>：<span></span></li>
                     </ul>
                 </div>
             </div>

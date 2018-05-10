@@ -341,6 +341,7 @@ width: 100%;
 .article .article-content-right-right{
     padding-top: 0;
     float: right;
+    margin-right: 50px;
 }
 .article .article-content-right{
   width: 848px;
@@ -368,8 +369,13 @@ width: 100%;
     margin:30px 30px 0  ;
 
 }
-
-
+.article .article-content-right-right ul li{
+    float: left;
+    line-height: 60px;
+}
+.article .article-content-left-content-span{
+font-size: 14px;
+}
 .article .your-class {
 
 
