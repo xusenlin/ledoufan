@@ -16,9 +16,7 @@ include 'header.php';
                     <li>展示公司介绍</li>
                 </ul>
 
-            </div>
-            </div>
-
+            </div></div>
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
                     <img src="img/article-content-right-content-top.jpg" />
@@ -53,6 +51,15 @@ include 'header.php';
                 </div>
 
             </div>
+           <div style="float: right;width: 300px"> <div class="center-paging clearfloat">
+                   <span class="item"><a href="#">Prev</a></span>
+                   <ul class="center-paging-list">
+                       <li><a class="itemss" href="#">1</a></li>
+                       <li><a href="#">2</a></li>
+                       <li><a href="#">3</a></li>
+                   </ul>
+                   <span class="item"><a href="#">Next</a></span>
+               </div></div>
         </div>
         <div class="article-content-left">
             <div class="article-content-left-content">
