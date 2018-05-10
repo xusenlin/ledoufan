@@ -8,13 +8,17 @@
 .index .about-us{
  width: 100%;
  height: 580px;
- background: url("../img/about-us-bg.png");
+ background: #e9fbf9;
 }
+/*.index .about-us .juzhong{*/
+    /*margin: 96px auto;*/
+/*}*/
 .index .left-img{
  width: 467px;
  height: 413px;
  float: left;
- margin: 93px 0 0 360px;
+    margin: 96px auto;
+ /*margin: 93px 0 0 360px;*/
 }
 
 .index .right-characters{
@@ -23,7 +27,8 @@
  height: 413px;
  /*background: green;*/
  height: 413px;
- margin: 93px 360px 0 78px;
+ /*margin: 93px 360px 0 78px;*/
+    margin: 96px 0 0 95px;
 }
 
 .index .right-characters-top{
