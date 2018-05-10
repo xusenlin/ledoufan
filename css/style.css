@@ -121,8 +121,97 @@ margin: 20px 0 0 0;
 | about
 |--------------------------------------------------------------------------
 */
-.about .your-class {
 
+
+.about .about-center-box{
+    margin-top: 60px;
+}
+.about-center-left{
+ float: left;
+ width: 340px;
+}
+.about-bottom{
+    margin-bottom: 30px;
+}
+.about-top{
+    margin-top: 46px;
+}
+.about-phone{
+    color: #535353;
+    margin-left: 20px;
+}
+.about .about-phone>h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+.about .about-phone>ul>li{
+    font-size: 15px;
+    line-height: 1.8;
+    display: block;
+}
+.about .top-icon{
+    margin-top: 16px;
+}
+.about-center-right{
+    width: 860px;
+    float: right;
+    position: relative;
+}
+.about-right-title{
+    width: 860px;
+}
+.about .right-ul{
+    float: right;
+    line-height: 70px;
+    margin-right: 28px;
+}
+.about .right-ul>li{
+    float: left;
+}
+.about .right-ul>li>a{
+    color: #8fa3a0;
+    font-size: 17px;
+    margin-right: 26px;
+}
+.about .right-ul>li>a>span>img{
+    margin-left: 6px;
+}
+.about .right-top1{
+    height: 48px;
+    margin-top: 54px;
+    border-top: 2px solid #949494;
+    border-bottom: 2px solid #bcbcbc;
+}
+.about .right-title2{
+    float: left;
+}
+.about .right-title2>li{
+    float: left;
+    font-size: 16px;
+    margin-right: 12px;
+    line-height: 48px;
+}
+.about .right-title2 .about-item{
+    color: #b6383b;
+}
+.about-photo{
+    width: 268px;
+    height: 42px;
+    z-index: 20;
+    float: right;
+    margin-right: 56px;
+    background: url("../img/about-right-photo.png");
+}
+.about .about-photo .side-a{
+    margin-top: 4px;
+    height: 40px;
+    width: 44px;
+    float: left;
+    display: block;
+}
+
+.about-new-center{
+    height: 2000px;
 }
 
 .about .your-class {
