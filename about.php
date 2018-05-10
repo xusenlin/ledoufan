@@ -2,7 +2,7 @@
 include 'header.php';
 ?>
 <div class="about">
-    <div class="container  clearfix">
+    <div class="container  clearfloat">
        <div class="about-center-box">
            <div class="about-center-left ">
                <div class="center-top about-bottom">
