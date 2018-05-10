@@ -70,10 +70,10 @@ include 'header.php';
                 <li><img class="imgs1" src="img/list-right1.png" alt=""></li>
             </ul>
             <ul>
-                <li><img class="imgs2" src="img/list-right1.png" alt=""></li>
+                <li><img class="imgs2" src="img/list-right2.png" alt=""></li>
             </ul>
             <ul>
-                <li><img class="imgs3" src="img/list-right1.png" alt=""></li>
+                <li><img class="imgs3" src="img/list-right3.png" alt=""></li>
             </ul>
         </div>
     </div>
