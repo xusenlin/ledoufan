@@ -1,4 +1,9 @@
 <?php
+/*
+Template Name:在线招聘
+*/
+?>
+<?php
 include 'header.php';
 ?>
 <div class="recruitment">
