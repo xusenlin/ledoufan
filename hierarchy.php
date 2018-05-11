@@ -1,4 +1,9 @@
 <?php
+/*
+Template Name:溯源体系
+*/
+?>
+<?php
 include 'header.php';
 ?>
 <div class="hierarchy">

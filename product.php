@@ -1,4 +1,9 @@
 <?php
+/*
+Template Name:公司产品
+*/
+?>
+<?php
 include 'header.php';
 ?>
 <div class="product">

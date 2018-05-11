@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:联系我们
+Template Name:连锁加盟
 */
 ?>
 <?php
