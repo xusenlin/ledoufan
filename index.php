@@ -10,7 +10,7 @@ include 'header.php';
 
             <div class="right-characters">
                 <div class="center-top right-characters-top">
-                    <span class="item1"><?php ?>关于我们</span>
+                    <span class="item1">关于我们</span>
                     <span class="item2"></span>
                     <span class="item3">ABOUT US</span>
                 </div>
@@ -20,7 +20,7 @@ include 'header.php';
             </div>
         </div>
         </div>
-    
+<!---->
 
     <div class="bottom container">
         <div class="list-left">
@@ -33,9 +33,19 @@ include 'header.php';
         <div class="left-list">
             <ul>
                 <li class="list-li">
-                    <h3>攀枝花李先生成功签约宏油庄</h3>
-                    <p class="pde">隆先生是在攀枝花宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃冒菜的隆先生是在攀枝花
-                        宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃 </p>
+                    <h3>
+                        <?php
+
+                           the_title();
+                     
+                        ?><!--攀枝花李先生成功签约宏油庄-->
+                    </h3>
+                    <p class="pde">
+
+
+                        隆先生是在攀枝花宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃冒菜的隆先生是在攀枝花
+                        宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃
+                    </p>
                     <span class="spanspan">
                         <a href=""><img src="<?php bloginfo('template_url'); ?>/img/right-point.png" alt=""></a>
                         <p class="tigh-p"> 2016-04-12</p>
@@ -44,11 +54,11 @@ include 'header.php';
             </ul>
             <ul>
                 <li class="list-li">
-                    <h3>攀枝花李先生成功签约宏油庄</h3>
+                    <h3><?php the_title(); ?><!--攀枝花李先生成功签约宏油庄--></h3>
                     <p class="pde">隆先生是在攀枝花宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃冒菜的隆先生是在攀枝花
                         宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃 </p>
                     <span class="spanspan">
-                       <a href=""><img <?php bloginfo('template_url'); ?>/src="img/right-point.png" alt=""></a>
+                       <a href=""><img src="<?php bloginfo('template_url'); ?>/img/right-point.png" alt=""></a>
                         <p class="tigh-p">2016-04-12</p>
             </span>
                 </li>
