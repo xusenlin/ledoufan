@@ -77,5 +77,5 @@ $slugs = is_page() ? get_post($post->ID, ARRAY_A)['post_name'] : '';
 $category = get_categories();
 $categoryNameToId = array();
 foreach ($category as $item){
-    $categoryNameToId[$item->name] = $item->term_id;
+    $categoryNameToId[trim($item->name)] = $item->term_id;
 }
