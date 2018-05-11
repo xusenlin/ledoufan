@@ -1,4 +1,9 @@
 <?php
+/*
+Template Name:关于我们
+*/
+?>
+<?php
 include 'header.php';
 ?>
 <div class="contact">
