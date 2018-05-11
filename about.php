@@ -25,19 +25,19 @@ include 'header.php';
                        </a></li>
                    <li><a href="#">
             <span>
-                <span>公司简介</span>
+                <span>文化理念</span>
                 <strong></strong>
             </span>
                        </a></li>
                    <li><a href="#">
             <span>
-                <span>公司简介</span>
+                <span>资质荣誉</span>
                 <strong></strong>
             </span>
                        </a></li>
                    <li><a href="#">
             <span>
-                <span>公司简介</span>
+                <span>公司发展历程</span>
                 <strong></strong>
             </span>
                        </a></li>
@@ -51,11 +51,17 @@ include 'header.php';
                <ul class="center-list">
                    <li><a href="#">
             <span>
-                <span>公司简介</span>
+                <span>公司动态</span>
                 <strong></strong>
             </span>
                        </a></li>
                    <li><a href="#">
+            <span>
+                <span>行业动态</span>
+                <strong></strong>
+            </span>
+                       </a></li>
+                  <!-- <li><a href="#">
             <span>
                 <span>公司简介</span>
                 <strong></strong>
@@ -66,13 +72,7 @@ include 'header.php';
                 <span>公司简介</span>
                 <strong></strong>
             </span>
-                       </a></li>
-                   <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                       </a></li>
+                       </a></li>-->
                </ul>
 
 
@@ -95,11 +95,12 @@ include 'header.php';
                    </ul>
                </div>
            </div><!--about-center-left 结束-->
+
            <div class="about-center-right">
                <div class="center-top about-right-title">
                     <ul class="right-ul">
-                        <li><a href="javascript:">首页<span><img src="img/about-right-pic.png" alt=""></span></a></li>
-                        <li><a href="javascript:">关于我们<span><img src="img/about-right-pic.png" alt=""></span></a></li>
+                        <li><a href="javascript:">首页<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a></li>
+                        <li><a href="javascript:">关于我们<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a></li>
                         <li><a href="javascript:">展示公司介绍</a></li>
                     </ul>
                </div><!--about-right-title 结束-->
