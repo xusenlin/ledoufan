@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="css/base.css" type="text/css" rel="stylesheet">
-    <link href="css/common.css" type="text/css" rel="stylesheet">
-    <link href="./style.css" type="text/css" rel="stylesheet">
-    <script src="./js/jquery.min.js"></script>
+    <link href="<?php bloginfo('template_url'); ?>/css/base.css" type="text/css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/css/common.css" type="text/css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" rel="stylesheet">
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
 </head>
 <body>
 
@@ -75,6 +75,6 @@
     </div>
 </header>
 <div class="top">
-    <img src="img/top-img.jpg">
+    <img src="<?php bloginfo('template_url'); ?>/img/top-img.jpg">
     <div class="top-item">欢迎来到乐豆坊食品有限公司</div>
 </div>
