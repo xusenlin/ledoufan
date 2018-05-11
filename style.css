@@ -201,7 +201,7 @@ margin: 20px 0 0 0;
     z-index: 20;
     float: right;
     margin-right: 56px;
-    background: url("../img/about-right-photo.png");
+    background: url("./img/about-right-photo.png");
 }
 .about .about-photo .side-a{
     margin-top: 4px;

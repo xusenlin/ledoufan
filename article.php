@@ -17,18 +17,19 @@ include 'header.php';
             <div class="article-content-right-right">
 <!--                <span class="">首页》关于我们》公司展示</span>-->
                 <ul>
-                    <li>首页<span><img src="img/about-right-pic.png" alt=""></span></li>
-                    <li>关于我们<span><img src="img/about-right-pic.png" alt=""></span></li>
-                    <li>展示公司介绍</li>
+                    <li>首页<span>  <img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png"></span></li>
+                    <li>新闻资讯<span> <img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png"></span></li>
+                    <li>公司动态</li>
                 </ul>
 
             </div></div>
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
-                    <img src="img/article-content-right-content-top.jpg" />
+
+                    <img src="<?php bloginfo('template_url'); ?>/img/article-content-right-content-top.jpg">
                 </div>
                 <div class="article-content-right-content-bottom">
-
+                    <p style="float: right;">2018.01.1101</p>
                     <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>
 
                     <a href="">[查看详情]</a>
@@ -37,10 +38,10 @@ include 'header.php';
             </div>
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
-                    <img src="img/article-content-right-content-top.jpg" />
+                    <img src="<?php bloginfo('template_url'); ?>/img/article-content-right-content-top.jpg">
                 </div>
                 <div class="article-content-right-content-bottom">
-                    <p style="float: right;">2018.01.01</p>
+                    <p style="float: right;">2018.01.1101</p>
                     <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>
                     <a href="">[查看详情]</a>
                 </div>
@@ -48,7 +49,7 @@ include 'header.php';
             </div>
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
-                    <img src="img/article-content-right-content-top.jpg" />
+                    <img src="<?php bloginfo('template_url'); ?>/img/article-content-right-content-top.jpg">
                 </div>
                 <div class="article-content-right-content-bottom">
                     <p style="float: right;">2018.01.01</p>
