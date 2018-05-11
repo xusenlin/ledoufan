@@ -355,7 +355,7 @@ width: 100%;
 .article .article-content-right-content{
   width: 846px;
   height: 480px;
- background: url(../img/article-content-right-content.png)no-repeat 0 360px ;
+ background: url(./img/article-content-right-content.png)no-repeat 0 360px ;
    margin-bottom: 20px;
 
 }

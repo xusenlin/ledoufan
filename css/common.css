@@ -190,7 +190,7 @@ footer .span1{
     z-index: 2;
     /*background:#36d9c9 no-repeat 0 10px;*/
 }
-.center-list li a:hover>span strong{
+.center-list li a:hover>span strong,.center-list li .active  strong{
     display: inline-block;
     top: 40px;
     left: 0;
