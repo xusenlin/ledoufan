@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:关于我们
+Template Name:联系我们
 */
 ?>
 <?php
