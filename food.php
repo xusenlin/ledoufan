@@ -132,6 +132,11 @@ include 'header.php';
     </div>
     <script>
         //Your JAVASCRIPT Code
+        var nav =document.querySelectorAll('#nav a');
+        var url = window.location.href;
+        for(var i=0;i<nav.length;i++){
+            if()
+        }
     </script>
 <?php
 include 'footer.php';

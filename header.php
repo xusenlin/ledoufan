@@ -28,69 +28,98 @@
     <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
 </head>
 <body>
+<?php
+    $siteUrl = get_bloginfo( 'url', 'display' );
+    $navInfo = [
+        ''=>[
+            'title'=>'网站首页',
+            'class'=>'',
+            'child'=>[
+                    ['title'=>'关于我们','class'=>''],
+                    ['title'=>'新闻资讯','class'=>'']
+            ]
+        ],
+        'about'=>[
+            'title'=>'关于我们',
+            'class'=>'',
+            'child'=>[
+                ['title'=>'公司简介','class'=>''],
+                ['title'=>'企业文化','class'=>''],
+                ['title'=>'公司资质','class'=>''],
+                ['title'=>'企业荣誉','class'=>''],
+                ['title'=>'发展历程','class'=>''],
+            ]
+        ],
+        'news'=>[
+            'title'=>'新闻资讯',
+            'class'=>'',
+            'child'=>[
+                ['title'=>'公司动态','class'=>''],
+                ['title'=>'行业动态','class'=>''],
+            ]
+        ],
+        'food'=>[
+            'title'=>'美食文化',
+            'class'=>'',
+            'child'=>[
+                ['title'=>'豆腐美食','class'=>''],
+                ['title'=>'豆腐宴','class'=>''],
+            ]
+        ],
+        'product'=>[
+            'title'=>'公司产品',
+            'class'=>'',
+            'child'=>[
+                ['title'=>'产品展示','class'=>''],
+                ['title'=>'天猫商城','class'=>'icon'],
+            ]
+        ],
+        'hierarchy'=>[
+            'title'=>'溯源体系',
+            'class'=>'ict1',
+            'child'=>[
+                ['title'=>'原产料基地','class'=>''],
+            ]
+        ],
+        'affiliate'=>[
+            'title'=>'连锁加盟',
+            'class'=>'ict2',
+            'child'=>[
+                ['title'=>'连锁加盟','class'=>''],
+            ]
+        ],
+        'contact'=>[
+            'title'=>'联系我们',
+            'class'=>'item ict3',
+            'child'=>[
+                ['title'=>'联系方式','class'=>''],
+                ['title'=>'在线招聘','class'=>''],
+            ]
+        ],
+    ];
+    $slugs = is_page() ? get_post($post->ID, ARRAY_A)['post_name'] : '';
 
+?>
 <header>
     <div class="container header">
         <a href="#" class="header-logo"></a>
-        <ul class="header-nav">
-            <li>
-                <a href="<?php bloginfo('url');?>">网站首页</a>
-                <ul class="header-nav-list">
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">新闻资讯</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="<?php bloginfo('url');?>/about">关于我们</a>
-                <ul class="header-nav-list">
-                    <li><a href="<?php bloginfo('url');?>/about?id=1">公司简介</a></li>
-                    <li><a href="<?php bloginfo('url');?>/about?id=2">企业文化</a></li>
-                    <li><a href="<?php bloginfo('url');?>/about?id=3">公司资质</a></li>
-                    <li><a href="<?php bloginfo('url');?>/about?id=4">企业荣誉</a></li>
-                    <li><a href="<?php bloginfo('url');?>/about?id=5">发展历程</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="<?php bloginfo('url');?>/news">新闻资讯</a>
-                <ul class="header-nav-list">
-                    <li><a href="<?php bloginfo('url');?>/news?id=1">公司动态</a></li>
-                    <li><a href="<?php bloginfo('url');?>/news?id=2">行业动态</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="<?php bloginfo('url');?>/food">美食文化</a>
-                <ul class="header-nav-list">
-                    <li><a href="<?php bloginfo('url');?>/food?id=1">豆腐美食</a></li>
-                    <li><a href="<?php bloginfo('url');?>/food?id=2">豆腐宴</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="<?php bloginfo('url');?>/product">公司产品</a>
-                <ul class="header-nav-list">
-                    <li><a href="<?php bloginfo('url');?>/product?id=1">产品展示</a></li>
-                    <li class="icon"><a href="<?php bloginfo('url');?>/product?id=2">天猫商城</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="<?php bloginfo('url');?>/hierarchy" class="ict1">溯源体系</a>
-                <ul class="header-nav-list">
-                    <li><a href="<?php bloginfo('url');?>/hierarchy?id=1">原产料基地</a></li>
-                </ul>
-            </li>
-
-            <li> <li>
-                <a href="<?php bloginfo('url');?>/affiliate" class="ict2">连锁加盟</a>
-                <ul class="header-nav-list">
-                    <li><a href="<?php bloginfo('url');?>/affiliate?id=1">连锁加盟</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="<?php bloginfo('url');?>/contact" class="item ict3">联系我们</a>
-                <ul class="header-nav-list">
-                    <li><a href="<?php bloginfo('url');?>/contact?id=1">联系方式</a></li>
-                    <li><a href="<?php bloginfo('url');?>/contact?id=2">在线招聘</a></li>
-                </ul>
-            </li>
+        <ul class="header-nav" id="nav">
+            <?php
+            
+                foreach ($navInfo as $k=>$item){
+                    $classActive = $k == $slugs ? " active" : "";
+                    echo '<li><a class="'.$item['class'].$classActive.'" href="'.$siteUrl.'/'.$k.'">'.$item['title'].'</a>';
+                    echo '<ul class="header-nav-list">';
+                    foreach ($item['child'] as $key=>$value){
+                        if($value['class'] == 'icon')
+                            echo '<li class="icon"><a href="'.$siteUrl.'/'.$k.'?id='.$key.'">'.$value['title'].'</a></li>';
+                        else
+                            echo '<li><a href="'.$siteUrl.'/'.$k.'?id='.$key.'">'.$value['title'].'</a></li>';
+                    }
+                    echo '</ul>';
+                    echo '</li>';
+                }
+            ?>
         </ul>
     </div>
 </header>
