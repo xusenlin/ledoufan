@@ -5,7 +5,7 @@
     <title>Title</title>
     <link href="css/base.css" type="text/css" rel="stylesheet">
     <link href="css/common.css" type="text/css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="./style.css" type="text/css" rel="stylesheet">
     <script src="./js/jquery.min.js"></script>
 </head>
 <body>
