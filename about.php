@@ -1,4 +1,10 @@
 <?php
+/*
+Template Name:关于我们（about）
+*/
+?>
+
+<?php
 include 'header.php';
 ?>
 <div class="about">
