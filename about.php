@@ -31,7 +31,7 @@ include 'header.php';
                        </a></li>
                    <li><a href="#">
             <span>
-                <span>资质荣誉</span>
+                <span>企业荣誉</span>
                 <strong></strong>
             </span>
                        </a></li>
@@ -43,7 +43,7 @@ include 'header.php';
                        </a></li>
                </ul>
 
-               <div class="center-top about-bottom about-top">
+               <!--<div class="center-top about-bottom about-top">
                    <span class="item1">新闻咨询</span>
                    <span class="item2"></span>
                    <span class="item3">NEWS</span>
@@ -76,7 +76,7 @@ include 'header.php';
                </ul>
 
 
-               <div class="center-top about-bottom about-top">
+               <!--<div class="center-top about-bottom about-top">
                    <span class="item1">联系我们</span>
                    <span class="item2"></span>
                    <span class="item3">CONTACT US</span>
@@ -93,7 +93,7 @@ include 'header.php';
                        <li>地&emsp;址：</li>
                        <li>网&emsp;址：</li>
                    </ul>
-               </div>
+               </div>-->
            </div><!--about-center-left 结束-->
 
            <div class="about-center-right">
@@ -124,6 +124,20 @@ include 'header.php';
 
 
                <div class="about-new-center"></div>
+
+
+               <!--翻页-->
+               <div style="float: right;width: 300px">
+                   <div class="center-paging clearfloat">
+                       <span class="item"><a href="#">Prev</a></span>
+                       <ul class="center-paging-list">
+                           <li><a class="itemss" href="#">1</a></li>
+                           <li><a href="#">2</a></li>
+                           <li><a href="#">3</a></li>
+                       </ul>
+                       <span class="item"><a href="#">Next</a></span>
+                   </div>
+               </div>
 
 
 
