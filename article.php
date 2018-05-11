@@ -1,4 +1,10 @@
 <?php
+/*
+Template Name:新闻资讯
+*/
+?>
+
+<?php
 include 'header.php';
 ?>
 <div class="article">
