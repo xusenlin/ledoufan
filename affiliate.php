@@ -21,21 +21,7 @@ include 'header.php';
                 <span>连锁加盟</span>
                 <strong></strong>
             </span>
-                        </a></li>
-                    <li><a href="#">
-            <span>
-                <span>联系方式与地址</span>
-                <strong></strong>
-            </span>
-                        </a></li>
-                    <li><a href="#">
-            <span>
-                <span>在线招聘</span>
-                <strong></strong>
-            </span>
-                        </a></li>
                 </ul>
-
             </div>
         </div>
         <div class="container-r">
