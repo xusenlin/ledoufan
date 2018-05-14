@@ -11,16 +11,22 @@ include 'header.php';
         <div class="container-l">
             <div class="con-left fl">
                 <div class="center-top">
-                    <span class="item1">联系我们</span>
+                    <span class="item1">连锁加盟</span>
                     <span class="item2"></span>
                     <span class="item3">CONTACT US</span>
                 </div>
                 <ul class="center-list nav">
-                    <li><a href="#">
+                   <!--<a href="#">
             <span>
                 <span>连锁加盟</span>
                 <strong></strong>
-            </span>
+            </span>-->
+                            <?php
+                            foreach ($navInfo[$slugs]['child'] as $v){
+                                $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                                echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                            }
+                            ?>
                 </ul>
             </div>
         </div>
@@ -38,7 +44,7 @@ include 'header.php';
                 </div>
             </div>
             <div class="container-rb">
-                <div class="container-rb-l"><img src="img/affiliate-a.jpg" alt=""></div>
+                <div class="container-rb-l"><img src="<?php bloginfo('template_url'); ?>/img/affiliate-a.jpg" alt=""></div>
                 <div class="container-rb-z"></div>
                 <div class="container-rb-r">
                     <div class="container-rb-ra">
@@ -72,7 +78,7 @@ include 'header.php';
                 <span>6、市场支持:豆乐坊潘小小豆总部制定统一的市场规划,实施区域保护政策,让投资者能够在本区域范国内享受到庞大市场吸引力的待遇从而轻松经营、快乐钱!</span><br>
                 <span>7、后续服务支持:豆乐坊潘小小豆总部快速高效的服务理念,保证月月有新品</span><br>
             </div>
-            <div class="container-re"><img src="img/affiliate-b.jpg" alt=""></div>
+            <div class="container-re"><img src="<?php bloginfo('template_url'); ?>/img/affiliate-b.jpg" alt=""></div>
             <div class="container-rf">
                 <span>1、品牌支持:针对中国市场,豆乐坊潘小小三商制定立体化的品牌推广战路,全面锁定目标消费群体,为投资者聚敛人气,提高投资者终端经</span><br>
                 <span>2、装修支持:三乐坊潘小小豆以专业的知识指导加店商寻找合适的店铺位置,在签订合作协议后,可提供由设计人员提供店铺设计图并指导装修</span><br>
@@ -86,9 +92,13 @@ include 'header.php';
     </div>
 
 </div>
-<script>
+<!--<script>
     //Your JAVASCRIPT Code
-</script>
+</script>-->
+    <script>
+        var api= '<?php echo $siteUrl; ?>/?json=get_category_posts';
+        //Your JAVASCRIPT Code
+    </script>
 <?php
 include 'footer.php';
 ?>

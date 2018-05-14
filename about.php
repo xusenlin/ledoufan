@@ -7,6 +7,7 @@ Template Name:关于我们（about）
 <?php
 include 'header.php';
 ?>
+    <script src="<?php bloginfo('template_url'); ?>/js/oabout.js"></script>
     <div class="about">
         <div class="container  clearfloat">
             <div class="about-center-box">
@@ -20,7 +21,7 @@ include 'header.php';
                         <?php
                         foreach ($navInfo[$slugs]['child'] as $v){
                             $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                            echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                            echo '<li class="active"><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../about?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                         }
                         ?>
                     </ul>
@@ -29,11 +30,10 @@ include 'header.php';
                 <div class="about-center-right">
                     <div class="center-top about-right-title">
                         <ul class="right-ul">
-                            <li><a href="javascript:">首页<span><img
-                                                src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
+                            <li>
+                                <a href="javascript:">首页<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
                             </li>
-                            <li><a href="javascript:">关于我们<span><img
-                                                src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
+                            <li><a href="javascript:">关于我们<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
                             </li>
                             <li><a href="javascript:">展示公司介绍</a></li>
                         </ul>
@@ -56,10 +56,17 @@ include 'header.php';
                         </div>
                     </div>
 
+                    <div class="bout-centre-content">
+                        <?php
+                        $about=get_posts( ['category'  =>$categoryNameToId[$_GET['tile']]]);
+                        //  echo '<pre>';
+                        //  var_dump($about);
+                        foreach ($about as $v){
+                            echo $v->post_content;
+                        }
 
-                    <div class="about-new-center"></div>
-
-
+                        ?>
+                    </div><!--bout-centre-content 结束-->
                <!--翻页-->
               <div class="page-turning">
                   <div style="float: right;width: 300px">
@@ -75,14 +82,12 @@ include 'header.php';
                   </div>
               </div><!--page-turning 结束-->
 
-
                 </div><!--about-center-right 结束-->
             </div>
         </div><!--container 结束-->
     </div>
     <script>
         var api= '<?php echo $siteUrl; ?>/?json=get_category_posts';
-        //Your JAVASCRIPT Code
     </script>
 <?php
 include 'footer.php';
