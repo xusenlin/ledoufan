@@ -11,7 +11,7 @@ include 'header.php';
         <div class="container-l">
             <div class="con-left fl">
                 <div class="center-top">
-                    <span class="item1">联系我们</span>
+                    <span class="item1">连锁加盟</span>
                     <span class="item2"></span>
                     <span class="item3">CONTACT US</span>
                 </div>
