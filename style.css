@@ -36,7 +36,7 @@
  width: 636px;
  height: 227px;
  float: left;
- margin: 74px 0 0 0px;
+ margin: -160px 0 0 0px;
  font-size: 17px;
  text-indent: 2em;
  line-height: 34px;
@@ -44,7 +44,7 @@
 }
 .index .right-characters .right-point{
  float: left;
- margin: -24px 0 0 564px;
+ margin: 6px 0 0 564px;
 }
 .index .right-characters .about-span1,.about-span2,.about-span3{
  display: inline-block;
@@ -73,7 +73,7 @@
 .index .bottom .left-list ul .list-li{
  width: 720px;
  height: 138px;
- margin: 70px 0 0 23px;
+ margin: 70px 0 0 0px;
 }
 .index .bottom .left-list ul .list-li .spanspan{
  display: inline-block;
@@ -101,7 +101,7 @@ margin: 20px 0 0 0;
 }
 .index .bottom .right-list ul li .imgs1{
  float: right;
- margin:-632px 0 0 0;
+ margin:-280px 0 0 0;
 }
 .index .bottom .right-list ul li .imgs2{
  float: right;
@@ -109,7 +109,7 @@ margin: 20px 0 0 0;
 }
 .index .bottom .right-list ul li .imgs3{
  float: right;
- margin:-183px 0 0 0;
+ margin:100px 0 0 0;
 }
 
 
@@ -383,6 +383,11 @@ width: 100%;
 }
 .article .article-content-left-content-span{
 font-size: 14px;
+}
+
+.article .article-paging{
+
+    display:none;
 }
 .article .your-class {
 
