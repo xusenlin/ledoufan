@@ -12,95 +12,28 @@ include 'header.php';
             <div class="about-center-box">
                 <div class="about-center-left ">
                     <div class="center-top about-bottom">
-                        <span class="item1">关于我们</span>
+                        <span class="item1"><?php print_r($navInfo[$slugs]['title'])?></span>
                         <span class="item2"></span>
-                        <span class="item3">ABOUT US</span>
+                        <span class="item3"><?php echo strtoupper($slugs) ?></span>
                     </div>
                     <ul class="center-list">
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
+                        <?php
+                        foreach ($navInfo[$slugs]['child'] as $v){
+                            $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                            echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                        }
+                        ?>
                     </ul>
 
-                    <div class="center-top about-bottom about-top">
-                        <span class="item1">新闻咨询</span>
-                        <span class="item2"></span>
-                        <span class="item3">NEWS</span>
-                    </div>
-                    <ul class="center-list">
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
-                        <li><a href="#">
-            <span>
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                            </a></li>
-                    </ul>
-
-
-                    <div class="center-top about-bottom about-top">
-                        <span class="item1">联系我们</span>
-                        <span class="item2"></span>
-                        <span class="item3">CONTACT US</span>
-                    </div>
-                    <div class="about-phone">
-                        <h3>镇远乐豆坊食品有限公司</h3>
-                        <ul class="top-icon">
-                            <li>联系人：</li>
-                            <li>座&emsp;机：</li>
-                            <li>传&emsp;真：</li>
-                            <li>手&emsp;机：</li>
-                            <li>Q&emsp;Q： </li>
-                            <li>邮&emsp;箱：</li>
-                            <li>地&emsp;址：</li>
-                            <li>网&emsp;址：</li>
-                        </ul>
-                    </div>
                 </div><!--about-center-left 结束-->
-                <div class="about-center-right">
+                <div class="about-center-right  food-center">
                     <div class="center-top about-right-title">
-                        <ul class="right-ul">
+                        <ul class="right-ul food-ul">
                             <li><a href="javascript:">首页<span><img src="img/about-right-pic.png" alt=""></span></a></li>
+                            <li class="time1">>></li>
                             <li><a href="javascript:">关于我们<span><img src="img/about-right-pic.png" alt=""></span></a></li>
-                            <li><a href="javascript:">展示公司介绍</a></li>
+                            <li class="time1">>></li>
+                            <li><a class="time2" href="javascript:">展示公司介绍</a></li>
                         </ul>
                     </div><!--about-right-title 结束-->
                     <div class="right-top1">
