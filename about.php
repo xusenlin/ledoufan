@@ -7,7 +7,6 @@ Template Name:关于我们（about）
 <?php
 include 'header.php';
 ?>
-    <script src="<?php bloginfo('template_url'); ?>/js/oabout.js"></script>
     <div class="about">
         <div class="container  clearfloat">
             <div class="about-center-box">
@@ -21,7 +20,7 @@ include 'header.php';
                         <?php
                         foreach ($navInfo[$slugs]['child'] as $v){
                             $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                            echo '<li class="active"><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../about?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                            echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../about?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                         }
                         ?>
                     </ul>
@@ -56,16 +55,30 @@ include 'header.php';
                         </div>
                     </div>
 
-                    <div class="bout-centre-content">
-                        <?php
-                        $about=get_posts( ['category'  =>$categoryNameToId[$_GET['tile']]]);
-                        //  echo '<pre>';
-                        //  var_dump($about);
-                        foreach ($about as $v){
-                            echo $v->post_content;
-                        }
+                    <div class="about-centre-content">
+                        <ul class="about-center-ul">
+                            <?php
+                                if (has_post_thumbnail()){
+                                    the_post_thumbnail();
+                                }
+                                //echo '<pre>';
+                                //var_dump(get_posts(['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]));
+                                $about = get_posts(['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]);
+                                foreach ($about as $abt){
+                                    $img_id = get_post_thumbnail_id($abt->ID);
+                                    $img_url = wp_get_attachment_image_src($img_id,'full');
+                                        //echo '<pre>';
+                                        //var_dump($img_url);
+                                    $img_url = $img_url[0];
+                                    echo '<li>
+                                        <img src="'.$img_url.'"/>
+                                        <p>'.$abt->post_content.'</p>
+                                        <h3>'.$abt->post_title.'</h3>
+                                        </li>';
 
-                        ?>
+                                }
+                            ?>
+                        </ul>
                     </div><!--bout-centre-content 结束-->
                <!--翻页-->
               <div class="page-turning">
