@@ -399,8 +399,7 @@ font-size: 14px;
 */
 
 .contact .main {
-    margin-top: 66px;
-    margin-bottom: 720px;
+    margin: 66px auto 120px auto;
 }
 .contact .nav{
     margin-top: 46px;
@@ -425,17 +424,15 @@ font-size: 14px;
     height: 66px;
 }
 .contact #dituContent{
-    margin-top: 46px;
-    margin-bottom: 34px;
+    margin: 46px 0 34px 0;
 }
 .contact .QRcode{
     height: 260px;
     width: 260px;
-    background: url("../img/QRcode.jpg");
+    background: url("img/QRcode.jpg");
 }
 .contact .info-more ul{
-    padding-top: 16px;
-    padding-left: 84px;
+    padding: 16px 0 0 84px;
 }
 .contact .info-more li{
     color: #4b4b4b;
