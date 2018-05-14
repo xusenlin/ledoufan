@@ -7,6 +7,16 @@ Template Name:新闻资讯
 <?php
 include 'header.php';
 ?>
+<div style="width: 1200px ;margin:0 auto ">
+<?php
+
+
+$data=get_posts( ['category'  =>$categoryNameToId['公司动态']]);
+//var_dump($data[0]->post_content);
+
+var_dump(get_posts( ['category'  =>$categoryNameToId['公司动态']]));
+foreach ($data as $TT)
+?></div>
 <div class="article">
 <!--    Your Code-->
 <!--    3.新闻资讯-->
@@ -23,41 +33,53 @@ include 'header.php';
                 </ul>
 
             </div></div>
+<?php
+
+
+$data=get_posts( ['category'  =>$categoryNameToId['公司动态']]);
+//var_dump($data[0]->post_content);
+
+//var_dump(get_posts( ['category'  =>$categoryNameToId['公司动态']]));
+foreach ($data as $TT){
+    ?>
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
 
                     <img src="<?php bloginfo('template_url'); ?>/img/article-content-right-content-top.jpg">
                 </div>
                 <div class="article-content-right-content-bottom">
-                    <p style="float: right;">2018.01.1101</p>
-                    <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>
+                    <p style="float: right;"><?php  print_r($TT->post_date_gmt) ?></>
+                    <p><?php  print_r($TT->post_title) ?></p>
 
                     <a href="">[查看详情]</a>
                 </div>
 
             </div>
-            <div class="article-content-right-content">
-                <div class="article-content-right-content-top">
-                    <img src="<?php bloginfo('template_url'); ?>/img/article-content-right-content-top.jpg">
-                </div>
-                <div class="article-content-right-content-bottom">
-                    <p style="float: right;">2018.01.1101</p>
-                    <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>
-                    <a href="">[查看详情]</a>
-                </div>
-
-            </div>
-            <div class="article-content-right-content">
-                <div class="article-content-right-content-top">
-                    <img src="<?php bloginfo('template_url'); ?>/img/article-content-right-content-top.jpg">
-                </div>
-                <div class="article-content-right-content-bottom">
-                    <p style="float: right;">2018.01.01</p>
-                    <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>
-                    <a href="">[查看详情]</a>
-                </div>
-
-            </div>
+    <?php
+}
+?>
+<!--            <div class="article-content-right-content">-->
+<!--                <div class="article-content-right-content-top">-->
+<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/img/article-content-right-content-top.jpg">-->
+<!--                </div>-->
+<!--                <div class="article-content-right-content-bottom">-->
+<!--                    <p style="float: right;">2018.01.1101</p>-->
+<!--                    <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>-->
+<!--                    <a href="">[查看详情]</a>-->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
+<!--            <div class="article-content-right-content">-->
+<!--                <div class="article-content-right-content-top">-->
+<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/img/article-content-right-content-top.jpg">-->
+<!--                </div>-->
+<!--                <div class="article-content-right-content-bottom">-->
+<!--                    <p style="float: right;">2018.01.01</p>-->
+<!--                    <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>-->
+<!--                    <a href="">[查看详情]</a>-->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
            <div style="float: right;width: 300px"> <div class="center-paging clearfloat">
                    <span class="item"><a href="#">Prev</a></span>
                    <ul class="center-paging-list">
@@ -76,33 +98,40 @@ include 'header.php';
                 <span class="item3">NEWS</span>
             </div>
             <ul class="center-list">
-
                 <?php
-                    $active = $_GET['id'];
 
+                foreach ($navInfo[$slugs]['child'] as $v){
+                    $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                    echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                }
                 ?>
 
-                <li><a href="#">
-            <span class="<?php echo $active == 0 ? 'active':'' ?>">
-                <span>公司简介</span>
-                <strong></strong>
-            </span>
-                    </a></li>
-                <li><a href="#">
-            <span class="<?php echo $active == 1 ? 'active':'' ?>">
-                <span>行业形态</span>
-                <strong></strong>
-            </span>
-                    </a></li>
-            </ul>
+<!--                --><?php
+//                    $active = $_GET['id'];
+//
+//                ?>
+<!---->
+<!--                <li><a href="#">-->
+<!--            <span class="--><?php //echo $active == 0 ? 'active':'' ?><!--">-->
+<!--                <span>公司简介</span>-->
+<!--                <strong></strong>-->
+<!--            </span>-->
+<!--                    </a></li>-->
+<!--                <li><a href="#">-->
+<!--            <span class="--><?php //echo $active == 1 ? 'active':'' ?><!--">-->
+<!--                <span>行业形态</span>-->
+<!--                <strong></strong>-->
+<!--            </span>-->
+<!--                    </a></li>-->
+<!--            </ul>-->
             </div>
 
 
 
 
     </div>
-        $cat=get_category_by_slug($works);
-        wp_list_categories(array("child_of"=>$cat->term_id,
+<!--        $cat=get_category_by_slug($works);-->
+<!--        wp_list_categories(array("child_of"=>$cat->term_id,-->
 
 
     </div>
@@ -113,6 +142,7 @@ include 'header.php';
 
         if(data.status){
             console.log(data);
+
         }
         else {
             alert("请求出错");
