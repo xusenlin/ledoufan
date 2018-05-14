@@ -96,21 +96,15 @@ include 'header.php';
                     </a></li>
             </ul>
             </div>
-
-
-
-
     </div>
         $cat=get_category_by_slug($works);
         wp_list_categories(array("child_of"=>$cat->term_id,
-
 
     </div>
 <script>
     var api= '<?php bloginfo('url'); ?>/?json=get_category_posts';
     var catId = '<?php  echo  $_GET['id']  ?>';
     $.get(api,{id:catId,count:10,page:1},function (data) {
-
         if(data.status){
             console.log(data);
         }
@@ -118,7 +112,6 @@ include 'header.php';
             alert("请求出错");
         }
     },'json');
-
 </script>
 <?php
 include 'footer.php';
