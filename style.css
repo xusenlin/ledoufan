@@ -475,7 +475,24 @@ font-size: 14px;
 .food-ul .time1{
     margin: 0 13px;
 }
-
+.food-new-center{
+    position: relative;
+    width: 860px;
+}
+.food-new-list li img{
+    width: 858px;
+    max-height: 500px;
+}
+.food-new-list li p{
+    margin: 42px 0;
+    font-size: 13px;
+    line-height: 26px;
+    color: #4c4c4c;
+}
+.food-new-center .center-paging{
+    float: right;
+    margin-bottom: 48px;
+}
 /*
 |--------------------------------------------------------------------------
 | hierarchy
