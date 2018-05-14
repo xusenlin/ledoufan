@@ -383,6 +383,11 @@ width: 100%;
 .article .article-content-left-content-span{
 font-size: 14px;
 }
+
+.article .article-paging{
+
+    display:none;
+}
 .article .your-class {
 
 

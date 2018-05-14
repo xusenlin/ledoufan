@@ -7,16 +7,7 @@ Template Name:新闻资讯
 <?php
 include 'header.php';
 ?>
-<div style="width: 1200px ;margin:0 auto ">
-<?php
 
-
-$data=get_posts( ['category'  =>$categoryNameToId['公司动态']]);
-//var_dump($data[0]->post_content);
-
-var_dump(get_posts( ['category'  =>$categoryNameToId['公司动态']]));
-foreach ($data as $TT)
-?></div>
 <div class="article">
 <!--    Your Code-->
 <!--    3.新闻资讯-->
@@ -33,19 +24,40 @@ foreach ($data as $TT)
                 </ul>
 
             </div></div>
-<?php
 
 
-$data=get_posts( ['category'  =>$categoryNameToId['公司动态']]);
-//var_dump($data[0]->post_content);
 
-//var_dump(get_posts( ['category'  =>$categoryNameToId['公司动态']]));
-foreach ($data as $TT){
-    ?>
+
+            <?php
+                    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                        the_post_thumbnail();
+                    }
+
+                    $amoun=get_category($_GET['id'])->count;
+                    $paging=2;
+                    if($_GET['present']){
+                        $present=$_GET['present'];
+                    }else{
+                        $present=0;
+                    }
+//                    print_r($present);
+                    $amoun=ceil($amoun/$paging);
+
+                    $data=get_posts( [ 'category' =>$_GET["id"] ,'numberposts'=> $paging,  'offset'  => $present*$paging]);
+
+                    foreach ($data as $TT){
+                        $img_id = get_post_thumbnail_id($TT->ID);
+                        $img_url = wp_get_attachment_image_src($img_id,'full');
+                        $img_url = $img_url[0];
+//                       echo bloginfo('template_url');
+//                        var_dump($_SERVER['HTTP_HOST'].'/'.$_SERVER['REQUEST_URI']);
+
+                ?>
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
 
-                    <img src="<?php bloginfo('template_url'); ?>/img/article-content-right-content-top.jpg">
+                    <img src="<?php echo $img_url ?>" width="846" height="380">
+
                 </div>
                 <div class="article-content-right-content-bottom">
                     <p style="float: right;"><?php  print_r($TT->post_date_gmt) ?></>
@@ -55,40 +67,28 @@ foreach ($data as $TT){
                 </div>
 
             </div>
-    <?php
+            <?php
 }
 ?>
-<!--            <div class="article-content-right-content">-->
-<!--                <div class="article-content-right-content-top">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/img/article-content-right-content-top.jpg">-->
-<!--                </div>-->
-<!--                <div class="article-content-right-content-bottom">-->
-<!--                    <p style="float: right;">2018.01.1101</p>-->
-<!--                    <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>-->
-<!--                    <a href="">[查看详情]</a>-->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-<!--            <div class="article-content-right-content">-->
-<!--                <div class="article-content-right-content-top">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/img/article-content-right-content-top.jpg">-->
-<!--                </div>-->
-<!--                <div class="article-content-right-content-bottom">-->
-<!--                    <p style="float: right;">2018.01.01</p>-->
-<!--                    <p>贵州五福坊食品有限公司相关领导到公司调研合作</p>-->
-<!--                    <a href="">[查看详情]</a>-->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-           <div style="float: right;width: 300px"> <div class="center-paging clearfloat">
-                   <span class="item"><a href="#">Prev</a></span>
+
+           <div style="float: right;width: 300px">
+               <div class="center-paging clearfloat">
+                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
                    <ul class="center-paging-list">
-                       <li><a class="itemss" href="#">1</a></li>
-                       <li><a href="#">2</a></li>
-                       <li><a href="#">3</a></li>
+                       <?php for($i=0;$i<$amoun;$i++) {
+
+                          $ps= $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.$i;
+                           $classpaging = $i == $present ? "itemss" : "";
+                           ?>
+                       <li class="article-paging " ><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
+                               <?php echo $i+1; ?>
+                           </a></li>
+
+                       <?php } ?>
                    </ul>
-                   <span class="item"><a href="#">Next</a></span>
-               </div></div>
+                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
+               </div>
+           </div>
         </div>
         <div class="article-content-left">
             <div class="article-content-left-content">
@@ -106,42 +106,49 @@ foreach ($data as $TT){
                 }
                 ?>
 
-<!--                --><?php
-//                    $active = $_GET['id'];
-//
-//                ?>
-<!---->
-<!--                <li><a href="#">-->
-<!--            <span class="--><?php //echo $active == 0 ? 'active':'' ?><!--">-->
-<!--                <span>公司简介</span>-->
-<!--                <strong></strong>-->
-<!--            </span>-->
-<!--                    </a></li>-->
-<!--                <li><a href="#">-->
-<!--            <span class="--><?php //echo $active == 1 ? 'active':'' ?><!--">-->
-<!--                <span>行业形态</span>-->
-<!--                <strong></strong>-->
-<!--            </span>-->
-<!--                    </a></li>-->
-<!--            </ul>-->
-            </div>
-    </div>
-<!--        $cat=get_category_by_slug($works);-->
-<!--        wp_list_categories(array("child_of"=>$cat->term_id,-->
 
+
+            </div>
+        </div>
     </div>
 <script>
-    var api= '<?php bloginfo('url'); ?>/?json=get_category_posts';
-    var catId = '<?php  echo  $_GET['id']  ?>';
-    $.get(api,{id:catId,count:10,page:1},function (data) {
-        if(data.status){
-            console.log(data);
+
+
+    window.onload=function () {
+        var paging=document.getElementsByClassName('article-paging');
+        var present=<?pHp echo $present ?>;
+        var amoun=<?pHp echo $amoun ?>
+
+        for (var i = 0; i < paging.length; i++) {
+
+            this.index=i;
+
+            if ( this.index ==present) {
+                    if(this.index>=2){
+                        if(this.index+1==amoun){
+                            paging[this.index-2].style.display='block';
+                            paging[this.index-1].style.display='block';
+                            paging[this.index].style.display='block';
+
+                        }else {
+                            paging[this.index-1].style.display='block';
+                            paging[this.index].style.display='block';
+                            paging[this.index+1].style.display='block';
+                        }
+
+                    }else {
+                        paging[0].style.display='block';
+                        paging[1].style.display='block';
+                        paging[2].style.display='block';
+                    }
+
+
+
+
+            }
 
         }
-        else {
-            alert("请求出错");
-        }
-    },'json');
+    }
 </script>
 <?php
 include 'footer.php';
