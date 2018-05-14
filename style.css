@@ -466,6 +466,15 @@ font-size: 14px;
 .food .your-class {
 
 }
+.food-center .food-ul li a{
+    margin-right: 0;
+}
+.food-center .food-ul li .time2{
+    margin-right: 26px;
+}
+.food-ul .time1{
+    margin: 0 13px;
+}
 
 /*
 |--------------------------------------------------------------------------
