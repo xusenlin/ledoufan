@@ -25,7 +25,13 @@ include 'header.php';
                        </a></li>
                    <li><a href="#">
             <span>
-                <span>文化理念</span>
+                <span>企业文化</span>
+                <strong></strong>
+            </span>
+                       </a></li>
+                   <li><a href="#">
+            <span>
+                <span>公司资质</span>
                 <strong></strong>
             </span>
                        </a></li>
@@ -37,7 +43,7 @@ include 'header.php';
                        </a></li>
                    <li><a href="#">
             <span>
-                <span>公司发展历程</span>
+                <span>发展历程</span>
                 <strong></strong>
             </span>
                        </a></li>
@@ -127,17 +133,19 @@ include 'header.php';
 
 
                <!--翻页-->
-               <div style="float: right;width: 300px">
-                   <div class="center-paging clearfloat">
-                       <span class="item"><a href="#">Prev</a></span>
-                       <ul class="center-paging-list">
-                           <li><a class="itemss" href="#">1</a></li>
-                           <li><a href="#">2</a></li>
-                           <li><a href="#">3</a></li>
-                       </ul>
-                       <span class="item"><a href="#">Next</a></span>
-                   </div>
-               </div>
+              <div class="page-turning">
+                  <div style="float: right;width: 300px">
+                      <div class="center-paging clearfloat">
+                          <span class="item"><a href="#">Prev</a></span>
+                          <ul class="center-paging-list">
+                              <li><a class="itemss" href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                          </ul>
+                          <span class="item"><a href="#">Next</a></span>
+                      </div>
+                  </div>
+              </div><!--page-turning 结束-->
 
 
 

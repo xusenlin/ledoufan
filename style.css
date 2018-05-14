@@ -212,12 +212,14 @@ margin: 20px 0 0 0;
 }
 
 .about-new-center{
-    height: 2000px;
+    height: 1000px;
+}
+.about .page-turning{
+    float: right;
+    width: 300px;
+    margin-bottom: 48px;
 }
 
-.about .your-class {
-
-}
 
 /*
 |--------------------------------------------------------------------------
