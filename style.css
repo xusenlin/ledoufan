@@ -217,6 +217,7 @@ margin: 20px 0 0 0;
 .about .page-turning{
     float: right;
     width: 300px;
+    margin-top: 50px;
     margin-bottom: 48px;
 }
 
@@ -383,6 +384,11 @@ width: 100%;
 .article .article-content-left-content-span{
 font-size: 14px;
 }
+
+.article .article-paging{
+
+    display:none;
+}
 .article .your-class {
 
 
@@ -399,7 +405,7 @@ font-size: 14px;
 */
 
 .contact .main {
-    margin: 66px auto 100px auto;
+    margin: 66px auto 120px auto;
 }
 .contact .nav{
     margin-top: 46px;
@@ -570,7 +576,18 @@ font-size: 14px;
     float: left;
     display: block;
 }
-
+.hierarchy .hierarchy-center-right .picture1{
+    margin-top: 56px;
+}
+.hierarchy .hierarchy-center-right .picture2{
+    margin-bottom: 100px;
+}
+.hierarchy .hierarchy-center-right .character
+{
+    line-height: 2;
+    font-size: 13px;
+    margin: 42px 0;
+}
 
 /*
 |--------------------------------------------------------------------------
