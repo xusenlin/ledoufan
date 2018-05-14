@@ -82,8 +82,6 @@ function pagination($query_string){
 add_theme_support('post-thumbnails');//开启特色图像
 
 
-
-
 add_action('admin_init', 'wpjam_blogroll_settings_api_init');
 function wpjam_blogroll_settings_api_init() {
     add_settings_field('wpjam_blogroll_setting', '友情链接', 'wpjam_blogroll_setting_callback_function', 'reading');

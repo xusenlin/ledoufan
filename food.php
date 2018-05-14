@@ -12,7 +12,7 @@ include 'header.php';
             <div class="about-center-box">
                 <div class="about-center-left ">
                     <div class="center-top about-bottom">
-                        <span class="item1"><?php print_r($navInfo[$slugs]['title'])?></span>
+                        <span class="item1"><?php echo $navInfo[$slugs]['title']?></span>
                         <span class="item2"></span>
                         <span class="item3"><?php echo strtoupper($slugs) ?></span>
                     </div>
@@ -55,8 +55,40 @@ include 'header.php';
                     </div>
 
 
-                    <div class="about-new-center"></div>
+                    <div class="food-new-center">
+                        <ul class="food-new-list">
+                            <?php
+                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                the_post_thumbnail();
+                            }
+//                            echo '<pre>';
+//                            var_dump(get_posts( ['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]));
+                            $food=get_posts( ['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]);
+                            foreach ($food as $v){
+                                $img_id = get_post_thumbnail_id($v->ID);
+                                $img_url = wp_get_attachment_image_src($img_id,'full');
+//                                echo '<pre>';
+//                                var_dump($img_url);
+                                $img_url = $img_url[0];
 
+                                echo '<li>
+                                          <img src="'.$img_url.'"/>
+                                          <p>'.$v->post_excerpt.'</p>
+                                     </li>
+                                ';
+                            }
+                            ?>
+                        </ul>
+                        <div class="center-paging">
+                            <span class="item"><a href="#">Prev</a></span>
+                            <ul class="center-paging-list">
+                                <li><a class="itemss" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+                            <span class="item"><a href="#">Next</a></span>
+                        </div>
+                    </div>
 
 
                 </div><!--about-center-right 结束-->
@@ -65,7 +97,7 @@ include 'header.php';
     </div>
     <script>
         //Your JAVASCRIPT Code
-        var nav =document.querySelectorAll('#nav a');
+        var nav =document.querySelectorAll('center-list a');
         var url = window.location.href;
         for(var i=0;i<nav.length;i++){
             if()
