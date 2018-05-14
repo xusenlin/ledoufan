@@ -217,6 +217,7 @@ margin: 20px 0 0 0;
 .about .page-turning{
     float: right;
     width: 300px;
+    margin-top: 50px;
     margin-bottom: 48px;
 }
 
