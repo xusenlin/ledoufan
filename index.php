@@ -20,7 +20,6 @@ include 'header.php';
             </div>
         </div>
         </div>
-<!---->
 
     <div class="bottom container">
         <div class="list-left">
@@ -30,15 +29,12 @@ include 'header.php';
                         <span class="item3">NEWS</span>
                     </div>
         </div>
+
         <div class="left-list">
             <ul>
                 <li class="list-li">
                     <h3>
-                        <?php
-
-                           the_title();
-                     
-                        ?><!--攀枝花李先生成功签约宏油庄-->
+                       攀枝花李先生成功签约宏油庄
                     </h3>
                     <p class="pde">
 
@@ -54,7 +50,7 @@ include 'header.php';
             </ul>
             <ul>
                 <li class="list-li">
-                    <h3><?php the_title(); ?><!--攀枝花李先生成功签约宏油庄--></h3>
+                    <h3>攀枝花李先生成功签约宏油庄</h3>
                     <p class="pde">隆先生是在攀枝花宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃冒菜的隆先生是在攀枝花
                         宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃 </p>
                     <span class="spanspan">
@@ -65,11 +61,7 @@ include 'header.php';
             </ul>
             <ul>
                 <li class="list-li">
-                    <h3>  <?php
-
-                        the_title();
-
-                        ?><!--攀枝花李先生成功签约宏油庄--></h3>
+                    <h3>攀枝花李先生成功签约宏油庄</h3>
                     <p class="pde">隆先生是在攀枝花宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃冒菜的隆先生是在攀枝花
                         宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃 </p>
                     <span class="spanspan">
@@ -80,6 +72,16 @@ include 'header.php';
             </ul>
 
         </div>
+        <?php
+//        var_dump(get_the_category($categoryNameToId['新闻资讯']));
+//        var_dump(wp_list_categories('include='.$categoryNameToId['新闻资讯']));
+
+        
+
+        var_dump(get_posts( ['category'  =>$categoryNameToId['新闻资讯']]));
+
+        ?>
+
         <div class="right-list">
 
             <ul>
@@ -95,7 +97,7 @@ include 'header.php';
     </div>
 </div>
 <script>
-    //Your JAVASCRIPT Code
+
 </script>
 <?php
 include 'footer.php';
