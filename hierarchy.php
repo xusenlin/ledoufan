@@ -25,25 +25,7 @@ include 'header.php';
                 </ul>
 
 
-                <div class="center-top hierarchy-bottom hierarchy-top">
-                    <span class="item1">联系我们</span>
-                    <span class="item2"></span>
-                    <span class="item3">CONTACT US</span>
-                </div>
-                <div class="hierarchy-phone">
-                    <h3>镇远乐豆坊食品有限公司</h3>
-                    <ul class="top-icon">
-                        <li>联系人：</li>
-                        <li>座&emsp;机：</li>
-                        <li>传&emsp;真：</li>
-                        <li>手&emsp;机：</li>
-                        <li>Q&emsp;Q： </li>
-                        <li>邮&emsp;箱：</li>
-                        <li>地&emsp;址：</li>
-                        <li>网&emsp;址：</li>
-                    </ul>
-                </div>
-            </div>
+
 
             <div class="hierarchy-center-right">
                 <div class="center-top hierarchy-right-title">

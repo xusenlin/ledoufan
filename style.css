@@ -495,25 +495,7 @@ font-size: 14px;
 .hierarchy-bottom{
     margin-bottom: 30px;
 }
-.hierarchy-top{
-    margin-top: 46px;
-}
-.hierarchy-phone{
-    color: #535353;
-    margin-left: 20px;
-}
-.hierarchy .about-phone>h3{
-    font-size: 22px;
-    font-weight: bold;
-}
-.hierarchy .about-phone .top-icon>li{
-    font-size: 16px;
-    line-height: 1.8;
-    display: block;
-}
-.hierarchy .top-icon{
-    margin-top: 16px;
-}
+
 .hierarchy-center-right{
     width: 860px;
     float: right;
