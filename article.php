@@ -76,14 +76,20 @@ include 'header.php';
                 <span class="item3">NEWS</span>
             </div>
             <ul class="center-list">
+
+                <?php
+                    $active = $_GET['id'];
+
+                ?>
+
                 <li><a href="#">
-            <span>
+            <span class="<?php echo $active == 0 ? 'active':'' ?>">
                 <span>公司简介</span>
                 <strong></strong>
             </span>
                     </a></li>
                 <li><a href="#">
-            <span>
+            <span class="<?php echo $active == 1 ? 'active':'' ?>">
                 <span>行业形态</span>
                 <strong></strong>
             </span>
@@ -91,70 +97,28 @@ include 'header.php';
             </ul>
             </div>
 
-            <div class="article-content-left-content">
-                <div class="center-top  article-content-left-div">
-                    <span class="item1">关于我们</span>
-                    <span class="item2"></span>
-                    <span class="item3">ABOUT US</span>
-                </div>
-
-                <ul class="center-list">
-                    <li><a href="#">
-            <span>
-                <span>展示公司简介</span>
-                <strong></strong>
-            </span>
-                        </a></li>
-                    <li><a href="#">
-            <span>
-                <span>文化理念</span>
-                <strong></strong>
-            </span>
-                        </a></li>
-                    <li><a href="#">
-            <span>
-                <span>资质荣誉</span>
-                <strong></strong>
-            </span>
-                        </a></li>
-                    <li><a href="#">
-            <span>
-                <span>公司发展历程</span>
-                <strong></strong>
-            </span>
-                        </a></li>
-                </ul>
-            </div>
-            <div class="article-content-left-content">
-
-                <div class="center-top  article-content-left-div ">
-                    <span class="item1">联系我们</span>
-                    <span class="item2"></span>
-                    <span class="item3">CONTACT US</span>
-                </div>
-
-                <div >
-                    <h3>镇远乐豆坊食品有限公司</h3>
-                    <ul class="article-content-left-content-span">
-                        <li><span >联系人</span>：     <span></span></li>
-                        <li><span >座&emsp;机</span>：<span></span></li>
-                        <li><span >传&emsp;真</span>：<span></span></li>
-                        <li><span >手&emsp;机</span>：<span></span></li>
-                        <li><span >Q&emsp;Q  </span>：<span></span></li>
-                        <li><span >邮&emsp;箱</span>：<span></span></li>
-                        <li><span >地&emsp;址</span>：<span></span></li>
-                        <li><span >网&emsp;址</span>：<span></span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
 
 
     </div>
-</div>
+        $cat=get_category_by_slug($works);
+        wp_list_categories(array("child_of"=>$cat->term_id,
+
+
+    </div>
 <script>
-    //Your JAVASCRIPT Code
+    var api= '<?php bloginfo('url'); ?>/?json=get_category_posts';
+    var catId = '<?php  echo  $_GET['id']  ?>';
+    $.get(api,{id:catId,count:10,page:1},function (data) {
+
+        if(data.status){
+            console.log(data);
+        }
+        else {
+            alert("请求出错");
+        }
+    },'json');
+
 </script>
 <?php
 include 'footer.php';

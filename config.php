@@ -76,6 +76,8 @@ $navInfo = [
 $slugs = is_page() ? get_post($post->ID, ARRAY_A)['post_name'] : '';
 $category = get_categories();
 $categoryNameToId = array();
+$categoryIdToName = array();
 foreach ($category as $item){
     $categoryNameToId[trim($item->name)] = $item->term_id;
+    $categoryIdToName[$item->term_id] = trim($item->name);
 }

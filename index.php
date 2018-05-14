@@ -65,7 +65,11 @@ include 'header.php';
             </ul>
             <ul>
                 <li class="list-li">
-                    <h3>攀枝花李先生成功签约宏油庄</h3>
+                    <h3>  <?php
+
+                        the_title();
+
+                        ?><!--攀枝花李先生成功签约宏油庄--></h3>
                     <p class="pde">隆先生是在攀枝花宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃冒菜的隆先生是在攀枝花
                         宏油庄冒菜店，经常吃冒菜的冒菜店，经常吃 </p>
                     <span class="spanspan">
@@ -77,6 +81,7 @@ include 'header.php';
 
         </div>
         <div class="right-list">
+
             <ul>
                 <li><img class="imgs1" src="<?php bloginfo('template_url'); ?>/img/list-right1.png" alt=""></li>
             </ul>
