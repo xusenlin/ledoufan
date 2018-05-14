@@ -16,14 +16,21 @@ include 'header.php';
                 <span class="item3">CONTACTUS</span>
             </div>
             <ul class="center-list">
-                <li><a href="#">
+                <?php
+
+                foreach ($navInfo[$slugs]['child'] as $v){
+                    $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                    echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                }
+                ?>
+                <!--<li><a href="#">
             <span>
                 <span>连锁加盟</span>
                 <strong></strong>
             </span>
                     </a></li>
                 <li><a href="#">联系方式和地址</a></li>
-                <li><a href="#">在线招聘</a></li>
+                <li><a href="#">在线招聘</a></li>-->
             </ul>
         </div>
         <div class="rb fr ">
