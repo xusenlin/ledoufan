@@ -108,7 +108,7 @@ include 'header.php';
     </div>
 <script>
     var api= '<?php bloginfo('url'); ?>/?json=get_category_posts';
-    var catId = '<?php  get_category_by_slug('gsdt')->term_id  ?>';
+    var catId = '<?php  echo  $_GET['id']  ?>';
     $.get(api,{id:catId,count:10,page:1},function (data) {
 
         if(data.status){

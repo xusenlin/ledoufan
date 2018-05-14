@@ -41,9 +41,9 @@
                     echo '<ul class="header-nav-list">';
                     foreach ($item['child'] as $key=>$value){
                         if($value['class'] == 'icon')
-                            echo '<li class="icon"><a href="'.$siteUrl.'/'.$k.'?id='.$key.'">'.$value['title'].'</a></li>';
+                            echo '<li class="icon"><a href="'.$siteUrl.'/'.$k.'?id='.$categoryNameToId[$value['title']].'">'.$value['title'].'</a></li>';
                         else
-                            echo '<li><a href="'.$siteUrl.'/'.$k.'?id='.$key.'">'.$value['title'].'</a></li>';
+                            echo '<li><a href="'.$siteUrl.'/'.$k.'?id='.$categoryNameToId[$value['title']].'">'.$value['title'].'</a></li>';
                     }
                     echo '</ul>';
                     echo '</li>';
