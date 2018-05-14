@@ -574,7 +574,16 @@ font-size: 14px;
     display: block;
 }
 .hierarchy .hierarchy-center-right .picture1{
-    background: url("img/1.png");
+    margin-top: 56px;
+}
+.hierarchy .hierarchy-center-right .picture2{
+    margin-bottom: 100px;
+}
+.hierarchy .hierarchy-center-right .character
+{
+    line-height: 2;
+    font-size: 13px;
+    margin: 42px 0;
 }
 
 /*
