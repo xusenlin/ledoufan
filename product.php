@@ -70,7 +70,7 @@ include 'header.php';
 
                <div class="product_food_list_box" style="position:relative ">
 
-                            <img src="<?php echo $img_url ?> "width="100%" height="100%">
+                            <img src="<?php echo $img_url ?>" width="100%" height="100%">
                            <span style="position: absolute;top:288px;left:0px"><a href=""><?php print_r($TT->post_title);  ?></a></span>
 
                </div>
@@ -82,27 +82,60 @@ include 'header.php';
        </div>
        <div class="right_btn_page">
                <div class="center-paging clearfloat">
-                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
+                   <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present=0'; ?>">Prev</a></span>
                    <ul class="center-paging-list">
                        <?php for($i=0;$i<$amoun;$i++) {
 
-                           $ps= $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.$i;
+                           $ps= $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present='.$i;
                            $classpaging = $i == $present ? "itemss" : "";
                            ?>
-                           <li class="article-paging " ><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
+                           <li class="food-paging"><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
                                    <?php echo $i+1; ?>
                                </a></li>
-
                        <?php } ?>
                    </ul>
-                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
+                   <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present='.($amoun-1) ?>">Next</a></span>
                </div>
            <br>
        </div>
    </div>
 </div>
 <script>
+    var paging=document.getElementsByClassName('food-paging');
+    var present=<?pHp echo $present ?>;
+    var amoun=<?pHp echo $amoun ?>;
+    var index=0;
+    for (var k = 0; k < paging.length; k++) {
+        paging[k].style.display="none";
+    }
+    for (var i = 0; i < paging.length; i++) {
 
+        index=i;
+
+        if ( index ==present) {
+            if(index>=2){
+                if(index+1==amoun){
+                    paging[index-2].style.display='block';
+                    paging[index-1].style.display='block';
+                    paging[index].style.display='block';
+                    paging[index].style.marginRight='14px';
+
+                }else {
+                    paging[index-1].style.display='block';
+                    paging[index].style.display='block';
+                    paging[index+1].style.display='block';
+                    paging[index+1].style.marginRight='14px';
+
+                }
+
+            }else {
+                paging[0].style.display='block';
+                paging[1].style.display='block';
+                paging[2].style.display='block';
+                paging[2].style.marginRight='14px';
+            }
+        }
+    }
 
 </script>
 <?php
