@@ -82,7 +82,8 @@ include 'header.php';
 
            <div style="float: right;width: 300px">
                <div class="center-paging clearfloat">
-                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
+                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
+
                    <ul class="center-paging-list">
                        <?php for($i=0;$i<$amoun;$i++) {
 
@@ -128,40 +129,42 @@ include 'header.php';
 <script>
 
 
+window.onload=function () {
+    var paging=document.getElementsByClassName('article-paging');
+    var present=<?pHp echo $present ?>;
+    var amoun=<?pHp echo $amoun ?>
 
-        var paging=document.getElementsByClassName('article-paging');
-        var present=<?pHp echo $present ?>;
-        var amoun=<?pHp echo $amoun ?>
+    for (var i = 0; i < paging.length; i++) {
 
-        for (var i = 0; i < paging.length; i++) {
+        this.index=i;
 
-            this.index=i;
+        if ( this.index ==present) {
+            if(this.index>=2){
+                if(this.index+1==amoun){
+                    paging[this.index-2].style.display='block';
+                    paging[this.index-1].style.display='block';
+                    paging[this.index].style.display='block';
 
-            if ( this.index ==present) {
-                    if(this.index>=2){
-                        if(this.index+1==amoun){
-                            paging[this.index-2].style.display='block';
-                            paging[this.index-1].style.display='block';
-                            paging[this.index].style.display='block';
+                }else {
+                    paging[this.index-1].style.display='block';
+                    paging[this.index].style.display='block';
+                    paging[this.index+1].style.display='block';
+                }
 
-                        }else {
-                            paging[this.index-1].style.display='block';
-                            paging[this.index].style.display='block';
-                            paging[this.index+1].style.display='block';
-                        }
-
-                    }else {
-                        paging[0].style.display='block';
-                        paging[1].style.display='block';
-                        paging[2].style.display='block';
-                    }
-
-
-
-
+            }else {
+                paging[0].style.display='block';
+                paging[1].style.display='block';
+                paging[2].style.display='block';
             }
 
+
+
+
         }
+
+    }
+}
+
 
 </script>
 <?php

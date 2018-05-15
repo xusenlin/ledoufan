@@ -2,26 +2,35 @@
 include 'header.php';
 $post = get_post($_POST['p']);
 $time=explode(' ',$post->post_date_gmt);
-var_dump($post);
+
+//print_r($navInfo);
 ?>
 <div class="about">
     <div class="container  clearfloat">
         <div class="about-center-box">
-            <div class="about-center-left ">
+            <div class="about-center-left1 ">
+                <?php
+                $keyy=array_keys($navInfo);
+//                var_dump($keyy);
+                $i=0;
+                foreach ($navInfo as $ss){
+                ?>
                 <div class="center-top about-bottom">
-                    <span class="item1">关于我们</span>
+                    <span class="item1">  <?php  echo $ss['title'];?></span>
                     <span class="item2"></span>
-                    <span class="item3">ABOUT US</span>
+                    <span class="item3"><?php echo $keyy[$i]; ?></span>
                 </div>
                 <ul class="center-list">
                     <?php
-                    foreach ($navInfo[$slugs]['child'] as $v){
-                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                    foreach ($ss['child'] as $v){
+
                         echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                     }
                     ?>
                 </ul>
-            </div><!--about-center-left 结束-->
+                <?php  $i++;} ?>
+            </div>
+            <!--about-center-left 结束-->
 
             <div class="about-center-right">
                 <div class="center-top about-right-title">
@@ -53,12 +62,12 @@ var_dump($post);
                     </div>
                 </div>
 
-                <div class="about-new-center">
+                <div class="about-new-details">
                  <h1><?php echo $post->post_title;
                   ?></h1>
                     <h3><?php echo $post->post_excerpt;
                         ?></h3>
-                    <p><?php echo $post->post_content;
+                    <p class="about-new-center-details"><?php echo $post->post_content;
                         ?></p>
 
                 </div>

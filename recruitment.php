@@ -19,7 +19,7 @@ include 'header.php';
                 <?php
                 foreach ($navInfo[$slugs]['child'] as $v){
                     $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                    echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                    echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                 }
                 ?>
                 <!--<li><a href="#">
