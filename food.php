@@ -81,9 +81,10 @@ include 'header.php';
 //                                var_dump($img_url);
                                 $img_url = $img_url[0];
 
-                                echo '<li>
+                                echo '<li><a href="'.$siteUrl.'/?p='.$v->ID.'">
                                           <img src="'.$img_url.'"/>
                                           <p>'.$v->post_excerpt.'</p>
+                                          </a>
                                      </li>
                                 ';
                             }
@@ -97,7 +98,7 @@ include 'header.php';
                                     $ps= $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present='.$i;
                                     $classpaging = $i == $present ? "itemss" : "";
                                     ?>
-                                    <li class="food-paging " ><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
+                                    <li class="food-paging"><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
                                             <?php echo $i+1; ?>
                                         </a></li>
                                 <?php } ?>
@@ -113,42 +114,42 @@ include 'header.php';
     </div>
     <script>
         //Your JAVASCRIPT Code
-        var nav =document.querySelectorAll('center-list a');
-        var url = window.location.href;
-        for(var i=0;i<nav.length;i++){
-            if()
-        }
-        window.onload=function () {
             var paging=document.getElementsByClassName('food-paging');
             var present=<?pHp echo $present ?>;
-            var amoun=<?pHp echo $amoun ?>
-
+            var amoun=<?pHp echo $amoun ?>;
+            var index=0;
+            for (var k = 0; k < paging.length; k++) {
+                paging[k].style.display="none";
+            }
             for (var i = 0; i < paging.length; i++) {
 
-                this.index=i;
+                index=i;
 
-                if ( this.index ==present) {
-                    if(this.index>=2){
-                        if(this.index+1==amoun){
-                            paging[this.index-2].style.display='block';
-                            paging[this.index-1].style.display='block';
-                            paging[this.index].style.display='block';
+                if ( index ==present) {
+                    if(index>=2){
+                        if(index+1==amoun){
+                            paging[index-2].style.display='block';
+                            paging[index-1].style.display='block';
+                            paging[index].style.display='block';
+                            paging[index].style.marginRight='14px';
 
                         }else {
-                            paging[this.index-1].style.display='block';
-                            paging[this.index].style.display='block';
-                            paging[this.index+1].style.display='block';
+                            paging[index-1].style.display='block';
+                            paging[index].style.display='block';
+                            paging[index+1].style.display='block';
+                            paging[index+1].style.marginRight='14px';
+
                         }
 
                     }else {
                         paging[0].style.display='block';
                         paging[1].style.display='block';
                         paging[2].style.display='block';
+                        paging[2].style.marginRight='14px';
                     }
                 }
 
             }
-        }
     </script>
 <?php
 include 'footer.php';
