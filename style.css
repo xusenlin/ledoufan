@@ -1,0 +1,832 @@
+/*
+|--------------------------------------------------------------------------
+| index
+|--------------------------------------------------------------------------
+*/
+
+/*首页样式*/
+.index .about-us{
+ width: 100%;
+ height: 580px;
+ background: #e9fbf9;
+}
+.index .left-img{
+ width: 467px;
+ height: 413px;
+ float: left;
+ margin: 96px auto;
+}
+.index .left-img .imgsd{
+    width: 464px;
+    height: 367px;
+}
+
+.index .right-characters{
+ float: left;
+ width: 638px;
+ height: 413px;
+ height: 413px;
+ margin: 96px 0 0 95px;
+}
+
+.index .right-characters-top{
+ background: none;
+ margin: 0 0 0 398px;
+}
+.index .right-characters-top .item1{
+ color: #4c4c4c;
+}
+.index .right-characters .conten-p{
+ width: 636px;
+ height: 227px;
+ float: left;
+ font-size: 17px;
+ text-indent: 2em;
+ line-height: 34px;
+ overflow: hidden;
+ color: #565656;
+ margin-top: 60px;
+}
+.index .right-characters .right-point{
+ float: left;
+ margin: 6px 0 0 564px;
+}
+.index .right-characters .about-span1,.about-span2,.about-span3{
+ display: inline-block;
+}
+
+
+.index .right-characters .about-span1{
+ margin: 0 0 0 0;
+}
+.index .right-characters .about-span2 img{
+ background: #e9fbf9;
+}
+/*首页的下面*/
+.index .bottom{
+ width: 1203px;
+ margin-top: 60px;
+}
+.index .bottom .item1{
+ color: #4c4c4c;
+}
+.index .center-top{
+ background: none;
+}
+.index .bottom .left-list ul .list-li{
+ width: 720px;
+ height: 138px;
+ margin: 70px 0 0 0px;
+}
+/*返工的*/
+/*左边*/
+.new-ul{
+    margin-bottom: 30px;
+}
+
+.index .new-list-left{
+    width: 1196px;
+    height: 212px;
+    margin-top: 45px;
+}
+.index .new-list-left .left{
+    float: left;
+    width: 760px;
+    height: 212px;
+    margin: 0 0 0 18px;
+}
+.index .new-list-left .left h3{
+    margin: 0 0 0 0;
+    overflow: hidden;
+    color: #535353;
+    font-weight: bold;
+    font-size: 18px;
+}
+.index .new-list-left .sape{
+    height: 27px;
+    width: 760px;
+    margin: 100px 0 0 8px;;
+    float: left;
+}
+.index .new-list-left .left .ppkk{
+    margin:  10px 0 0 0;
+    width: 760px;
+    overflow: hidden;
+    color: #a3a3a3;
+}
+.index .new-list-left .left .ppppp{
+    margin: -23px 0 0 618px;
+}
+.index .new-list-left .left a .img-left{
+}
+/*右边图片*/
+.index .new-list-left .img-right{
+    margin:  -211px 0 0 906px;
+    float: right;
+    width: 290px;
+    height: 210px;
+}
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| about
+|--------------------------------------------------------------------------
+*/
+
+
+.about .about-center-box{
+    margin-top: 60px;
+}
+.about-center-left{
+ float: left;
+ width: 340px;
+}
+.about-bottom{
+    margin-bottom: 30px;
+}
+.about-top{
+    margin-top: 46px;
+}
+.about-phone{
+    color: #535353;
+    margin-left: 20px;
+}
+.about .about-phone>h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+.about .about-phone .top-icon>li{
+    font-size: 16px;
+    line-height: 1.8;
+    display: block;
+}
+.about .top-icon{
+    margin-top: 16px;
+}
+.about-center-right{
+    width: 860px;
+    float: right;
+    position: relative;
+}
+.about-right-title{
+    width: 860px;
+}
+.about .right-ul{
+    float: right;
+    line-height: 70px;
+    margin-right: 28px;
+}
+.about .right-ul>li{
+    float: left;
+}
+.about .right-ul>li>a{
+    color: #8fa3a0;
+    font-size: 17px;
+    margin-right: 26px;
+}
+.about .right-ul>li>a>span>img{
+    margin-left: 6px;
+}
+.about .right-top1{
+    height: 48px;
+    margin-top: 54px;
+    border-top: 2px solid #949494;
+    border-bottom: 2px solid #bcbcbc;
+}
+.about .right-title2{
+    float: left;
+}
+.about .right-title2>li{
+    float: left;
+    font-size: 16px;
+    margin-right: 12px;
+    line-height: 48px;
+}
+.about .right-title2 .about-item{
+    color: #b6383b;
+}
+.about-photo{
+    width: 268px;
+    height: 42px;
+    z-index: 20;
+    float: right;
+    margin-right: 56px;
+    background: url("./img/about-right-photo.png");
+}
+.about .about-photo .side-a{
+    margin-top: 4px;
+    height: 40px;
+    width: 44px;
+    float: left;
+    display: block;
+}
+
+.about-new-center{
+    height: 1000px;
+}
+.about .page-turning{
+    float: right;
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 48px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| affiliate
+|--------------------------------------------------------------------------
+*/
+.affiliate{
+
+}
+.affiliate .container{
+ display: flex;
+ width: 1200px;
+ margin: 0 auto;
+ padding-top: 62px;
+}
+.affiliate .container-l{
+flex: 375px;
+}
+.affiliate .container-r{
+flex: 875px;
+}
+.affiliate .container-ra{
+
+}
+.affiliate .container-ra .center-top{
+    width: 824px;
+    height: 66px;
+    line-height: 66px;
+}
+.affiliate .container-rb{
+ display: flex;
+ height: 272px;
+    padding-top: 35px;
+}
+.affiliate .container-rb-l{
+ flex: 356px;
+}
+.affiliate .container-rb-z{
+ flex: 12px;
+}
+.affiliate .container-rb-r{
+ flex: 457px;
+}
+.affiliate .container-rb-r .container-rb-ra{
+ height: 97px;
+ border-bottom: 1px solid #cac8c9;
+}
+.affiliate .container-rb-r .container-rb-rb{
+height: 175px;
+padding-top: 25px;
+}
+.affiliate .container-rb-r .container-rb-rb span{
+ font-size: 16px;
+}
+.affiliate .container-rc{
+    padding-top: 40px;
+    height:45px ;
+    border-bottom: 4px solid #32d8d6;
+}
+.affiliate .container-rc-a{
+    height:45px;
+    width: 158px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    line-height: 45px;
+    background:#32d8d6;
+}
+.affiliate .container-rc-a span{
+    font-size: 25px;
+    color: white;
+
+}
+
+.affiliate .container-rd{
+    padding-top: 45px;
+    line-height: 30px;
+}
+.affiliate .container-rd span{
+
+    word-spacing: 100px;
+}
+.affiliate .container-re{
+padding-top: 34px;
+}
+.affiliate .container-rf{
+    padding-top: 45px;
+    line-height: 30px;
+}
+.affiliate .container-rg{
+height: 40px;
+}
+.affiliate .your-class {
+
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| article
+|--------------------------------------------------------------------------
+*/
+
+.article .article-content{
+  overflow: hidden;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+}
+.article .article-content-left{
+  width: 290px;
+  float: left;
+
+}
+.article .article-content-left-div{
+    margin-bottom: 25px;
+}
+.article .article-content-left-content{
+width: 100%;
+    margin-bottom: 40px;
+}
+.article .article-content-right-right{
+
+}
+
+.article .article-content-right-right{
+    padding-top: 0;
+    float: right;
+    margin-right: 50px;
+}
+.article .article-content-right{
+  width: 848px;
+  float: right;
+}
+.article .article-content-right-content{
+  width: 846px;
+  height: 480px;
+ background: url(./img/article-content-right-content.png)no-repeat 0 360px ;
+   margin-bottom: 20px;
+
+}
+.article .article-content-right-content-top{
+
+    height: 378px;
+    width: 864px;
+    margin: 0px auto ;
+    background: #ffffff;
+
+
+}
+.article .article-content-right-content-bottom{
+
+    height: 378px;
+    margin:30px 30px 0  ;
+
+}
+.article .article-content-right-right ul li{
+    float: left;
+    line-height: 60px;
+}
+.article .article-content-left-content-span{
+font-size: 14px;
+}
+
+.article .article-paging{
+
+    display:none;
+}
+.article .your-class {
+
+
+}
+
+.article .your-class {
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| contact
+|--------------------------------------------------------------------------
+*/
+
+.contact .main {
+    margin: 66px auto 120px auto;
+}
+.contact .nav{
+    margin-top: 46px;
+}
+.contact .con-right h2{
+    color: #fff;
+    line-height: 66px;
+    padding-left: 30px;
+}
+.contact .con-right a{
+    line-height: 66px;
+    color: #838987;
+}
+.contact .con-right span {
+    padding: 0 6px 0 0;
+    color: #838987;
+    line-height: 71px;
+    letter-spacing: -6px;
+}
+.contact .con-right .center-top{
+    width: 824px;
+    height: 66px;
+}
+.contact #dituContent{
+    margin: 46px 0 34px 0;
+}
+.contact .QRcode{
+    height: 260px;
+    width: 260px;
+    background: url("img/QRcode.jpg");
+}
+.contact .info-more ul{
+    padding: 16px 0 0 84px;
+}
+.contact .info-more li{
+    color: #4b4b4b;
+    line-height: 44px;
+}
+/*
+|--------------------------------------------------------------------------
+| details
+|--------------------------------------------------------------------------
+*/
+.details .your-class {
+
+}
+
+.details .your-class {
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| food
+|--------------------------------------------------------------------------
+*/
+.food .your-class {
+
+}
+
+.food .your-class {
+
+}
+.food-center .food-ul li a{
+    margin-right: 0;
+}
+.food-center .food-ul li .time2{
+    margin-right: 26px;
+}
+.food-ul .time1{
+    margin: 0 13px;
+}
+.food-new-center{
+    position: relative;
+    width: 860px;
+}
+.food-new-list li img{
+    width: 858px;
+    max-height: 500px;
+}
+.food-new-list li p{
+    margin: 42px 0;
+    font-size: 13px;
+    line-height: 26px;
+    color: #4c4c4c;
+}
+.food-new-center .center-paging{
+    float: right;
+    margin-bottom: 48px;
+}
+/*
+|--------------------------------------------------------------------------
+| hierarchy
+|--------------------------------------------------------------------------
+*/
+.hierarchy .your-class {
+
+}
+
+.hierarchy .your-class {
+
+}
+.hierarchy .hierarchy-center-box{
+    margin-top: 60px;
+}
+.hierarchy-center-left{
+    float: left;
+    width: 340px;
+}
+.hierarchy-bottom{
+    margin-bottom: 30px;
+}
+
+.hierarchy-center-right{
+    width: 860px;
+    float: right;
+    position: relative;
+}
+.hierarchy-right-title{
+    width: 860px;
+}
+.hierarchy .right-ul{
+    float: right;
+    line-height: 70px;
+    margin-right: 28px;
+}
+.hierarchy .right-ul>li{
+    float: left;
+}
+.hierarchy .right-ul>li>a{
+    color: #8fa3a0;
+    font-size: 17px;
+    margin-right: 26px;
+}
+.hierarchy .right-ul>li>a>span>img{
+    margin-left: 6px;
+}
+.hierarchy .right-top1{
+    height: 48px;
+    margin-top: 54px;
+    border-top: 2px solid #949494;
+    border-bottom: 2px solid #bcbcbc;
+}
+.hierarchy .right-title2{
+    float: left;
+}
+.hierarchy .right-title2>li{
+    float: left;
+    font-size: 16px;
+    margin-right: 12px;
+    line-height: 48px;
+}
+.hierarchy .right-title2 .hierarchy-item{
+    color: #b6383b;
+}
+.hierarchy-photo{
+    width: 268px;
+    height: 42px;
+    z-index: 20;
+    float: right;
+    margin-right: 56px;
+    background: url("./img/about-right-photo.png");
+}
+.hierarchy .hierarchy-photo .side-a{
+    margin-top: 4px;
+    height: 40px;
+    width: 44px;
+    float: left;
+    display: block;
+}
+.hierarchy .hierarchy-center-right .picture1{
+    margin-top: 56px;
+}
+.hierarchy .hierarchy-center-right .picture2{
+    margin-bottom: 100px;
+}
+.hierarchy .hierarchy-center-right .character
+{
+    line-height: 2;
+    font-size: 13px;
+    margin: 42px 0;
+}
+
+/*
+|--------------------------------------------------------------------------
+| product
+|--------------------------------------------------------------------------
+*/
+
+.product{
+        position: relative;
+        width: 100%;
+        height: 100%;
+}
+.container{position: relative}
+.product_item_left{
+        position: relative;
+        float: left;
+        width: 305px;
+        height: 100%;
+        display: block;
+        box-sizing: border-box;
+        margin-top: 38px;
+}
+
+.product .company-contact  h5{
+       font-size: 20px;
+        color: #535353;
+        font-weight: bold;
+        padding-left: 18px;
+}
+.product .company-contact li{
+        font-size: 15px;
+        color: #535353;
+        padding-left: 18px;
+        line-height: 26px;
+}
+.product .product_item_right {
+        width: 840px;
+        position: relative;
+        float: right;
+        margin-top: 58px;
+}
+.product .product_item_right .item_right_bar{
+        position: relative;
+        width: 100%;
+        height: 80px;
+        border-radius: 8px;
+        background: linear-gradient(to right, #17dadb , rgba(104, 216, 209, 0.8), rgba(50, 153, 111, 0.2),rgba(64,153,124,0));
+}
+.product .product_item_right .contact_style_adr{
+        width: 300px;
+        font-size:25px ;
+        float: left;
+        color: #fff;
+        line-height: 80px;
+        padding-left: 30px;
+}
+.product .product_item_right .front_page{
+        float: right;
+        line-height: 80px;
+        color: #929a98;
+        font-size: 17px;
+        padding-right: 26px;
+}
+.product .product_item_right .front_page a{
+        color: #929a98;
+}
+.product .product_food_list {
+        width: 100%;
+        height: 300px;
+}
+.product .product_food_list img{
+        margin: 0px;
+}
+.product .product_food_list span{
+        width: 245px;
+        text-align: center;
+        display: inline-block;
+}
+.product .product_food_list a{
+
+        font-size: 20px;
+        line-height: 36px;
+        color: #4c4c4c;
+}
+.product .product_food_list_box {
+        width: 245px;
+        height: 278px;
+        float: left;
+        margin: 20px 10px 26px;
+        border: 7px solid #53e7d7;
+        background: #53e7d7;
+        box-shadow: 5px 4px 3px 1px #cfd2d2;
+}
+
+.product .clear_shadow{
+        margin-right: 0px;
+}
+
+.product .right_btn_page{
+        position: relative;
+}
+.product .center-paging{
+       position: relative;
+        display: inline-block;
+        margin: 130px 0 40px 922px;
+}
+        /*
+        |--------------------------------------------------------------------------
+        | recruitment
+        |--------------------------------------------------------------------------
+        */
+.recruitment .your-class {
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| recruitment
+|--------------------------------------------------------------------------
+*/
+
+
+.recruitment .lb{
+}
+.recruitment .lb .center-top{
+    position: relative;
+ margin-top: 63px;
+ width: 286px;
+}
+.recruitment .lb .center-list{
+    position: relative;
+ margin-top: 20px;
+}
+
+
+
+.recruitment .rb{
+    position: relative;
+    width: 826px;
+}
+.recruitment .rb h2{
+    color: #fff;
+    line-height: 66px;
+    padding-left: 30px;
+}
+.recruitment .rb a{
+    line-height: 66px;
+    color: #838987;
+}
+.recruitment .rb span {
+    padding: 0 6px 0 0;
+    color: #838987;
+    line-height: 71px;
+    letter-spacing: -6px;
+}
+.recruitment .rb .center-top{
+    margin-top: 63px;
+    width: 824px;
+    height: 66px;
+}
+.recruitment .rb  .b{
+    position: relative;
+    width: 796px;
+    left: 20px;
+    top: 40px;
+}
+.recruitment .rb  .b .b-top{
+    position: relative;
+    /*width: 490px;*/
+}
+
+
+.recruitment .rb  .b .b-top-post{
+    color: #4c4c4c;
+    margin-bottom: 10px;
+}
+.recruitment .rb  .b .b-c{
+    margin-top: 16px;
+}
+.recruitment .rb  .b .b-c-a{
+    position: relative;
+    background: #def6f3;
+    padding: 1px 8px;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.recruitment .rb  .b .b-d{
+    position: relative;
+    color: #4c4c4c;
+    margin-top: 26px;
+}
+
+.recruitment .rb  .b .b-d-a{
+    margin-right: 16px;
+}
+.recruitment .rb .b-top-site{
+    position: relative;
+    margin-top: 12px;
+}
+.recruitment .rb .b-top-site-a{
+    position: relative;
+    padding-left: 30px;
+    padding-top: 3px;
+}
+.recruitment .rb .b-top-salary{
+    position: absolute;
+    right: 44px;
+    top: 34px;
+    font-size: 32px;
+    color: #f1520c;
+}
+
+.recruitment .rb .b-content{
+    position: relative;
+    margin-top: 52px;
+    color: #4c4c4c;
+    line-height: 3;
+}
+
+.recruitment .rb .run{
+    position: relative;
+    margin-top: 98px;
+    margin-bottom: 100px;
+    width: 796px;
+}
+
