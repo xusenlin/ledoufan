@@ -5,7 +5,7 @@ include 'header.php';
     <div class="about-us">
         <div class="container">
             <div class="left-img">
-                <img src="<?php echo catch_that_image() ?>" alt="">
+                <img src="<?php ?>" alt="">
             </div>
 
             <div class="right-characters">
@@ -14,10 +14,23 @@ include 'header.php';
                     <span class="item2"></span>
                     <span class="item3">ABOUT US</span>
                 </div>
-                <p class="conten-p">
-                    <?php the_excerpt(); ?>
-<!--                    贵州大学明德学院数字传媒系成立于2014年，设有数字媒体艺术、数字媒体艺术、艺术与科技、视觉传达与设计四个专业。围绕贵州大数据贵州创意文化产业，以泰豪创意产业集群为依托平台，以“互联网+文化/艺术/产品”为指导思想示范效应的数字艺术、技术人才培养高地干货黄金客户好几个号结构化即可国家法规环境法规和见过好几个环节赶紧回家都给他凡人歌人控股集团考虑过深刻了解公司考虑到该 我看过图片搜几个登记公司考虑到该。-->
-                </p>
+
+                <?php
+                $args=array(
+                    'cat' => $categoryNameToId['关于我们'],   // 分类ID
+                    'posts_per_page' => 1, // 显示篇数
+                );?>
+                <?php
+                query_posts($args);
+                 if(have_posts()) : while (have_posts()) : the_post();
+                if (has_excerpt()) {?>
+                    <p class="conten-p">
+                          <?php echo $description = get_the_excerpt();?>
+                    </p>
+          <?php  }else {
+                echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 170,"……"); //文章编辑中若无摘要，自定截取文章内容字数做为摘要
+            } ?>
+             <?php endwhile; endif; wp_reset_query(); ?>
 
                 <a href=""><img class="right-point" src="<?php bloginfo('template_url'); ?>/img/right-point.png" alt=""></a>
             </div>
@@ -53,7 +66,7 @@ include 'header.php';
                              <a href="<?php echo $siteUrl;?>/?p=<?php echo $ietm->ID;?>">
                                 <img class="img-left" src="<?php bloginfo('template_url'); ?>/img/right-point.png" alt="">
                             </a>
-                            <p class="ppppp"><?php echo  $ietm->post_date;?></p>
+                            <p class="ppppp"><?php echo  substr($ietm->post_date,0,10);//字符串截取?></p>
                         </div>
                     </div>
                     <img class="img-right" src="<?php ;?>" alt="">
