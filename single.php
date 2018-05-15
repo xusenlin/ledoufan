@@ -3,7 +3,7 @@ include 'header.php';
 $post = get_post($_POST['p']);
 $time=explode(' ',$post->post_date_gmt);
 
-//print_r($navInfo);
+print_r($post);
 ?>
 <div class="about">
     <div class="container  clearfloat">
@@ -12,7 +12,7 @@ $time=explode(' ',$post->post_date_gmt);
                 <?php
                 $keyy=array_keys($navInfo);
 //                var_dump($keyy);
-                $aa=$navInfo[$_GET['new']];
+                $aa=$navInfo[$_GET['tag']];
 //                var_dump($aa);
                 ?>
                 <div class="center-top about-bottom">

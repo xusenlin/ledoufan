@@ -26,7 +26,7 @@ include 'header.php';
                     ?>
                     <?php echo $ietm->post_excerpt;?>
                 </p>
-                <a href="<?php echo $siteUrl;?>/?p=<?php echo $ietm->ID.'&&new='.$slugs; ?>">
+                <a href="<?php echo $siteUrl;?>/?p=<?php echo $ietm->ID.'&&tag='.$slugs; ?>">
                     <img class="right-point" src="<?php bloginfo('template_url'); ?>/img/right-point.png" alt="">
                 </a>
             <?php endforeach;?>
@@ -62,7 +62,7 @@ include 'header.php';
                         </p>
 
                         <div class="sape">
-                             <a href="<?php echo $siteUrl;?>/?p=<?php echo $ietm->ID.'&&new='.$slugs;?>">
+                             <a href="<?php echo $siteUrl;?>/?p=<?php echo $ietm->ID.'&&tag='.$slugs;?>">
                                 <img class="img-left" src="<?php bloginfo('template_url'); ?>/img/right-point.png" alt="">
                             </a>
                             <p class="ppppp"><?php echo  substr($ietm->post_date,0,10);?></p>
