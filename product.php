@@ -46,7 +46,7 @@ include 'header.php';
 
            <div class="product_food_list">
                <?php
-               if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+               if ( has_post_thumbnail() ) {
                    the_post_thumbnail();
                }
 
@@ -81,41 +81,21 @@ include 'header.php';
 
        </div>
        <div class="right_btn_page">
-           <?php
-           //获取页码
-           $page = $_GET['li'];
-           $host = "localhost";
-           $username = "root";
-           $password = "root";
-           $db = "ldf";
-           //连接数据库
-           $conn = mysqli_connect($host,$username,$password);
-           if (!$conn) {
-               echo "数据库连接失败";
-               exit;
-           }else{
-//               echo '链接数据库成功！';
-           }
-           //选择要操作的数据库
-           mysqli_select_db($conn,$wp_posts);
-           //设置数据库编码格式
-           mysqli_query($conn,"SET NAMES UTF8");
-           //编写sql获取分页数据SELECT * FROM 表名 LIMIT 起始位置,显示条数
-           $sql = "select * from wp_posts limit ".($page-1) * 9 .",9 ";
-           //把sql语句传送到数据中
-           $result = mysqli_query($conn,$sql);
-
-
-           ?>
-
                <div class="center-paging clearfloat">
-                   <span class="item"><a href="#">Prev</a></span>
+                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
                    <ul class="center-paging-list">
-                       <li><a class="itemss" href="#">1</a></li>
-                       <li><a href="#">2</a></li>
-                       <li><a href="#">3</a></li>
+                       <?php for($i=0;$i<$amoun;$i++) {
+
+                           $ps= $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.$i;
+                           $classpaging = $i == $present ? "itemss" : "";
+                           ?>
+                           <li class="article-paging " ><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
+                                   <?php echo $i+1; ?>
+                               </a></li>
+
+                       <?php } ?>
                    </ul>
-                   <span class="item"><a href="#">Next</a></span>
+                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
                </div>
            <br>
        </div>

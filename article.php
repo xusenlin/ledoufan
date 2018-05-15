@@ -110,12 +110,14 @@ include 'header.php';
                 <?php
 
                 foreach ($navInfo[$slugs]['child'] as $v){
+
                     $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
 
                     $chaining=$_SERVER['HTTP_HOST'].'/new?id='.$categoryNameToId[$v["title"]];
 
                     echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="'.$chaining.'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                 }
+
                 ?>
 
 
