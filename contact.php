@@ -18,7 +18,7 @@ include 'header.php';
                     <?php
                     foreach ($navInfo[$slugs]['child'] as $v){
                         $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                     }
                     ?>
                 </ul>
@@ -45,10 +45,6 @@ include 'header.php';
             </div>
         </div>
     </div>
-    <script>
-        var api= '<?php echo $siteUrl; ?>/?json=get_category_posts';
-        //Your JAVASCRIPT Code
-    </script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
     <script type="text/javascript">
         //创建和初始化地图函数：
