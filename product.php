@@ -67,7 +67,6 @@ include 'header.php';
                $img_url = $img_url[0];
                ?>
 
-
                        <a href="<?php echo $siteUrl ?>?p=<?php echo $TT->ID ?>" class="product_food_list_box" style="position:relative ">
 
                            <img src="<?php echo $img_url ?>" width="100%" height="100%">
@@ -98,7 +97,7 @@ include 'header.php';
                    <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present='.($amoun-1) ?>">Next</a></span>
                </div>
            <br>
-  
+
    </div>
 </div>
 <script>
