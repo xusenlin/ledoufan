@@ -8,30 +8,28 @@ $time=explode(' ',$post->post_date_gmt);
 <div class="about">
     <div class="container  clearfloat">
         <div class="about-center-box">
-            <div class="about-center-left1 ">
+            <div class="about-center-left1 " style="float: left">
                 <?php
                 $keyy=array_keys($navInfo);
 //                var_dump($keyy);
-                $i=0;
-                foreach ($navInfo as $ss){
+                $aa=$navInfo[$_GET['new']];
+//                var_dump($aa);
                 ?>
                 <div class="center-top about-bottom">
-                    <span class="item1">  <?php  echo $ss['title'];?></span>
+                    <span class="item1">  <?php  echo $aa['title'];?></span>
                     <span class="item2"></span>
-                    <span class="item3"><?php echo $keyy[$i]; ?></span>
+                    <span class="item3"><?php echo $_GET['new']; ?></span>
                 </div>
                 <ul class="center-list">
                     <?php
-                    foreach ($ss['child'] as $v){
+                    foreach ($aa['child'] as $v){
 
                         echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                     }
                     ?>
                 </ul>
-                <?php  $i++;} ?>
             </div>
             <!--about-center-left 结束-->
-
             <div class="about-center-right">
                 <div class="center-top about-right-title">
                     <ul class="right-ul">

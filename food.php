@@ -81,7 +81,7 @@ include 'header.php';
 //                                var_dump($img_url);
                                 $img_url = $img_url[0];
 
-                                echo '<li><a href="'.$siteUrl.'/?p='.$v->ID.'">
+                                echo '<li><a href="'.$siteUrl.'/?p='.$v->ID.'&&new='.$slugs.'">
                                           <img src="'.$img_url.'"/>
                                           <p>'.$v->post_excerpt.'</p>
                                           </a>
