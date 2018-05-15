@@ -20,7 +20,7 @@ include 'header.php';
                         <?php
                         foreach ($navInfo[$slugs]['child'] as $v){
                             $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                            echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                            echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="'.$siteUrl.'/'.$slugs.'?id='.$categoryNameToId[$v['title']].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                         }
                         ?>
                     </ul>
@@ -50,7 +50,6 @@ include 'header.php';
                             <a class="side-a" href="javascript:"></a>
                             <a class="side-a" href="javascript:"></a>
                             <a class="side-a" href="javascript:"></a>
-                            </span>
                         </div>
                     </div>
 
@@ -61,9 +60,20 @@ include 'header.php';
                             if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
                                 the_post_thumbnail();
                             }
+
+                            $amoun=get_category($_GET['id'])->count;
+                            $paging=3;
+                            if($_GET['present']){
+                                $present=$_GET['present'];
+                            }else{
+                                $present=0;
+                            }
+                            //                    print_r($present);
+                            $amoun=ceil($amoun/$paging);
+
 //                            echo '<pre>';
-//                            var_dump(get_posts( ['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]));
-                            $food=get_posts( ['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]);
+//                            var_dump(get_posts( ['category'  =>$_GET['id']]));
+                            $food=get_posts( ['category'  =>$_GET['id'],'numberposts'=> $paging,  'offset'  => $present*$paging]);
                             foreach ($food as $v){
                                 $img_id = get_post_thumbnail_id($v->ID);
                                 $img_url = wp_get_attachment_image_src($img_id,'full');
@@ -80,13 +90,19 @@ include 'header.php';
                             ?>
                         </ul>
                         <div class="center-paging">
-                            <span class="item"><a href="#">Prev</a></span>
+                            <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present=0'; ?>">Prev</a></span>
                             <ul class="center-paging-list">
-                                <li><a class="itemss" href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                                <?php for($i=0;$i<$amoun;$i++) {
+
+                                    $ps= $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present='.$i;
+                                    $classpaging = $i == $present ? "itemss" : "";
+                                    ?>
+                                    <li class="food-paging " ><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
+                                            <?php echo $i+1; ?>
+                                        </a></li>
+                                <?php } ?>
                             </ul>
-                            <span class="item"><a href="#">Next</a></span>
+                            <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present='.($amoun-1) ?>">Next</a></span>
                         </div>
                     </div>
 
@@ -101,6 +117,37 @@ include 'header.php';
         var url = window.location.href;
         for(var i=0;i<nav.length;i++){
             if()
+        }
+        window.onload=function () {
+            var paging=document.getElementsByClassName('food-paging');
+            var present=<?pHp echo $present ?>;
+            var amoun=<?pHp echo $amoun ?>
+
+            for (var i = 0; i < paging.length; i++) {
+
+                this.index=i;
+
+                if ( this.index ==present) {
+                    if(this.index>=2){
+                        if(this.index+1==amoun){
+                            paging[this.index-2].style.display='block';
+                            paging[this.index-1].style.display='block';
+                            paging[this.index].style.display='block';
+
+                        }else {
+                            paging[this.index-1].style.display='block';
+                            paging[this.index].style.display='block';
+                            paging[this.index+1].style.display='block';
+                        }
+
+                    }else {
+                        paging[0].style.display='block';
+                        paging[1].style.display='block';
+                        paging[2].style.display='block';
+                    }
+                }
+
+            }
         }
     </script>
 <?php
