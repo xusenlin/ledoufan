@@ -29,30 +29,30 @@ include 'header.php';
                 <div class="about-center-right  food-center">
                     <div class="center-top about-right-title">
                         <ul class="right-ul food-ul">
-                            <li><a href="javascript:">首页<span><img src="img/about-right-pic.png" alt=""></span></a></li>
-                            <li class="time1">>></li>
-                            <li><a href="javascript:">关于我们<span><img src="img/about-right-pic.png" alt=""></span></a></li>
-                            <li class="time1">>></li>
-                            <li><a class="time2" href="javascript:">展示公司介绍</a></li>
+                            <li><a href="javascript:">首页</a></li>
+                            <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                            <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
+                            <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                            <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
                         </ul>
                     </div><!--about-right-title 结束-->
-                    <div class="right-top1">
-                        <ul class="right-title2">
-                            <li>2018-04-19</li>
-                            <li>11:39:04</li>
-                            <li>中国青年网</li>
-                            <li class="about-item">参与评论0人</li>
-                        </ul>
-                        <div class="about-photo">
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                        </div>
-                    </div>
 
+                    <div class="right-top1" style="border: none;height: 0">
+<!--                        <ul class="right-title2">-->
+<!--                            <li>2018-04-19</li>-->
+<!--                            <li>11:39:04</li>-->
+<!--                            <li>中国青年网</li>-->
+<!--                            <li class="about-item">参与评论0人</li>-->
+<!--                        </ul>-->
+<!--                        <div class="about-photo">-->
+<!--                            <a class="side-a" href="javascript:"></a>-->
+<!--                            <a class="side-a" href="javascript:"></a>-->
+<!--                            <a class="side-a" href="javascript:"></a>-->
+<!--                            <a class="side-a" href="javascript:"></a>-->
+<!--                            <a class="side-a" href="javascript:"></a>-->
+<!--                            <a class="side-a" href="javascript:"></a>-->
+<!--                        </div>-->
+                    </div>
 
                     <div class="food-new-center">
                         <ul class="food-new-list">
@@ -148,7 +148,6 @@ include 'header.php';
                         paging[2].style.marginRight='14px';
                     }
                 }
-
             }
     </script>
 <?php

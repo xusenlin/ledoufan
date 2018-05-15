@@ -18,83 +18,22 @@ include 'header.php';
                </div>
                <br>
                <ul class="center-list">
-                   <li><a href="#">
-                    <span>
-                        <span>豆腐美食系列</span>
-                        <strong></strong>
-                    </span>
-                       </a></li>
-                   <li><a href="#">
-                    <span>
-                        <span>商超系列</span>
-                        <strong></strong>
-                    </span>
-                       </a></li>
-                   <li><a href="#">
-                    <span>
-                        <span>水果系列</span>
-                        <strong></strong>
-                    </span>
-                       </a></li>
-                   <li><a href="#">
-                    <span>
-                        <span>土特产系列</span>
-                        <strong></strong>
-                    </span>
-                       </a></li>
-                   <li><a href="#">
-                    <span>
-                        <span>酸汤系列</span>
-                        <strong></strong>
-                    </span>
-                       </a></li>
+                   <?php
 
-               </ul>
-               <br>
+                   foreach ($navInfo[$slugs]['child'] as $v){
+                       $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                       echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                   }
+                   ?>
 
-               <br>
-               <div class="center-top">
-                   <span class="item1">新闻咨询</span>
-                   <span class="item2"></span>
-                   <span class="item3">NEWS</span>
-               </div>
-               <br>
-               <ul class="center-list">
-                   <li><a href="#">
-                    <span>
-                        <span>公司动态</span>
-                        <strong></strong>
-                    </span>
-                       </a></li>
-                   <li><a href="#">
-                    <span>
-                        <span>行业动态</span>
-                        <strong></strong>
-                    </span>
-                       </a></li>
-               </ul>
-               <ul class="company-contact">
-
-                   <br>
-                   <div class="center-top">
-                       <span class="item1">联系我们</span>
-                       <span class="item2"></span>
-                       <span class="item3">CONTACTUS</span>
-                   </div>
-                   <br>
-
-                   <h5>镇远乐豆坊食品有限公司</h5>
-                   <li>联系人:  <span></span></li>
-                   <li>座    机:<span></span></li>
-                   <li>传    真：<span></span></li>
-                   <li>手    机：<span></span></li>
-                   <li>Q     Q：<span></span></li>
-                   <li>邮    箱：<span></span></li>
-                   <li>地    址：<span></span></li>
-                   <li>网    址：<span></span></li>
-               </ul>
        </div>
        <div class="product_item_right">
+<!--           --><?php
+//           $data=get_posts( ['category'  =>$categoryNameToId['产品展示']]);
+//           echo '<pre>';
+//           print_r($data);
+//
+//           ?>
            <div class="item_right_bar">
                <h2 class="contact_style_adr">联系方式与地址 </h2>
                <div class="front_page"><a href="#">首页</a>
@@ -102,169 +41,103 @@ include 'header.php';
                    <span>&gt;&gt;</span><a href="#">联系方式</a>
                </div>
            </div>
+
+
            <div class="product_food_list">
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
+               <?php
+               if ( has_post_thumbnail() ) {
+                   the_post_thumbnail();
+               }
 
-                           <span><a href="">米豆腐</a></span>
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                       <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
+               $amoun=get_category($_GET['id'])->count;
+               $paging=9;
+               if($_GET['present']){
+                   $present=$_GET['present'];
+               }else{
+                   $present=0;
+               }
+               //                    print_r($present);
+               $amoun=ceil($amoun/$paging);
 
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box clear_shadow">
-                   <ul>
-                       <li>
-                       <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
+               $data=get_posts( [ 'category' =>$_GET["id"] ,'numberposts'=> $paging,  'offset'  => $present*$paging]);
 
-                       </li>
-                   </ul>
-               </div>
+               foreach ($data as $TT){
+               $img_id = get_post_thumbnail_id($TT->ID);
+               $img_url = wp_get_attachment_image_src($img_id,'full');
+               $img_url = $img_url[0];
+               ?>
 
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
 
-                           <span><a href="">米豆腐</a></span>
+                       <a href="<?php echo $siteUrl ?>?p=<?php echo $TT->ID ?>" class="product_food_list_box" style="position:relative ">
 
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
+                           <img src="<?php echo $img_url ?>" width="100%" height="100%">
+                           <span style="position: absolute;top:288px;left:0px"><?php print_r($TT->post_title);  ?></span>
 
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box clear_shadow">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
+                       </a>
 
-                       </li>
-                   </ul>
-               </div>
 
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
+               <?php }  ?>
 
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box clear_shadow">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box clear_shadow">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
-               <div class="product_food_list_box clear_shadow">
-                   <ul>
-                       <li>
-                           <div><img src="img/public_food_pic.png" alt=""></div>
-                           <span><a href="">米豆腐</a></span>
-
-                       </li>
-                   </ul>
-               </div>
            </div>
 
        </div>
-       <div class="right_btn_page">
-           <div class="center-paging clearfloat">
-               <span class="item"><a href="#">Prev</a></span>
-               <ul class="center-paging-list">
-                   <li><a class="itemss" href="#">1</a></li>
-                   <li><a href="#">2</a></li>
-                   <li><a href="#">3</a></li>
-               </ul>
-               <span class="item"><a href="#">Next</a></span>
-           </div>
+
+               <div class="center-paging clearfloat">
+                   <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present=0'; ?>">Prev</a></span>
+                   <ul class="center-paging-list">
+                       <?php for($i=0;$i<$amoun;$i++) {
+
+                           $ps= $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present='.$i;
+                           $classpaging = $i == $present ? "itemss" : "";
+                           ?>
+                           <li class="food-paging"><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
+                                   <?php echo $i+1; ?>
+                               </a></li>
+                       <?php } ?>
+                   </ul>
+                   <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present='.($amoun-1) ?>">Next</a></span>
+               </div>
            <br>
-       </div>
+  
    </div>
 </div>
 <script>
-    //Your JAVASCRIPT Code
+    var paging=document.getElementsByClassName('food-paging');
+    var present=<?pHp echo $present ?>;
+    var amoun=<?pHp echo $amoun ?>;
+    var index=0;
+    for (var k = 0; k < paging.length; k++) {
+        paging[k].style.display="none";
+    }
+    for (var i = 0; i < paging.length; i++) {
+
+        index=i;
+
+        if ( index ==present) {
+            if(index>=2){
+                if(index+1==amoun){
+                    paging[index-2].style.display='block';
+                    paging[index-1].style.display='block';
+                    paging[index].style.display='block';
+                    paging[index].style.marginRight='14px';
+
+                }else {
+                    paging[index-1].style.display='block';
+                    paging[index].style.display='block';
+                    paging[index+1].style.display='block';
+                    paging[index+1].style.marginRight='14px';
+
+                }
+
+            }else {
+                paging[0].style.display='block';
+                paging[1].style.display='block';
+                paging[2].style.display='block';
+                paging[2].style.marginRight='14px';
+            }
+        }
+    }
+
 </script>
 <?php
 include 'footer.php';
