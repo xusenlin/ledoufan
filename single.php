@@ -1,6 +1,8 @@
 <?php
 include 'header.php';
 $post = get_post($_POST['p']);
+$time=explode(' ',$post->post_date_gmt);
+var_dump($post);
 ?>
 <div class="about">
     <div class="container  clearfloat">
@@ -31,12 +33,12 @@ $post = get_post($_POST['p']);
                         </li>
 
                     </ul>
-                </div><!--about-right-title 结束-->
+                </div><!--a bout-right-title 结束-->
 
                 <div class="right-top1">
                     <ul class="right-title2">
-                        <li>2018-04-19</li>
-                        <li>11:39:04</li>
+                        <li><?php echo $time[0]; ?></li>
+                        <li><?php echo $time[1];  ?></li>
 <!--                        <li>中国青年网</li>-->
 <!--                        <li class="about-item">参与评论0人</li>-->
                     </ul>
@@ -51,7 +53,15 @@ $post = get_post($_POST['p']);
                     </div>
                 </div>
 
-                <div class="about-new-center"></div>
+                <div class="about-new-center">
+                 <h1><?php echo $post->post_title;
+                  ?></h1>
+                    <h3><?php echo $post->post_excerpt;
+                        ?></h3>
+                    <p><?php echo $post->post_content;
+                        ?></p>
+
+                </div>
             </div><!--about-center-right 结束-->
         </div>
     </div><!--container 结束-->

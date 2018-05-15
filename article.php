@@ -53,7 +53,7 @@ include 'header.php';
                     $amoun=ceil($amoun/$paging);
 
                     $data=get_posts( [ 'category' =>$_GET["id"] ,'numberposts'=> $paging,  'offset'  => $present*$paging]);
-print_r($data);
+//print_r($data);
                     foreach ($data as $TT){
                         $img_id = get_post_thumbnail_id($TT->ID);
                         $img_url = wp_get_attachment_image_src($img_id,'full');
@@ -160,7 +160,7 @@ print_r($data);
             }
 
         }
- 
+
 </script>
 <?php
 include 'footer.php';
