@@ -36,11 +36,12 @@
  width: 636px;
  height: 227px;
  float: left;
- margin: -160px 0 0 0px;
  font-size: 17px;
  text-indent: 2em;
  line-height: 34px;
-    color: #565656;
+ overflow: hidden;
+ color: #565656;
+ margin-top: 60px;
 }
 .index .right-characters .right-point{
  float: left;
@@ -60,8 +61,6 @@
 /*首页的下面*/
 .index .bottom{
  width: 1203px;
- /*height: 739px;*/
- /*background: #cac8c9;*/
  margin-top: 60px;
 }
 .index .bottom .item1{
@@ -84,7 +83,6 @@
 .index .new-list-left{
     width: 1196px;
     height: 212px;
-    /*background: red;*/
     margin-top: 45px;
 }
 .index .new-list-left .left{
@@ -92,7 +90,6 @@
     width: 760px;
     height: 212px;
     margin: 0 0 0 18px;
-    /*background: green;*/
 }
 .index .new-list-left .left h3{
     margin: 0 0 0 0;
