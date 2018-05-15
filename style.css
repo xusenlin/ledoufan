@@ -235,6 +235,18 @@
     margin-top: 50px;
     margin-bottom: 48px;
 }
+.about-center-img-down>h3{
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+.about-wenzhang>P{
+  color: #000;
+  font-size: 16px;
+  line-height: 1.6;
+  text-indent: 2em;
+  margin-top: 20px;
+}
 
 
 /*

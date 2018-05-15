@@ -20,7 +20,7 @@ include 'header.php';
                         <?php
                         foreach ($navInfo[$slugs]['child'] as $v){
                             $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                            echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../about?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                            echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../about?id='.$categoryNameToId[$v['title']].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                         }
                         ?>
                     </ul>
@@ -28,79 +28,135 @@ include 'header.php';
 
                 <div class="about-center-right">
                     <div class="center-top about-right-title">
-                        <ul class="right-ul">
+                        <ul class="right-ul food-ul">
                             <li>
-                                <a href="javascript:">首页<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
+                                <a href="javascript:" style="margin: 0">首页</a>
                             </li>
-                            <li><a href="javascript:">关于我们<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
-                            </li>
-                            <li><a href="javascript:">展示公司介绍</a></li>
+                            <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                            <li><a href="javascript:" style="margin: 0"><?php echo $navInfo[$slugs]['title'] ?></a></li>
+                            <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                            <li><a class="time2" href="javascript:"  style="margin-right: 26px"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
                         </ul>
                     </div><!--about-right-title 结束-->
-                    <div class="right-top1">
-                        <ul class="right-title2">
-                            <li>2018-04-19</li>
-                            <li>11:39:04</li>
-                            <li>中国青年网</li>
-                            <li class="about-item">参与评论0人</li>
-                        </ul>
-                        <div class="about-photo">
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            <a class="side-a" href="javascript:"></a>
-                            </span>
-                        </div>
-                    </div>
 
-                    <div class="about-centre-content">
-                        <ul class="about-center-ul">
-                            <?php
-                                if (has_post_thumbnail()){
-                                    the_post_thumbnail();
-                                }
-                                //echo '<pre>';
-                                //var_dump(get_posts(['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]));
-                                $about = get_posts(['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]);
-                                foreach ($about as $abt){
-                                    $img_id = get_post_thumbnail_id($abt->ID);
-                                    $img_url = wp_get_attachment_image_src($img_id,'full');
-                                        //echo '<pre>';
-                                        //var_dump($img_url);
-                                    $img_url = $img_url[0];
-                                    echo '<li>
-                                        <img src="'.$img_url.'"/>
-                                        <p>'.$abt->post_content.'</p>
-                                        <h3>'.$abt->post_title.'</h3>
-                                        </li>';
+                    <?php
+                    //echo '<pre>';
+                    //var_dump(get_posts( ['category'  =>$categoryNameToId[$navInfo[$slugs]['title']]]));
+                    if (has_post_thumbnail()){
+                        the_post_thumbnail();
+                    }
+                    $amoun=get_category($_GET['id'])->count;
 
-                                }
-                            ?>
-                        </ul>
-                    </div><!--bout-centre-content 结束-->
+                    $paging = 3;
+
+
+                    if ($_GET['present']){
+                        $present = $_GET['present'];
+                    }
+                    else{
+                        $present = 0;
+                    }
+                    //echo $present;
+                    $amoun = ceil($amoun/$paging);
+
+                    //echo $amoun;
+                    $ab=get_posts( [ 'category' =>$_GET["id"] ,'numberposts'=> $paging,  'offset'  => $present*$paging]);
+                       // var_dump($ab);
+                    //echo $ab;
+                    //print_r($_SERVER);
+                    foreach ($ab as $AA){
+
+                        $img_id = get_post_thumbnail_id($AA->ID);
+                        $img_url = wp_get_attachment_image_src($img_id,'full');
+                        $img_url = $img_url[0];
+                    ?>
+                        <a class="about-center-a" style="margin-top: 40px;display: block;">
+
+                            <div class="about-img">
+                                <img src="<?php echo $img_url ?>" width="846" height="380">
+                            </div>
+
+                            <div class="about-wenzhang">
+                                <p> <?php print_r($AA->post_excerpt); ?></p>
+                            </div>
+
+                            <div class="about-center-img-down">
+                                <p style="float: right;"><?php print_r($AA->post_date_gmt); ?></p>
+                                <h3><?php print_r($AA->post_title)?></h3>
+                                <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'?p='.$AA->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
+                            </div><!--about-center-img-down 结束-->
+                        </a>
+    <?php  } ?>
+
+
                <!--翻页-->
               <div class="page-turning">
                   <div style="float: right;width: 300px">
                       <div class="center-paging clearfloat">
-                          <span class="item"><a href="#">Prev</a></span>
+                          <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
                           <ul class="center-paging-list">
-                              <li><a class="itemss" href="#">1</a></li>
-                              <li><a href="#">2</a></li>
-                              <li><a href="#">3</a></li>
+
+                              <?php for($i=0;$i<$amoun;$i++) {
+
+
+                                  $ps= $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.$i;
+                                  $classpaging = $i == $present ? "itemss" : "";
+                                  ?>
+                                  <li class="article-paging" style="display: none"><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
+                                          <?php echo $i+1; ?>
+                                      </a></li>
+
+                              <?php } ?>
                           </ul>
-                          <span class="item"><a href="#">Next</a></span>
+                          <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
                       </div>
                   </div>
               </div><!--page-turning 结束-->
-
                 </div><!--about-center-right 结束-->
             </div>
         </div><!--container 结束-->
     </div>
     <script>
-        var api= '<?php echo $siteUrl; ?>/?json=get_category_posts';
+        //var api= '<?php echo $siteUrl; ?>/?json=get_category_posts';
+
+        var paging=document.getElementsByClassName('article-paging');
+
+        var present=<?pHp echo  $present ?>;
+        var amoun=<?pHp echo $amoun ?>;
+        //for(var i=0;i<paging.length;i++){
+        //
+        //
+        //}
+        //alert(11);
+        for (var i= 0; i<paging.length; i++) {
+
+          this.index=i;
+
+          if ( this.index==present) {
+            if(this.index>=2){
+              if(this.index+1==amoun){
+                paging[this.index-2].style.display='block';
+                paging[this.index-1].style.display='block';
+                paging[this.index].style.display='block';
+
+              }else {
+                paging[this.index-1].style.display='block';
+                paging[this.index].style.display='block';
+                paging[this.index+1].style.display='block';
+              }
+
+            }else {
+              paging[0].style.display='block';
+              paging[1].style.display='block';
+              paging[2].style.display='block';
+            }
+
+
+
+
+          }
+
+        }
     </script>
 <?php
 include 'footer.php';
