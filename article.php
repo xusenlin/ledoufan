@@ -53,7 +53,7 @@ include 'header.php';
                     $amoun=ceil($amoun/$paging);
 
                     $data=get_posts( [ 'category' =>$_GET["id"] ,'numberposts'=> $paging,  'offset'  => $present*$paging]);
-
+//print_r($data);
                     foreach ($data as $TT){
                         $img_id = get_post_thumbnail_id($TT->ID);
                         $img_url = wp_get_attachment_image_src($img_id,'full');
@@ -72,7 +72,7 @@ include 'header.php';
                     <p style="float: right;"><?php  print_r($TT->post_date_gmt) ?></p>
                     <p><?php  print_r($TT->post_title) ?></p>
 
-                    <a href="">[查看详情]</a>
+                    <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'?p='.$TT->ID ; ?>">[查看详情]</a>
                 </div>
 
             </div>
@@ -126,7 +126,7 @@ include 'header.php';
 <script>
 
 
-    window.onload=function () {
+
         var paging=document.getElementsByClassName('article-paging');
         var present=<?pHp echo $present ?>;
         var amoun=<?pHp echo $amoun ?>
@@ -160,7 +160,7 @@ include 'header.php';
             }
 
         }
-    }
+
 </script>
 <?php
 include 'footer.php';
