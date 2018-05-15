@@ -37,10 +37,10 @@ include 'header.php';
             <?php
             $catid =$categoryNameToId['新闻资讯'];//获取id
             $data = get_posts(['category'=>$catid,'numberposts'=>3]);
-
+//var_dump($data);die();
             ?>
                 <?php foreach ($data as $ietm): ?>
-                
+
                 <li class="new-list-left">
                     <div class="left">
                         <h3><?php echo $ietm->post_title; ?></h3>
@@ -56,7 +56,7 @@ include 'header.php';
                             <p class="ppppp"><?php echo  $ietm->post_date;?></p>
                         </div>
                     </div>
-                    <img class="img-right" src="<?php ?>" alt="">
+                    <img class="img-right" src="<?php ;?>" alt="">
                 </li>
                 <?php endforeach; ?>
                 <!--                <li class="new-list-left">-->
