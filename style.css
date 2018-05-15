@@ -16,6 +16,10 @@
  float: left;
  margin: 96px auto;
 }
+.index .left-img .imgsd{
+    width: 464px;
+    height: 367px;
+}
 
 .index .right-characters{
  float: left;
@@ -94,6 +98,9 @@
 .index .new-list-left .left h3{
     margin: 0 0 0 0;
     overflow: hidden;
+    color: #535353;
+    font-weight: bold;
+    font-size: 18px;
 }
 .index .new-list-left .sape{
     height: 27px;
@@ -105,6 +112,7 @@
     margin:  10px 0 0 0;
     width: 760px;
     overflow: hidden;
+    color: #a3a3a3;
 }
 .index .new-list-left .left .ppppp{
     margin: -23px 0 0 618px;
@@ -115,6 +123,8 @@
 .index .new-list-left .img-right{
     margin:  -211px 0 0 906px;
     float: right;
+    width: 290px;
+    height: 210px;
 }
 
 
