@@ -60,7 +60,7 @@
 /*首页的下面*/
 .index .bottom{
  width: 1203px;
- height: 739px;
+ /*height: 739px;*/
  /*background: #cac8c9;*/
  margin-top: 60px;
 }
@@ -75,41 +75,49 @@
  height: 138px;
  margin: 70px 0 0 0px;
 }
-.index .bottom .left-list ul .list-li .spanspan{
- display: inline-block;
- margin: 22px 0 0 0;
+/*返工的*/
+/*左边*/
+.new-ul{
+    margin-bottom: 30px;
 }
-.index .bottom .left-list ul .list-li .spanspan .tigh-p{
-  margin-left: 560px;
-  color: #a3a3a3;
+
+.index .new-list-left{
+    width: 1196px;
+    height: 212px;
+    /*background: red;*/
+    margin-top: 45px;
 }
-.index .bottom .left-list ul .list-li h3{
- font-weight: bold;
- color: #535353;
+.index .new-list-left .left{
+    float: left;
+    width: 760px;
+    height: 212px;
+    margin: 0 0 0 18px;
+    /*background: green;*/
 }
-.index .bottom .left-list ul .list-li .pde{
-margin: 20px 0 0 0;
- font-size: 17px;
- color: #a3a3a3;
+.index .new-list-left .left h3{
+    margin: 0 0 0 0;
+    overflow: hidden;
 }
-.index .bottom .left-list ul .list-li .spanspan p{
- float: right;
+.index .new-list-left .sape{
+    height: 27px;
+    width: 760px;
+    margin: 100px 0 0 8px;;
+    float: left;
 }
-/**/
-.index .bottom .right-list{
- float: right;
+.index .new-list-left .left .ppkk{
+    margin:  10px 0 0 0;
+    width: 760px;
+    overflow: hidden;
 }
-.index .bottom .right-list ul li .imgs1{
- float: right;
- margin:-280px 0 0 0;
+.index .new-list-left .left .ppppp{
+    margin: -23px 0 0 618px;
 }
-.index .bottom .right-list ul li .imgs2{
- float: right;
- margin:-408px 0 0 0;
+.index .new-list-left .left a .img-left{
 }
-.index .bottom .right-list ul li .imgs3{
- float: right;
- margin:100px 0 0 0;
+/*右边图片*/
+.index .new-list-left .img-right{
+    margin:  -211px 0 0 906px;
+    float: right;
 }
 
 
