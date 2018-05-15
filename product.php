@@ -43,7 +43,6 @@ include 'header.php';
            </div>
 
 
-
            <div class="product_food_list">
                <?php
                if ( has_post_thumbnail() ) {
@@ -68,19 +67,21 @@ include 'header.php';
                $img_url = $img_url[0];
                ?>
 
-               <div class="product_food_list_box" style="position:relative ">
 
-                            <img src="<?php echo $img_url ?>" width="100%" height="100%">
-                           <span style="position: absolute;top:288px;left:0px"><a href=""><?php print_r($TT->post_title);  ?></a></span>
+                       <a href="<?php echo $siteUrl ?>?p=<?php echo $TT->ID ?>" class="product_food_list_box" style="position:relative ">
 
-               </div>
+                           <img src="<?php echo $img_url ?>" width="100%" height="100%">
+                           <span style="position: absolute;top:288px;left:0px"><?php print_r($TT->post_title);  ?></span>
+
+                       </a>
+
 
                <?php }  ?>
 
            </div>
 
        </div>
-       <div class="right_btn_page">
+
                <div class="center-paging clearfloat">
                    <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present=0'; ?>">Prev</a></span>
                    <ul class="center-paging-list">
@@ -97,7 +98,7 @@ include 'header.php';
                    <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present='.($amoun-1) ?>">Next</a></span>
                </div>
            <br>
-       </div>
+  
    </div>
 </div>
 <script>
