@@ -2,7 +2,7 @@
 include 'header.php';
 $post = get_post($_POST['p']);
 $time=explode(' ',$post->post_date_gmt);
-print_r($post);
+//print_r($post);
 ?>
 <div class="about">
     <div class="container  clearfloat">
