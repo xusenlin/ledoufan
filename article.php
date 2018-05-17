@@ -72,7 +72,7 @@ include 'header.php';
                     <p style="float: right;"><?php  print_r($TT->post_date_gmt) ?></p>
                     <p><?php  print_r($TT->post_title) ?></p>
 
-                    <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'?p='.$TT->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
+                    <a href="<?php echo $siteUrl.'?p='.$TT->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
                 </div>
 
             </div>
@@ -82,12 +82,12 @@ include 'header.php';
 
            <div style="float: right;width: 300px">
                <div class="center-paging clearfloat">
-                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
+                   <span class="item"><a href="<?php echo  $siteUrl.'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
 
                    <ul class="center-paging-list">
                        <?php for($i=0;$i<$amoun;$i++) {
 
-                          $ps= $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.$i;
+                          $ps= $siteUrl.'/new?id='.$_GET["id"].'&present='.$i;
                            $classpaging = $i == $present ? "itemss" : "";
                            ?>
                        <li class="article-paging " ><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
@@ -96,7 +96,7 @@ include 'header.php';
 
                        <?php } ?>
                    </ul>
-                   <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
+                   <span class="item"><a href="<?php echo  $siteUrl.'/new?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
                </div>
            </div>
         </div>
@@ -114,7 +114,7 @@ include 'header.php';
 
                     $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
 
-                    $chaining=$_SERVER['HTTP_HOST'].'/new?id='.$categoryNameToId[$v["title"]];
+                    $chaining=$siteUrl.'/new?id='.$categoryNameToId[$v["title"]];
 
                     echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="'.$chaining.'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                 }

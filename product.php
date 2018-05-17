@@ -71,10 +71,7 @@ include 'header.php';
 
                            <img src="<?php echo $img_url ?>" width="100%" height="100%">
                            <span style="position: absolute;top:288px;left:0px"><?php print_r($TT->post_title);  ?></span>
-
                        </a>
-
-
                <?php }  ?>
 
            </div>
@@ -86,7 +83,7 @@ include 'header.php';
                    <ul class="center-paging-list">
                        <?php for($i=0;$i<$amoun;$i++) {
 
-                           $ps= $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present='.$i;
+                           $ps= $siteUrl.'/'.$slugs.'?id='.$_GET["id"].'&present='.$i;
                            $classpaging = $i == $present ? "itemss" : "";
                            ?>
                            <li class="food-paging"><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
