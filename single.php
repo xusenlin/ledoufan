@@ -2,8 +2,7 @@
 include 'header.php';
 $post = get_post($_POST['p']);
 $time=explode(' ',$post->post_date_gmt);
-
-print_r($post);
+//print_r($post);
 ?>
 <div class="about">
     <div class="container  clearfloat">
@@ -18,15 +17,24 @@ print_r($post);
                 <div class="center-top about-bottom">
                     <span class="item1">  <?php  echo $aa['title'];?></span>
                     <span class="item2"></span>
-                    <span class="item3"><?php echo $_GET['new']; ?></span>
+                    <span class="item3"><?php echo $_GET['tag']; ?></span>
                 </div>
                 <ul class="center-list">
                     <?php
+//                    foreach ($aa['child'] as $v){
+//
+//                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+//                    }
+
                     foreach ($aa['child'] as $v){
 
-                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
-                    }
-                    ?>
+                   $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+
+                    $chaining='http://'.$_SERVER['HTTP_HOST'].'/'.$_GET['tag'].'?id='.$categoryNameToId[$v["title"]];
+
+
+                    echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="'.$chaining.'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                    } ?>
                 </ul>
             </div>
             <!--about-center-left 结束-->
@@ -60,13 +68,10 @@ print_r($post);
                     </div>
                 </div>
 
-                <div class="about-new-details">
-                 <h1><?php echo $post->post_title;
-                  ?></h1>
-                    <h3><?php echo $post->post_excerpt;
-                        ?></h3>
-                    <p class="about-new-center-details"><?php echo $post->post_content;
-                        ?></p>
+                <div class="about-new-details1">
+                 <h1><?php echo $post->post_title; ?></h1>
+                    <h3><?php echo $post->post_excerpt; ?></h3>
+                    <p class="about-new-center-details"><?php echo $post->post_content; ?></p>
 
                 </div>
             </div><!--about-center-right 结束-->

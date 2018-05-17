@@ -72,7 +72,7 @@ include 'header.php';
                     <p style="float: right;"><?php  print_r($TT->post_date_gmt) ?></p>
                     <p><?php  print_r($TT->post_title) ?></p>
 
-                    <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'?p='.$TT->ID ; ?>">[查看详情]</a>
+                    <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'?p='.$TT->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
                 </div>
 
             </div>
