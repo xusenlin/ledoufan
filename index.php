@@ -5,6 +5,11 @@ include 'header.php';
     <div class="about-us">
         <div class="container">
             <div class="left-img">
+                <?php
+                $catid =$categoryNameToId['关于我们'];//获取id
+                $data = get_posts(['category'=>$catid,'numberposts'=>1]);
+                ?>
+                <?php foreach ($data as $ietm):?>
                <?php  $img_id = get_post_thumbnail_id($ietm->ID);
                        $img_url = wp_get_attachment_image_src($img_id,'full');
                        $img_url = $img_url[0];?>
@@ -18,12 +23,6 @@ include 'header.php';
                     <span class="item3">ABOUT US</span>
                 </div>
                 <p class="conten-p">
-                    <?php
-                    $catid =$categoryNameToId['关于我们'];//获取id
-                    $data = get_posts(['category'=>$catid,'numberposts'=>1]);
-                    ?>
-                    <?php foreach ($data as $ietm):
-                    ?>
                     <?php echo $ietm->post_excerpt;?>
                 </p>
                 <a href="<?php echo $siteUrl;?>/?p=<?php echo $ietm->ID.'&&tag='.$slugs; ?>">
