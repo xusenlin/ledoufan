@@ -58,11 +58,10 @@ $time=explode(' ',$post->post_date_gmt);
 <!--                        <li class="about-item">参与评论0人</li>-->
                     </ul>
                     <div class="about-photo">
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
+                        <a class="side-a" target="_blank" href="javascript:"></a>
+                        <a class="side-a" target="_blank" href="http://v.t.sina.com.cn/share/share.php?url=<?php echo $siteUrl; ?>&title='<?php echo $post->post_title; ?>'"></a>
+                        <a class="side-a" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<?php echo $siteUrl; ?>"></a>
+                        <a class="side-a" target="_blank" href="http://v.t.qq.com/share/share.php?url=<?php echo $siteUrl; ?>&title='<?php echo $post->post_title; ?>'"></a>
                         <a class="side-a" href="javascript:"></a>
                         </span>
                     </div>
@@ -70,7 +69,7 @@ $time=explode(' ',$post->post_date_gmt);
 
                 <div class="about-new-details1">
                  <h1><?php echo $post->post_title; ?></h1>
-                    <h3><?php echo $post->post_excerpt; ?></h3>
+                    <h3 style="font-size: 13px;color: #888"><?php echo $post->post_excerpt; ?></h3>
                     <p class="about-new-center-details"><?php echo $post->post_content; ?></p>
 
                 </div>

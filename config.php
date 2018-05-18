@@ -11,8 +11,8 @@ $navInfo = [
         'title'=>'网站首页',
         'class'=>'',
         'child'=>[
-            ['title'=>'关于我们','class'=>''],
-            ['title'=>'新闻资讯','class'=>'']
+            ['title'=>'关于我们','class'=>'','url'=>$siteUrl.'/about'],
+            ['title'=>'新闻资讯','class'=>'','url'=>$siteUrl.'/news']
         ]
     ],
     'about'=>[
@@ -69,7 +69,7 @@ $navInfo = [
         'class'=>'item ict3',
         'child'=>[
             ['title'=>'联系方式','class'=>''],
-            ['title'=>'在线招聘','class'=>''],
+            ['title'=>'在线招聘','class'=>'','url'=>$siteUrl.'/job'],
         ]
     ],
 ];

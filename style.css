@@ -211,7 +211,7 @@
     color: #b6383b;
 }
 .about-photo{
-    width: 268px;
+    width: 178px;
     height: 42px;
     z-index: 20;
     float: right;
@@ -240,7 +240,7 @@
   font-size: 20px;
   font-weight: bold;
 }
-.about-wenzhang>P{
+.about-wenzhang>p{
   color: #000;
   font-size: 16px;
   line-height: 1.6;
@@ -249,7 +249,11 @@
 }
 .about-new-details1{
     overflow: hidden;
+    line-height: 42px;
     width: 100%;
+    margin-bottom: 50px;
+    padding: 20px 0;
+    border-bottom: 2px solid #bcbcbc;
 }
 .about-new-details1 h1{
     text-align: center;
@@ -781,7 +785,6 @@ font-size: 14px;
     padding: 0 6px 0 0;
     color: #838987;
     line-height: 71px;
-    letter-spacing: -6px;
 }
 .recruitment .rb .center-top{
     margin-top: 63px;

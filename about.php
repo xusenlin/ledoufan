@@ -70,10 +70,10 @@ include 'header.php';
                         $img_url = wp_get_attachment_image_src($img_id,'full');
                         $img_url = $img_url[0];
                     ?>
-                        <a class="about-center-a" style="margin-top: 40px;display: block;">
+                        <div class="about-center-a" style="margin-top: 40px;display: block;">
 
                             <div class="about-img">
-                                <img src="<?php echo $img_url ?>" width="846" height="380">
+                                <img src="<?php echo $img_url ?>" width="846">
                             </div>
 
                             <div class="about-wenzhang">
@@ -85,7 +85,7 @@ include 'header.php';
                                 <h3><?php print_r($AA->post_title)?></h3>
                                 <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'?p='.$AA->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
                             </div><!--about-center-img-down 结束-->
-                        </a>
+                        </div>
     <?php  } ?>
 
 

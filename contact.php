@@ -15,12 +15,8 @@ include 'header.php';
                     <span class="item3">CONTACT US</span>
                 </div>
                 <ul class="center-list nav">
-                    <?php
-                    foreach ($navInfo[$slugs]['child'] as $v){
-                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
-                    }
-                    ?>
+                    <li><a  class="<?php echo $slugs == 'contact' ? 'active' :'' ?>" href="../contact?'"><span><span>联系方式</span><strong></strong></span></a></li>
+                    <li><a  class="<?php echo $slugs == 'job' ? 'active' :'' ?>" href="<?php echo $siteUrl ?>/job"><span><span>在线招聘</span><strong></strong></span></a></li>
                 </ul>
             </div>
 

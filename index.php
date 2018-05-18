@@ -6,7 +6,7 @@ include 'header.php';
         <div class="container">
             <div class="left-img">
                 <?php
-                $catid =$categoryNameToId['关于我们'];//获取id
+                $catid =$categoryNameToId['公司简介'];//获取id
                 $data = get_posts(['category'=>$catid,'numberposts'=>1]);
                 ?>
                 <?php foreach ($data as $ietm):?>

@@ -16,12 +16,9 @@ include 'header.php';
                 <span class="item3">CONTACTUS</span>
             </div>
             <ul class="center-list">
-                <?php
-                foreach ($navInfo[$slugs]['child'] as $v){
-                    $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                    echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
-                }
-                ?>
+                <li><a  class="<?php echo $slugs == 'contact' ? 'active' :'' ?>" href="../contact?'"><span><span>联系方式</span><strong></strong></span></a></li>
+                <li><a  class="<?php echo $slugs == 'job' ? 'active' :'' ?>" href="<?php echo $siteUrl ?>/job"><span><span>在线招聘</span><strong></strong></span></a></li>
+
                 <!--<li><a href="#">
             <span>
                 <span>连锁加盟</span>
@@ -61,13 +58,13 @@ include 'header.php';
                 <div class="f18 b-content">
                     <p>岗位职责</p>
                     <p>1、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
-                    <p>2、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
-                    <p>3、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
-                    <p>4、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
-                    <p>5、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
-                    <p>6、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
-                    <p>7、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
-                    <p>8、完成所辖区域的产品销售任务，提升产品在区域内的占比；</p>
+                    <p>2、负责所辖区域内市场的开拓、客户的开发、网点的布局及新客户前期进场谈判工作；</p>
+                    <p>3、负责所辖区域内卖场的出样规划布置，整体形象的维护；</p>
+                    <p>4、负责所辖区域内的产品线的设定，产品零售价、标价的制订，整体价格体系的维护；</p>
+                    <p>5、掌握所辖区域内客户进、销、存情况，及时跟进客户提货计划和物流发货状况；</p>
+                    <p>6、负责渠道促销方案的制订</p>
+                    <p>7、负责预算、确认渠道客户的各项费用，及时对账、催款；</p>
+                    <p>8、掌握所辖区域内竞品动态及节假日促销活动计划，并制订出相应策略。</p>
                     <p>任职资格</p>
                     <p>1、具有1年以上家电或快消品行业的销售管理经验者优先，对家电行业渠道运作、市场销售有较强理解者尤佳；</p>
                     <p>2、吃苦耐劳，有较强的工作责任心和团队协作精神；</p>
