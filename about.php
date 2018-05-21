@@ -70,8 +70,8 @@ include 'header.php';
                         $img_url = wp_get_attachment_image_src($img_id,'full');
                         $img_url = $img_url[0];
                     ?>
-                        <div class="about-center-a" style="margin-top: 40px;display: block;">
-
+                        <div class="about-center-a">
+                            <h2> <?php echo($AA->post_title); ?></h2>
                             <div class="about-img">
                                 <img src="<?php echo $img_url ?>" width="846">
                             </div>
@@ -81,9 +81,8 @@ include 'header.php';
                             </div>
 
                             <div class="about-center-img-down">
-                                <p style="float: right;"><?php print_r($AA->post_date_gmt); ?></p>
-                                <h3><?php print_r($AA->post_title)?></h3>
-                                <a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'?p='.$AA->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
+                                <p style="float: right;color: #b7b7b7;"><?php print_r($AA->post_date_gmt); ?></p>
+                                <a class="more" href="<?php echo $siteUrl.'?p='.$AA->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
                             </div><!--about-center-img-down 结束-->
                         </div>
     <?php  } ?>
@@ -91,15 +90,12 @@ include 'header.php';
 
                <!--翻页-->
               <div class="page-turning">
-                  <div style="float: right;width: 300px">
+                  <div style="float: right">
                       <div class="center-paging clearfloat">
-                          <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
+                          <span class="item"><a href="<?php echo  $siteUrl.'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
                           <ul class="center-paging-list">
-
                               <?php for($i=0;$i<$amoun;$i++) {
-
-
-                                  $ps= $_SERVER['HTTP_HOST'].'/new?id='.$_GET["id"].'&present='.$i;
+                                  $ps= $siteUrl.'/about?id='.$_GET["id"].'&present='.$i;
                                   $classpaging = $i == $present ? "itemss" : "";
                                   ?>
                                   <li class="article-paging" style="display: none"><a class=" <?php echo $classpaging ;?>" href="<?php echo  $ps;  ?>">
@@ -108,7 +104,7 @@ include 'header.php';
 
                               <?php } ?>
                           </ul>
-                          <span class="item"><a href="<?php echo  $_SERVER['HTTP_HOST'].'/'.$slugs.'?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
+                          <span class="item"><a href="<?php echo  $siteUrl.'/'.$slugs.'?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
                       </div>
                   </div>
               </div><!--page-turning 结束-->
