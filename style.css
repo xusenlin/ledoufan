@@ -527,7 +527,7 @@ font-size: 14px;
 }
 .food-new-list li img{
     width: 858px;
-    max-height: 500px;
+    /*max-height: 500px;*/
 }
 .food-new-list li p{
     margin: 42px 0;
