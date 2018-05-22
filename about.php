@@ -71,10 +71,11 @@ include 'header.php';
                         $img_url = $img_url[0];
                     ?>
                         <div class="about-center-a">
-                            <h2> <?php echo($AA->post_title); ?></h2>
                             <div class="about-img">
                                 <img src="<?php echo $img_url ?>" width="846">
                             </div>
+
+                            <h2> <?php echo($AA->post_title); ?></h2>
 
                             <div class="about-wenzhang">
                                 <p> <?php print_r($AA->post_excerpt); ?></p>
