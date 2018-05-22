@@ -41,10 +41,12 @@
                     echo '<li><a class="'.$item['class'].$classActive.'" href="'.$siteUrl.'/'.$k.'?id='.$id_url.'">'.$item['title'].'</a>';
                     echo '<ul class="header-nav-list">';
                     foreach ($item['child'] as $key=>$value){
-                        if($value['class'] == 'icon')
-                            echo '<li class="icon"><a href="'.$siteUrl.'/'.$k.'?id='.$categoryNameToId[$value['title']].'">'.$value['title'].'</a></li>';
+                        $hasIconClass = $value['class'] == 'icon' ? 'icon' : '';
+                        if($value['url'])
+                            echo '<li class="'.$hasIconClass.'"><a href="'.$value["url"].'">'.$value['title'].'</a></li>';
                         else
-                            echo '<li><a href="'.$siteUrl.'/'.$k.'?id='.$categoryNameToId[$value['title']].'">'.$value['title'].'</a></li>';
+                            echo '<li class="'.$hasIconClass.'"><a href="'.$siteUrl.'/'.$k.'?id='.$categoryNameToId[$value['title']].'">'.$value['title'].'</a></li>';
+
                     }
                     echo '</ul>';
                     echo '</li>';
@@ -53,7 +55,4 @@
         </ul>
     </div>
 </header>
-<div class="top">
-    <img src="<?php bloginfo('template_url'); ?>/img/top-img.jpg">
-    <div class="top-item">欢迎来到乐豆坊食品有限公司</div>
-</div>
+

@@ -64,15 +64,15 @@ include 'header.php';
                 ?>
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
-
-                    <img src="<?php echo $img_url ?>" width="846" height="380">
-
+                    <?php if($img_url): ?>
+                        <img src="<?php echo $img_url ?>" width="846" height="380">
+                    <?php endif; ?>
                 </div>
                 <div class="article-content-right-content-bottom">
                     <p style="float: right;"><?php  print_r($TT->post_date_gmt) ?></p>
                     <p><?php  print_r($TT->post_title) ?></p>
 
-                    <a href="<?php echo $siteUrl.'?p='.$TT->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
+                    <a class="more" href="<?php echo $siteUrl.'?p='.$TT->ID.'&&tag='.$slugs; ?>">[查看详情]</a>
                 </div>
 
             </div>
@@ -80,7 +80,7 @@ include 'header.php';
                       }
                     ?>
 
-           <div style="float: right;width: 300px">
+           <div style="float: right;">
                <div class="center-paging clearfloat">
                    <span class="item"><a href="<?php echo  $siteUrl.'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
 

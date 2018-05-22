@@ -1,12 +1,16 @@
 <?php
 include 'header.php';
 ?>
+<div class="top">
+    <img src="<?php bloginfo('template_url'); ?>/img/top-img.jpg">
+    <div class="top-item">欢迎来到乐豆坊食品有限公司</div>
+</div>
 <div class="index">
     <div class="about-us">
         <div class="container">
             <div class="left-img">
                 <?php
-                $catid =$categoryNameToId['关于我们'];//获取id
+                $catid =$categoryNameToId['公司简介'];//获取id
                 $data = get_posts(['category'=>$catid,'numberposts'=>1]);
                 ?>
                 <?php foreach ($data as $ietm):?>
@@ -42,7 +46,7 @@ include 'header.php';
                     </div>
         </div>
         <div class="news">
-            <ul class="new-ul">
+            <ul class="new-ul clearfloat">
             <?php
             $catid =$categoryNameToId['新闻资讯'];//获取id
             $data = get_posts(['category'=>$catid,'numberposts'=>3]);
@@ -57,9 +61,7 @@ include 'header.php';
                         <h3><?php echo $ietm->post_title; ?></h3>
                         <p class="ppkk">
                             <?php echo $ietm->post_excerpt;?>
-
                         </p>
-
                         <div class="sape">
                              <a href="<?php echo $siteUrl;?>/?p=<?php echo $ietm->ID.'&&tag='.$slugs;?>">
                                 <img class="img-left" src="<?php bloginfo('template_url'); ?>/img/right-point.png" alt="">
