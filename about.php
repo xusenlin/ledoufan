@@ -76,7 +76,6 @@ include 'header.php';
                             </div>
 
                             <h2> <?php echo($AA->post_title); ?></h2>
-
                             <div class="about-wenzhang">
                                 <p> <?php print_r($AA->post_excerpt); ?></p>
                             </div>
