@@ -30,11 +30,11 @@ include 'header.php';
                     <div class="QRcode fl"></div>
                     <div class="info-more fr f20">
                         <ul>
-                            <li>公司地址：贵州省镇远市</li>
-                            <li>邮编：5530000</li>
-                            <li>联系热线：13800000000</li>
-                            <li>官方网站：www.sgxueubvr.com</li>
-                            <li>微信公众号：123456789</li>
+                            <li>公司地址：贵州省镇远市新乐镇三江坝村二社</li>
+                            <li>邮编：xxxxx</li>
+                            <li>联系热线：xxxxxx</li>
+                            <li>官方网站：www.panxiaoxiao.com</li>
+                            <li>微信公众号：xxxxxx</li>
                         </ul>
                     </div>
                 </div>
