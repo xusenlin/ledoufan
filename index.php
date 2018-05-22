@@ -42,7 +42,7 @@ include 'header.php';
                     </div>
         </div>
         <div class="news">
-            <ul class="new-ul">
+            <ul class="new-ul clearfloat">
             <?php
             $catid =$categoryNameToId['新闻资讯'];//获取id
             $data = get_posts(['category'=>$catid,'numberposts'=>3]);

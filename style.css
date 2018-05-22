@@ -18,7 +18,7 @@
 }
 .index .left-img .imgsd{
     width: 464px;
-    height: 367px;
+    /*height: 367px;*/
 }
 
 .index .right-characters{
@@ -124,7 +124,7 @@
     margin:  -211px 0 0 906px;
     float: right;
     width: 290px;
-    height: 210px;
+    /*height: 210px;*/
 }
 
 
