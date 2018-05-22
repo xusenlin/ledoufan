@@ -15,8 +15,12 @@ include 'header.php';
                     <span class="item3">CONTACT US</span>
                 </div>
                 <ul class="center-list nav">
-                    <li><a  class="<?php echo $slugs == 'contact' ? 'active' :'' ?>" href="../contact?'"><span><span>联系方式</span><strong></strong></span></a></li>
-                    <li><a  class="<?php echo $slugs == 'job' ? 'active' :'' ?>" href="<?php echo $siteUrl ?>/job"><span><span>在线招聘</span><strong></strong></span></a></li>
+                    <?php
+                    foreach ($navInfo[$slugs]['child'] as $v){
+                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
 
@@ -30,11 +34,11 @@ include 'header.php';
                     <div class="QRcode fl"></div>
                     <div class="info-more fr f20">
                         <ul>
-                            <li>公司地址：贵州省镇远市新乐镇三江坝村二社</li>
-                            <li>邮编：xxxxx</li>
-                            <li>联系热线：xxxxxx</li>
-                            <li>官方网站：www.panxiaoxiao.com</li>
-                            <li>微信公众号：xxxxxx</li>
+                            <li>公司地址：贵州省黔东南苗族侗族自治州镇远县青溪坪阳小学</li>
+                            <li>邮编：5530000</li>
+                            <li>联系热线：13800000000</li>
+                            <li>官方网站：www.sgxueubvr.com</li>
+                            <li>微信公众号：123456789</li>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +58,7 @@ include 'header.php';
         //创建地图函数：
         function createMap() {
             var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-            var point = new BMap.Point(106.637425, 26.401387);//定义一个中心点坐标
+            var point = new BMap.Point(108.743008,27.125821);//定义一个中心点坐标
             map.centerAndZoom(point, 18);//设定地图的中心点和坐标并将地图显示在地图容器中
             window.map = map;//将map变量存储在全局
         }
