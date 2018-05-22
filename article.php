@@ -65,7 +65,7 @@ include 'header.php';
             <div class="article-content-right-content">
                 <div class="article-content-right-content-top">
                     <?php if($img_url): ?>
-                        <img src="<?php echo $img_url ?>" width="846" height="380">
+                        <img src="<?php echo $img_url ?>" width="846" >
                     <?php endif; ?>
                 </div>
                 <div class="article-content-right-content-bottom">
