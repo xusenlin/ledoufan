@@ -18,13 +18,20 @@ include 'header.php';
                </div>
                <br>
                <ul class="center-list">
+                   
                    <?php
 
                    foreach ($navInfo[$slugs]['child'] as $v){
+
                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                       echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+
+                       $chaining=$siteUrl.'/product?id='.$categoryNameToId[$v["title"]];
+
+                       echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="'.$chaining.'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
                    }
+
                    ?>
+
 
        </div>
        <div class="product_item_right">
