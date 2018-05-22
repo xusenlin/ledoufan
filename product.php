@@ -78,7 +78,7 @@ include 'header.php';
 
        </div>
 
-               <div class="center-paging clearfloat">
+               <div style="width: 276px" class="center-paging clearfloat">
                    <span class="item"><a href="<?php echo $siteUrl.'/'.$slugs.'?id='.$_GET['id'].'&present=0'; ?>">Prev</a></span>
                    <ul class="center-paging-list">
                        <?php for($i=0;$i<$amoun;$i++) {
