@@ -55,7 +55,4 @@
         </ul>
     </div>
 </header>
-<div class="top">
-    <img src="<?php bloginfo('template_url'); ?>/img/top-img.jpg">
-    <div class="top-item">欢迎来到乐豆坊食品有限公司</div>
-</div>
+
