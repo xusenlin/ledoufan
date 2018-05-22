@@ -18,7 +18,7 @@ include 'header.php';
                </div>
                <br>
                <ul class="center-list">
-                   
+
                    <?php
 
                    foreach ($navInfo[$slugs]['child'] as $v){
