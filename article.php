@@ -68,7 +68,7 @@ include 'header.php';
 
            <div style="float: right;">
                <div class="center-paging clearfloat">
-                   <span class="item"><a href="<?php echo  $siteUrl.'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Prev</a></span>
+                   <span class="item"><a href="<?php echo  $siteUrl.'/'.$slugs.'?id='.$_GET["id"].'&present=0' ?>">Home</a></span>
 
                    <ul class="center-paging-list">
                        <?php for($i=0;$i<$amoun;$i++) {
@@ -82,7 +82,7 @@ include 'header.php';
 
                        <?php } ?>
                    </ul>
-                   <span class="item"><a href="<?php echo  $siteUrl.'/new?id='.$_GET["id"].'&present='.($amoun-1) ?>">Next</a></span>
+                   <span class="item"><a href="<?php echo  $siteUrl.'/new?id='.$_GET["id"].'&present='.($amoun-1) ?>">End</a></span>
                </div>
            </div>
         </div>
