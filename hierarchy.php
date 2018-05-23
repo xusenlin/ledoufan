@@ -25,34 +25,16 @@ include 'header.php';
                 </ul>
             </div>
             <div class="hierarchy-center-right">
-                <div class="center-top hierarchy-right-title">
-                    <ul class="right-ul">
-                        <li>
-                            <a href="javascript:">首页<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
-                        </li>
-                        <li>
-                            <a href="javascript:">溯源体系<span><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
-                        </li>
-                        <li><a href="javascript:">原产料基地</a></li>
+                <div class="center-top about-right-title">
+                    <h2>原材料基地</h2>
+                    <ul class="right-ul food-ul">
+                        <li><a href="javascript:">首页</a></li>
+                        <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                        <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
+                        <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                        <li><a class="time2" href="javascript:">原材料基地</a></li>
                     </ul>
-                </div>
-                <div class="right-top1">
-                    <ul class="right-title2">
-                        <li>2018-04-19</li>
-                        <li>11:39:04</li>
-                        <li>中国青年网</li>
-                        <li class="hierarchy-item">参与评论0人</li>
-                    </ul>
-                    <div class="hierarchy-photo">
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        <a class="side-a" href="javascript:"></a>
-                        </span>
-                    </div>
-                </div>
+                </div><!--about-right-title 结束-->
                 <div class="picture1"><img src="<?php bloginfo('template_url'); ?>/img/1.png" alt="" width="860"></div>
                 <div>
                     <p class=" character">

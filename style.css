@@ -529,10 +529,10 @@ font-size: 14px;
 .food .your-class {
 
 }
-.food-center .food-ul li a{
+.right-ul li a{
     margin-right: 0;
 }
-.food-center .food-ul li .time2{
+.right-ul li .time2{
     margin-right: 26px;
 }
 .food-ul .time1{
@@ -595,11 +595,11 @@ font-size: 14px;
 .hierarchy .right-ul>li{
     float: left;
 }
-.hierarchy .right-ul>li>a{
-    color: #8fa3a0;
-    font-size: 17px;
-    margin-right: 26px;
-}
+/*.hierarchy .right-ul>li>a{*/
+    /*color: #8fa3a0;*/
+    /*font-size: 17px;*/
+    /*margin-right: 26px;*/
+/*}*/
 .hierarchy .right-ul>li>a>span>img{
     margin-left: 6px;
 }

@@ -40,15 +40,13 @@ $time=explode(' ',$post->post_date_gmt);
             <!--about-center-left 结束-->
             <div class="about-center-right">
                 <div class="center-top about-right-title">
-                    <ul class="right-ul">
-                        <li><a href="javascript:">首页<span><img
-                                            src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt=""></span></a>
-                        </li>
-                        <li><a href="javascript:">文章详情<span></span></a>
-                        </li>
-
+                    <h2>文章详情</h2>
+                    <ul class="right-ul food-ul">
+                        <li><a href="javascript:"><?php echo $aa['title'] ?></a></li>
+                        <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                        <li><a class="time2" href="javascript:">文章详情</a></li>
                     </ul>
-                </div><!--a bout-right-title 结束-->
+                </div><!--about-right-title 结束-->
 
                 <div class="right-top1">
                     <ul class="right-title2">
