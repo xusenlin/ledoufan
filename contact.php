@@ -15,12 +15,16 @@ include 'header.php';
                     <span class="item3">CONTACT US</span>
                 </div>
                 <ul class="center-list nav">
-                    <?php
-                    foreach ($navInfo[$slugs]['child'] as $v){
-                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
-                    }
-                    ?>
+<!--                    --><?php
+//                    foreach ($navInfo[$slugs]['child'] as $v){
+//                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+//                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+//                    }
+//                    ?>
+                    <li><a class="'.$className.'" href="<?php echo  $siteUrl.'/contact/' ?>"><span><span>联系方式</span><strong></strong></span></a></li>
+
+                    <li><a class="'.$className.'" href="<?php echo  $siteUrl.'/job/' ?>"><span><span>在线招聘</span><strong></strong></span></a></li>
+
                 </ul>
             </div>
 
@@ -89,9 +93,9 @@ include 'header.php';
 
         //标注点数组
         var markerArr = [{
-            title: "贵州泰豪易象万维数字文化公司",
+            title: "镇远县青溪坪阳小学",
             content: "联系热线： 13765168127 18579066106",
-            point: "106.637425|26.401387",
+            point: "108.743008|27.125821",
             isOpen: 0,
             icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
         }
