@@ -3,8 +3,9 @@
 /*}*/
 /*网站顶部*/
 header{
-    background: url("../img/header-background.jpg");
-    border-bottom:6px #fff solid;
+    background: url(../img/header-background.jpg) REPEAT-Y;
+    background-size: 100%;
+    border-bottom: 6px #fff solid;
 }
 .header{
     position: relative;
