@@ -176,20 +176,27 @@
 .about-right-title{
     width: 860px;
 }
-.about .right-ul{
+.about-right-title h2{
+    display: inline-block;
+    padding-left: 30px;
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+}
+.right-ul{
     float: right;
     line-height: 70px;
     margin-right: 28px;
 }
-.about .right-ul>li{
+.right-ul>li{
     float: left;
 }
-.about .right-ul>li>a{
+.right-ul>li>a{
     color: #8fa3a0;
     font-size: 17px;
-    margin-right: 26px;
+    /*margin-right: 26px;*/
 }
-.about .right-ul>li>a>span>img{
+.right-ul>li>a>span>img{
     margin-left: 6px;
 }
 .about .right-top1{

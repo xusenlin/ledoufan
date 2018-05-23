@@ -28,14 +28,13 @@ include 'header.php';
 
                 <div class="about-center-right">
                     <div class="center-top about-right-title">
+                        <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
                         <ul class="right-ul food-ul">
-                            <li>
-                                <a href="javascript:" style="margin: 0">首页</a>
-                            </li>
+                            <li><a href="javascript:">首页</a></li>
                             <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                            <li><a href="javascript:" style="margin: 0"><?php echo $navInfo[$slugs]['title'] ?></a></li>
+                            <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
                             <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                            <li><a class="time2" href="javascript:"  style="margin-right: 26px"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
+                            <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
                         </ul>
                     </div><!--about-right-title 结束-->
 

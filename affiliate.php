@@ -31,18 +31,16 @@ include 'header.php';
             </div>
         </div>
         <div class="container-r">
-            <div class="container-ra">
-                <div class="center-top clear">
-                    <h2 class="h25 fl" style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;连锁加盟 </h2>
-                    <div class="fr">
-                        <a href="#">首页</a>
-                        <span>》</span>
-                        <a href="#">联系我们</a>
-                        <span>》</span>
-                        <a href="#">连锁加盟</a>
-                    </div>
-                </div>
-            </div>
+            <div class="center-top about-right-title">
+                <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
+                <ul class="right-ul food-ul">
+                    <li><a href="javascript:">首页</a></li>
+                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                    <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
+                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                    <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
+                </ul>
+            </div><!--about-right-title 结束-->
             <div class="container-rb">
                 <div class="container-rb-l"><img src="<?php bloginfo('template_url'); ?>/img/affiliate-a.jpg" alt=""></div>
                 <div class="container-rb-z"></div>

@@ -34,13 +34,16 @@ include 'header.php';
 //           print_r($data);
 //
 //           ?>
-           <div class="item_right_bar">
-               <h2 class="contact_style_adr">联系方式与地址 </h2>
-               <div class="front_page"><a href="#">首页</a>
-                   <span>&gt;&gt;</span><a href="#">联系我们</a>
-                   <span>&gt;&gt;</span><a href="#">联系方式</a>
-               </div>
-           </div>
+           <div class="center-top about-right-title">
+               <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
+               <ul class="right-ul food-ul">
+                   <li><a href="javascript:">首页</a></li>
+                   <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                   <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
+                   <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                   <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
+               </ul>
+           </div><!--about-right-title 结束-->
 
 
            <div class="product_food_list">

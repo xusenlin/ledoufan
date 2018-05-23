@@ -13,30 +13,16 @@ include 'header.php';
 <!--    3.新闻资讯-->
     <div class="container   article-content">
         <div class="article-content-right">
-            <div class="center-top " style="width: 850px;margin-bottom: 30px">
-                <span class="item1">
-                    <?php
-                    foreach ($navInfo[$slugs]['child'] as $v){
-                    if($categoryNameToId[$v["title"]] == $_GET["id"] ){
-                    echo $v['title'];}
-                    }
-                     ?>
-                </span>
-            <div class="article-content-right-right">
-<!--                <span class="">首页》关于我们》公司展示</span>-->
-                <ul>
-                    <li>首页<span>  <img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png"></span></li>
-                    <li>新闻资讯<span> <img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png"></span></li>
-                    <li><?php
-                        foreach ($navInfo[$slugs]['child'] as $v){
-                            if($categoryNameToId[$v["title"]] == $_GET["id"] ){
-                                echo $v['title'];}
-                        }
-                        ?>
-                    </li>
+            <div class="center-top about-right-title">
+                <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
+                <ul class="right-ul food-ul">
+                    <li><a href="javascript:">首页</a></li>
+                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                    <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
+                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
+                    <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
                 </ul>
-
-            </div></div>
+            </div><!--about-right-title 结束-->
             <?php
                     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
                         the_post_thumbnail();
