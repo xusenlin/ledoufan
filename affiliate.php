@@ -10,37 +10,25 @@ include 'header.php';
     <div class="container">
         <div class="container-l">
             <div class="con-left fl">
-                <div class="center-top">
+                <div class="center-top about-bottom">
                     <span class="item1">连锁加盟</span>
                     <span class="item2"></span>
-                    <span class="item3">CONTACT US</span>
+                    <span class="item3">AFFILIATE</span>
                 </div>
-                <ul class="center-list nav">
-                   <!--<a href="#">
-            <span>
-                <span>连锁加盟</span>
-                <strong></strong>
-            </span>-->
-                            <?php
-                            foreach ($navInfo[$slugs]['child'] as $v){
-                                $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-                                echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="javascript:;"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
-                            }
-                            ?>
+                <ul class="center-list">
+                    <?php
+                    foreach ($navInfo[$slugs]['child'] as $v){
+                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
+                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="'.$siteUrl.'/'.$slugs.'?id='.$categoryNameToId[$v['title']].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
         <div class="container-r">
-            <div class="center-top about-right-title">
-                <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
-                <ul class="right-ul food-ul">
-                    <li><a href="javascript:">首页</a></li>
-                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                    <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
-                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                    <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
-                </ul>
-            </div><!--about-right-title 结束-->
+            <?php
+            include_once 'breadcrumb.php';
+            ?>
             <div class="container-rb">
                 <div class="container-rb-l"><img src="<?php bloginfo('template_url'); ?>/img/affiliate-a.jpg" alt=""></div>
                 <div class="container-rb-z"></div>

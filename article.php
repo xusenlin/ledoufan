@@ -13,16 +13,9 @@ include 'header.php';
 <!--    3.新闻资讯-->
     <div class="container   article-content">
         <div class="article-content-right">
-            <div class="center-top about-right-title">
-                <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
-                <ul class="right-ul food-ul">
-                    <li><a href="javascript:">首页</a></li>
-                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                    <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
-                    <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                    <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
-                </ul>
-            </div><!--about-right-title 结束-->
+            <?php
+            include_once 'breadcrumb.php';
+            ?>
             <?php
                     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
                         the_post_thumbnail();

@@ -27,16 +27,19 @@ include 'header.php';
                 </div><!--about-center-left 结束-->
 
                 <div class="about-center-right">
-                    <div class="center-top about-right-title">
-                        <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
-                        <ul class="right-ul food-ul">
-                            <li><a href="javascript:">首页</a></li>
-                            <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                            <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
-                            <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                            <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
-                        </ul>
-                    </div><!--about-right-title 结束-->
+                        <?php
+                        include_once 'breadcrumb.php';
+                        ?>
+<!--                    <div class="center-top about-right-title">-->
+<!--                        <h2>--><?php //echo $categoryIdToName[$_GET['id']] ?><!--</h2>-->
+<!--                        <ul class="right-ul food-ul">-->
+<!--                            <li><a href="javascript:">首页</a></li>-->
+<!--                            <li class="time1"><img src="--><?php //bloginfo('template_url'); ?><!--/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>-->
+<!--                            <li><a href="javascript:">--><?php //echo $navInfo[$slugs]['title'] ?><!--</a></li>-->
+<!--                            <li class="time1"><img src="--><?php //bloginfo('template_url'); ?><!--/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>-->
+<!--                            <li><a class="time2" href="javascript:">--><?php //echo $categoryIdToName[$_GET['id']] ?><!--</a></li>-->
+<!--                        </ul>-->
+<!--                    </div><!--about-right-title 结束-->
 
                     <?php
                     //echo '<pre>';

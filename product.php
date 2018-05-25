@@ -18,39 +18,15 @@ include 'header.php';
                </div>
                <br>
                <ul class="center-list">
-
-                   <?php
-
-                   foreach ($navInfo[$slugs]['child'] as $v){
-
-                       $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-
-                       $chaining=$siteUrl.'/product?id='.$categoryNameToId[$v["title"]];
-
-                       echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="'.$chaining.'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
-                   }
-
-                   ?>
-
-
+                   <li><a class="active" href="<?php echo $siteUrl.'/'.$slugs.'?id='.$categoryNameToId[$navInfo[$slugs]['child'][0]['title']];    ?>"><span><span><?php echo $navInfo[$slugs]['child'][0]['title'];?></span><strong></strong></span></a></li>
+                   <li><a target="_blank" class="" href="<?php echo $navInfo[$slugs]['child'][1]['url'];?>"><span><span>天猫商城</span><strong></strong></span></a></li>
+               </ul>
        </div>
        <div class="product_item_right">
-<!--           --><?php
-//           $data=get_posts( ['category'  =>$categoryNameToId['产品展示']]);
-//           echo '<pre>';
-//           print_r($data);
-//
-//           ?>
-           <div class="center-top about-right-title">
-               <h2><?php echo $categoryIdToName[$_GET['id']] ?></h2>
-               <ul class="right-ul food-ul">
-                   <li><a href="javascript:">首页</a></li>
-                   <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                   <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
-                   <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                   <li><a class="time2" href="javascript:"><?php echo $categoryIdToName[$_GET['id']] ?></a></li>
-               </ul>
-           </div><!--about-right-title 结束-->
+
+           <?php
+           include_once 'breadcrumb.php';
+           ?>
 
 
            <div class="product_food_list">
@@ -79,7 +55,7 @@ include 'header.php';
 
                        <a href="<?php echo $siteUrl ?>?p=<?php echo $TT->ID ?>" class="product_food_list_box" style="position:relative ">
 
-                           <img src="<?php echo $img_url ?>" width="100%" height="100%">
+                           <div style="background-size: auto 100%;background-repeat:no-repeat;background-position: center;overflow: hidden;width: 100%;height: 100%;background-image: url('<?php echo $img_url ?>')" ></div>
                            <span style="position: absolute;top:288px;left:0px"><?php print_r($TT->post_title);  ?></span>
                        </a>
                <?php }  ?>

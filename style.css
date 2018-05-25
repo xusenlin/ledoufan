@@ -310,18 +310,19 @@ flex: 875px;
     line-height: 66px;
 }
 .affiliate .container-rb{
- display: flex;
- height: 272px;
+    display: flex;
+    height: 272px;
+    width: 100%;
     padding-top: 35px;
 }
 .affiliate .container-rb-l{
- flex: 356px;
+ width: 356px;
 }
 .affiliate .container-rb-z{
- flex: 12px;
+ width: 12px;
 }
 .affiliate .container-rb-r{
- flex: 457px;
+ flex:1;
 }
 .affiliate .container-rb-r .container-rb-ra{
  height: 97px;

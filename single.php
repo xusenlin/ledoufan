@@ -17,7 +17,7 @@ $time=explode(' ',$post->post_date_gmt);
                 <div class="center-top about-bottom">
                     <span class="item1">  <?php  echo $aa['title'];?></span>
                     <span class="item2"></span>
-                    <span class="item3"><?php echo $_GET['tag']; ?></span>
+                    <span class="item3"><?php echo strtoupper($_GET['tag']); ?></span>
                 </div>
                 <ul class="center-list">
                     <?php

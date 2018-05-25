@@ -13,7 +13,7 @@ include 'header.php';
                 <div class="center-top hierarchy-bottom">
                     <span class="item1">溯源体系</span>
                     <span class="item2"></span>
-                    <span class="item3">ABOUT US</span>
+                    <span class="item3">HIERARCHY</span>
                 </div>
                 <ul class="center-list">
                     <?php
@@ -25,16 +25,9 @@ include 'header.php';
                 </ul>
             </div>
             <div class="hierarchy-center-right">
-                <div class="center-top about-right-title">
-                    <h2>原材料基地</h2>
-                    <ul class="right-ul food-ul">
-                        <li><a href="javascript:">首页</a></li>
-                        <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                        <li><a href="javascript:"><?php echo $navInfo[$slugs]['title'] ?></a></li>
-                        <li class="time1"><img src="<?php bloginfo('template_url'); ?>/img/about-right-pic.png" alt="" style="width: 13px;height: 14px"></li>
-                        <li><a class="time2" href="javascript:">原材料基地</a></li>
-                    </ul>
-                </div><!--about-right-title 结束-->
+                <?php
+                include_once 'breadcrumb.php';
+                ?>
                 <div class="picture1"><img src="<?php bloginfo('template_url'); ?>/img/1.png" alt="" width="860"></div>
                 <div>
                     <p class=" character">

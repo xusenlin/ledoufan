@@ -15,24 +15,18 @@ include 'header.php';
                     <span class="item3">CONTACT US</span>
                 </div>
                 <ul class="center-list nav">
-<!--                    --><?php
-//                    foreach ($navInfo[$slugs]['child'] as $v){
-//                        $className = $categoryNameToId[$v["title"]] == $_GET["id"] ? "active" : "";
-//                        echo '<li><a data-id="'.$categoryNameToId[$v['title']].'" class="'.$className.'" href="../contact?tile='.$v['title'].'"><span><span>'.$v['title'].'</span><strong></strong></span></a></li>';
-//                    }
-//                    ?>
-                    <li><a class="'.$className.'" href="<?php echo  $siteUrl.'/contact/' ?>"><span><span>联系方式</span><strong></strong></span></a></li>
 
-                    <li><a class="'.$className.'" href="<?php echo  $siteUrl.'/job/' ?>"><span><span>在线招聘</span><strong></strong></span></a></li>
+                    <li><a class="active" href="<?php echo  $siteUrl.'/contact/' ?>"><span><span>联系方式</span><strong></strong></span></a></li>
+
+                    <li><a class="" href="<?php echo  $siteUrl.'/job/' ?>"><span><span>在线招聘</span><strong></strong></span></a></li>
 
                 </ul>
             </div>
 
             <div class="con-right fr">
-                <div class="center-top clear"><h2 class="h25 fl">联系方式与地址 </h2>
-                    <div class="fr"><a href="#">首页</a><span>>></span><a href="#">联系我们</a><span>>></span><a
-                                href="#">联系方式</a></div>
-                </div>
+                <?php
+                include_once 'breadcrumb.php';
+                ?>
                 <div style="width:824px;height:658px;border:#1dd9da solid 4px;" id="dituContent"></div>
                 <div class="info clear">
                     <div class="QRcode fl"></div>

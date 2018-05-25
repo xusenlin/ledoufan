@@ -6,13 +6,21 @@
  * Time: 14:15
  */
 $siteUrl = get_bloginfo( 'url', 'display' );
+$slugs = is_page() ? get_post($post->ID, ARRAY_A)['post_name'] : '';
+$category = get_categories();
+$categoryNameToId = array();
+$categoryIdToName = array();
+foreach ($category as $item){
+    $categoryNameToId[trim($item->name)] = $item->term_id;
+    $categoryIdToName[$item->term_id] = trim($item->name);
+}
 $navInfo = [
     ''=>[
         'title'=>'网站首页',
         'class'=>'',
         'child'=>[
-            ['title'=>'关于我们','class'=>'','url'=>$siteUrl.'/about'],
-            ['title'=>'新闻资讯','class'=>'','url'=>$siteUrl.'/news']
+            ['title'=>'关于我们','class'=>'','url'=>$siteUrl.'/about/?id='.$categoryNameToId['公司简介']],
+            ['title'=>'新闻资讯','class'=>'','url'=>$siteUrl.'/news/?id='.$categoryNameToId['公司动态']]
         ]
     ],
     'about'=>[
@@ -47,7 +55,7 @@ $navInfo = [
         'class'=>'',
         'child'=>[
             ['title'=>'产品展示','class'=>''],
-            ['title'=>'天猫商城','class'=>'icon'],
+            ['title'=>'天猫商城','class'=>'icon','url'=>'https://taobao.com'],
         ]
     ],
     'hierarchy'=>[
@@ -73,11 +81,4 @@ $navInfo = [
         ]
     ],
 ];
-$slugs = is_page() ? get_post($post->ID, ARRAY_A)['post_name'] : '';
-$category = get_categories();
-$categoryNameToId = array();
-$categoryIdToName = array();
-foreach ($category as $item){
-    $categoryNameToId[trim($item->name)] = $item->term_id;
-    $categoryIdToName[$item->term_id] = trim($item->name);
-}
+

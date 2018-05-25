@@ -38,7 +38,9 @@
                 foreach ($navInfo as $k=>$item){
                     $id_url=$categoryNameToId[$item["child"][0]["title"]];
                     $classActive = $k == $slugs ? " active" : "";
-                    echo '<li><a class="'.$item['class'].$classActive.'" href="'.$siteUrl.'/'.$k.'?id='.$id_url.'">'.$item['title'].'</a>';
+
+                    if($slugs == 'job' && $k == 'contact')$classActive = ' active';
+                    echo '<li><a class="'.$item['class'].' ' .$classActive.'" href="'.$siteUrl.'/'.$k.'?id='.$id_url.'">'.$item['title'].'</a>';
                     echo '<ul class="header-nav-list">';
                     foreach ($item['child'] as $key=>$value){
                         $hasIconClass = $value['class'] == 'icon' ? 'icon' : '';
