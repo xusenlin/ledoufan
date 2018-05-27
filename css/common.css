@@ -107,13 +107,13 @@ header{
 
 /*网站底部*/
 footer{
-    height: 148px;
+    height: 127px;
     background: url("../img/header-background.jpg");
 }
 .footer-center{
     width: 600px;
     margin:0 auto;
-    padding-top: 66px;
+    padding-top: 44px;
 }
 footer span,footer .span1{
     padding-left: 20px;
